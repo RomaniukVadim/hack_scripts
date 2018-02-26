@@ -11,7 +11,7 @@ def extract_zip(zFile, pass_from_file):
         zFile.extractall(pwd=pass_from_file.encode('cp850','replace'))
         print("[+] Password found: " + pass_from_file + "\n" )
     except:
-        print("Trying password: "pass_from_file)
+        print("Trying password: " + pass_from_file)
         pass
 
 def main():
@@ -19,7 +19,7 @@ def main():
     parser.add_argument("-f", dest='zname', type=argparse.FileType('r'), help='specify zipfile')
     parser.add_argument("-d", dest='dname', type=argparse.FileType('r'), help='specify dictionary file')
     args = parser.parse_args()
-    if (args.zname.name == None) | (args.dname.name == None):
+    if (args.zname == None) | (args.dname == None):
         print(parser.print_help())
         exit(0)
     else:
