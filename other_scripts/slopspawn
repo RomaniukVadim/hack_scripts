@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# depends: dmenu slop xdotool
+# assumes next spawned window will be floating/moveable by xdotool.
+
+# get program name to launch using dmenu cache:
+cachedir=${XDG_CACHE_HOME:-"$HOME/.cache"}
+if [ -d "$cachedir" ]; then
+	cache=$cachedir/dmenu_run
+else
+	cache=$HOME/.dmenu_cache # if no xdg dir, fall back to dotfile in ~
+fi
+program=$(
+	IFS=:
+	if stest -dqr -n "$cache" $PATH; then
+		stest -flx $PATH | sort -u | tee "$cache" | dmenu "$@"
+	else
+		dmenu "$@" < "$cache"
+	fi
+)
+
+# Set dimension vars with slop
+eval `slop`
+
+# Get current window
+win=`xdotool getactivewindow`
+
+$program &
+
+# Wait for window to spawn and move with xdotool.
+newwin=$win
+while [ "$newwin" = "$win" ]; do
+	newwin=`xdotool getactivewindow`
+done
+
+xdotool windowmove $newwin $X $Y
+xdotool windowsize $newwin $W $H

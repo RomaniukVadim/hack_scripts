@@ -1,0 +1,37 @@
+#!/bin/sh
+# Wrapper script for managing ports
+
+if [ -n "$1" ]; then
+	case "$1" in
+		# edit Pkgfile
+		edit) sudo $EDITOR Pkgfile ;;
+
+		# force building
+		force) fakeroot pkgmk -d -f ;;
+
+		# search ports tree
+		grep) ports -l | grep $2 ;;
+
+		# check if port updates are needed
+		news) ports -d ;;
+
+		# update ports tree
+		update) sudo ports -u ;;
+
+		# upgrade all ports
+		upgrade) sudo prt-get sysup ;;
+
+		# verify port
+		verify) prtverify . ;;
+
+		# error
+		*) 
+			echo "Invalid command."
+			echo "Usage: port [edit|force|grep|news|update|upgrade|verify]"
+			exit 1
+		;;
+	esac
+else
+	# build with dtach and fakeroot
+	exec dtach -A "$TMPDIR/dtach/build-$(date +%s)" fakeroot /usr/bin/pkgmk -d
+fi

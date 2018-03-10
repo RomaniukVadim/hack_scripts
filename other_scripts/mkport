@@ -1,0 +1,97 @@
+#!/bin/bash
+#
+# onodera - onodera at openmailbox dot org
+# refactored by arianon - arianon at openmailbox dot org
+# Creates a port template
+
+# TODO: Force people to use prtverify somehow.
+
+color() {
+	foreground="\e[0;39m"
+	brown="\e[1;33m"
+	
+	echo -e "${brown}$@${foreground}"
+}
+
+read -p "Name: " name
+
+# color "Enter \"git\" here if your package gets pulled from git."
+read -p "Version: " version
+
+if [[ "$version" == git ]]; then
+	read -p "Git: " gitsource
+	read -p "Branch: " branch
+else
+	read -p "Source: " source
+fi
+
+echo ""
+
+# color "Git package, \"- git checkout\" will be automatically added to the description."
+while read -p "Description: " description; do
+	if [[ -z "$(echo "$description" | grep -o "^[A-Z]")" && -z "$(echo "$description" | grep -o "\.$")" ]]; then
+		color "Descriptions should start with a capital letter and end with a period, try again."
+	elif [[ -z "$(echo "$description" | grep -o "^[A-Z]")" ]]; then
+		color "Descriptions should start with a capital letter, try again."
+	elif [[ -z "$(echo "$description" | grep -o "\.$")" ]]; then
+		color "Descriptions should end with a period, try again."
+	else
+		break
+	fi
+done
+
+read -p "URL: " url
+
+if [[ "$version" == git ]]; then
+	while read -p "Depends on: git " deps; do
+		if [[ -n "$(echo "$deps" | grep -o ",")" ]]; then
+			color "Dependencies should only be separated by a space, try again."
+		else
+			break
+		fi
+	done
+else
+	while read -p "Depends on: " deps; do
+		if [[ -n "$(echo "$deps" | grep -o ",")" ]]; then
+			color "Dependencies should only be separated but a space, try again."
+		else
+			break
+		fi
+	done
+fi
+
+cdpkg() {
+	if [[ $version == "git" ]]; then
+	cat <<GIT
+	cd \$PKGMK_SOURCE_DIR
+
+	if cd \$name; then
+		git fetch -q; git reset --hard origin/$branch
+	else
+		git clone $gitsource -b $branch \$name
+		cd \$name
+	fi
+GIT
+	else
+		echo "cd \$name-\$version"
+	fi
+}
+
+cat > "Pkgfile" << EOTEMPLATE
+# Description: $description
+# URL:         $url
+# Packager:    Name and email go here.
+# Maintainer:  6c37 Team, https://github.com/6c37/crux-ports/issues
+# Depends on:  $deps
+
+name=$name
+version=$version
+release=1
+source=($source)
+
+build() {
+	$(cdpkg)
+
+	# Build instructions go here.
+}
+EOTEMPLATE

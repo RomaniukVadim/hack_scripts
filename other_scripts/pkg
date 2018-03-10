@@ -1,0 +1,38 @@
+#!/bin/sh
+# Wrapper script for managing packages
+
+if [ -n "$1" ]; then
+	case "$1" in
+		# install package
+		add) sudo pkgadd $2 ;;
+
+		# list what files the package added
+		files) pkginfo -l $2 ;;
+
+		# force installation of a package
+		force) sudo pkgadd -f $2 ;;
+
+		# list installed packages
+		ls) pkginfo -i ;;
+
+		# remove package
+		rm) sudo pkgrm $2 ;;
+
+		# update package
+		up) sudo pkgadd -u $2;;
+
+		# list which package owns which file
+		which) pkginfo -o $2 ;;
+		
+		# error
+		*)
+			echo "Invalid command."
+			echo "Usage: pkg [add|files|force|ls|rm|up|which] [package]"
+			exit 1
+		;;
+	esac
+else
+	echo "No command provided."
+	echo "Usage: pkg [add|files|force|ls|rm|up|which] [package]"
+	exit 1
+fi

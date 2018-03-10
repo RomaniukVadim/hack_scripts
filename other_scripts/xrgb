@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# Creepest code I ever made
+
+for c in 0 1 2 3 4 5 6 7
+do
+	tput setaf $c
+	gxc $c \# | tr '\n' ' '
+	tput setaf 0
+done
+echo
+
+for c in 8 9 10 11 12 13 14 15
+do
+	tput setaf $c
+	gxc $c \# | tr '\n' ' '
+	tput setaf 0
+done
+echo
+

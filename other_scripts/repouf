@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# repouf - Update all footprints in repo
+# onodera, https://github.com/onodera-punpun
+
+repo=$PWD
+
+for dir in $(ls); do
+	cd $repo/$dir
+
+	pkgmk
+	pkgmk -uf
+
+	if [ $? -ge 1 ]; then
+		exit 1
+	fi
+
+	git add .
+	git commit -m "$dir: Update footprint."
+	# TODO: Figure out how to auto enter username/password
+	git push
+done

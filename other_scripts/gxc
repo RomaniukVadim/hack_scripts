@@ -1,0 +1,89 @@
+#!/bin/sh
+#
+# gxc - get x color
+#
+
+PREFIX=
+
+if [ -z $1 ]; then
+  echo 'missing argument'
+  exit 1
+fi
+
+if [ -n $2 ]; then
+  PREFIX=$2
+fi
+
+case $1 in
+  0|bla|black)
+    CC='color0:'
+    ;;
+  1|red)
+    CC='color1:'
+    ;;
+  2|gre|green)
+    CC='color2:'
+    ;;
+  3|yel|yellow)
+    CC='color3:'
+    ;;
+  4|blu|blue)
+    CC='color4:'
+    ;;
+  5|mag|magenta)
+    CC='color5:'
+    ;;
+  6|cya|cyan)
+    CC='color6:'
+    ;;
+  7|whi|white)
+    CC='color7:'
+    ;;
+  8|bbla|boldblack)
+    CC='color8:'
+    ;;
+  9|bred|boldred)
+    CC='color9:'
+    ;;
+  10|bgre|boldgreen)
+    CC='color10:'
+    ;;
+  11|byel|boldyellow)
+    CC='color11:'
+    ;;
+  12|bblu|boldblue)
+    CC='color12:'
+    ;;
+  13|bmag|boldmagenta)
+    CC='color13:'
+    ;;
+  14|bcya|boldcyan)
+    CC='color14:'
+    ;;
+  15|bwhi|boldwhite)
+    CC='color15:'
+    ;;
+  
+  bg|background)
+    CC='background:'
+    ;;
+  fg|foreground)
+    CC='foreground:'
+    ;;
+  it|italic)
+    CC='colorIT:'
+    ;;
+  ul|underline)
+    CC='colorUL:'
+    ;;
+  -h|--help)
+    echo "Usage: $(basename $0) -h --help | color number | color name [prefix]"
+    exit 0
+    ;;
+  *)
+    echo 'invalid color identificator'
+    exit 1
+    ;;
+esac
+
+echo "$PREFIX$(xrdb -query | grep "$CC" | tail -c 7)"

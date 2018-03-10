@@ -1,0 +1,19 @@
+#!/bin/sh
+
+[ -n $2 ] || exit 1
+
+b=$(wattr b $2)
+x=$(wattr w $2)
+y=$(wattr h $2)
+
+case $1 in
+  x)
+    echo $(( $x / 2 + $b ))
+    ;;
+  y)
+    echo $(( $y / 2 + $b ))
+    ;;
+  *)
+    exit 2
+    ;;
+esac

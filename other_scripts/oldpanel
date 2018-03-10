@@ -1,0 +1,126 @@
+#!/bin/sh
+
+#
+# See also: spawner
+#
+
+# lemonbar params
+LBARGS="-B $(gxc background \#) -F $(gxc foreground \#)\
+ -g 1206x20+80+10 -f -*-lemon-*-*-*-10-*-*-*-*-*-*-*"
+
+# Colors
+BG=$(gxc bg ff)        # background
+FG=$(gxc fg ff)        # foreground
+GN=$(gxc boldgreen ff) # green
+GY=$(gxc boldblack ff) # gray
+RD=$(gxc boldred ff)   # red
+
+# Clickable area
+#
+# $1 text
+# $2 command
+#
+function A {
+	[[ -n $2 ]] && echo -n "%{A:$2:}${1}%{A}"
+}
+
+# Background color
+#
+# $1 text
+# $2 background color
+#
+function B {
+	[[ -n $2 ]] && echo -n "%{B#$2}${1}%{B-}"
+}
+
+# Foreground color
+#
+# $1 text
+# $2 foreground color
+#
+function F {
+	[[ -n $2 ]] && echo -n "%{F#$2}${1}%{F-}"
+}
+
+# Overlined text
+#
+# $1 text
+#
+function o {
+	[[ -n $1 ]] && echo -n "%{+o}${1}%{-o}"
+}
+
+# Underlined text
+#
+# $1 text
+#
+function u {
+	[[ -n $1 ]] && echo -n "%{+u}${1}%{-u}"
+}
+
+# Special
+DV=$(F ' :: ' $GY) # divider
+SP=$(F '--' $BG) # spacer
+
+
+# Panel parts
+
+NET0=$(F + $GN)
+NET1=$(F - $RD)
+network() {
+	ping -c 1 google.com >/dev/null 2>&1 && echo -n $NET0 || echo -n $NET1
+}
+
+datetime() {
+	date -u '+%H:%M %d/%m/%y' | tr -d '\n'
+}
+
+# In that case ``pamw'' is equal to ``pamixer --get-volume''
+volume() {
+	A $(pamw) volume
+}
+
+battery() {
+	VAL=$(acpi -b | awk '{ print $4 }' | tr -d ',%')
+	[[ $VAL -gt 20 ]] && echo -n $VAL || F $VAL $RD
+}
+
+layout() {
+	A $(xkb-switch) layout
+}
+
+# I have to use sed, because mpc does not print ``#''
+MPCFMT=' [%title%] _DV [%album%] _DV [%artist%] '
+mpc_status() {
+	mpc current -f "$MPCFMT" | tr -d '\n' | sed s/_DV/"$DV"/g
+}
+
+desktops() {
+	printf "desk"
+}
+
+BSPWM="  $(F bspwm $(gxc boldcyan ff))"
+while true; do
+# Left part
+#	mpc_status
+# Right part
+	echo -n " $BSPWM"
+	A ' web' 1
+	A ' rest' 2
+	echo -n '%{r}'
+	network
+#	echo -n $DV
+#	layout
+#	echo -n $DV
+#	volume
+#	echo -n $DV
+#	battery
+	echo -n $DV
+	datetime
+	echo -n $DV
+	A "$(F 'x' $RD)  " 'quit'
+# Sleep
+	sleep 0.5s
+# Clear bar
+	echo
+done | lemonbar $LBARGS $@ | spawner

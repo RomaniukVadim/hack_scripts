@@ -1,0 +1,41 @@
+#!/bin/sh
+
+FG=`gxc fg \#`
+BG=`gxc bg \#`
+
+RED=`gxc red \#`
+GREEN=`gxc gre \#`
+BLUE=`gxc blu \#`
+GRAY=`gxc bbla \#`
+
+function A {
+	echo -n "%{A:${1}:}${2}%{A}"
+}
+
+function F {
+	echo -n "%{F${1}}${2}%{F-}"
+}
+
+function B {
+	echo -n "%{B${1}}${2}%{B-}"
+}
+
+function U {
+	echo -n "%{U${1}}${2}%{U-}"
+}
+
+o='%{!o}'
+u='%{!u}'
+
+l='%{l}'
+r='%{r}'
+c='%{c}'
+
+LABEL=$(F $BLUE BSPWM)
+
+while true; do
+	echo "$l $LABEL $r`bspc query -D | tr '\n' ' '`"
+	sleep 0.25s
+done
+
+# EOF

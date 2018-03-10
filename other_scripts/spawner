@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Spawner for Bar Ain't Recursive
+
+while read cmd; do
+	case "$cmd" in
+		volume) pamw -t ;;
+		layout) xkb-switch --next ;;
+		quit)   bspc quit ;;
+		[1-9])  bspc desktop -f ^$cmd ;;
+		*)      bspc desktop -f $cmd ;;
+	esac
+done

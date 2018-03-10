@@ -1,0 +1,23 @@
+#!/bin/sh
+
+  x=0
+  y=0
+  width=1366
+  height=20
+  lines=0
+#  lines=5
+#  width=166
+#  height=24
+#  root=$(lsw -r)
+#  x=$((($(wattr w $root) - $width) / 2))
+#  y=$((($(wattr h $root) - $height * ($lines + 1)) / 2))
+
+dmenu_run \
+  -i -r -l $lines \
+  -p ' Run > ' \
+  -x $x -y $y -w $width -h $height \
+  -fn '-*-berry-*-*-*-*-11-*-*-*-*-*-*-*' \
+  -nb $(gxc background \#) \
+  -nf $(gxc foreground \#) \
+  -sb $(gxc boldblack \#) \
+  -sf $(gxc boldwhite \#)

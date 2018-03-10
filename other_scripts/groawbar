@@ -1,0 +1,38 @@
+#!/bin/sh
+#
+# GroawBar
+# depends: wattr, groaw, lemonbar
+
+GROOT=/tmp/groaw.d
+GNUMBER=5
+
+BG=$(gxc bg \#00)
+
+groaw >/dev/null
+
+mpc_status() {
+ echo -n '%{c}'
+}
+
+while true; do
+  echo -n '%{l}  '
+  for gid in $(seq 1 $GNUMBER); do
+    if [ 0 -eq $(fcount $GROOT/$gid) ]; then
+      echo -n ' - '
+    else
+      wattr m $(ls -1 $GROOT/$gid | head -n 1) \
+        && echo -n " $gid " \
+        || echo -n " x "
+#       && echo -n "%{!u} $gid %{!u}" \
+#       || echo -n " $gid "
+    fi
+  done
+  mpc_status
+  echo "%{r}$(date)  "
+  sleep 0.25s
+done | lemonbar \
+  -g 1366x20+0+0 \
+  -f '-*-fixed-*-*-*-*-12-*-*-*-*-*-*-r' \
+  -B $BG
+
+exit 1

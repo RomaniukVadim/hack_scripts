@@ -1,0 +1,21 @@
+#!/bin/sh
+
+case "$(basename $0)" in
+	lock)
+		if [ -f .lock ]; then
+			exit 1
+		else
+			touch .lock
+		fi
+		;;
+	unlock)
+		if [ -f .lock]; then
+			rm .lock
+		else
+			exit 1
+		fi
+		;;
+	keep)
+		echo 'blah blah blah' > .keep
+		;;
+esac

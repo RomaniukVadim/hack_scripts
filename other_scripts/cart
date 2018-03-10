@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# cart - common archive tool
+#
+
+extract() {
+  case $1 in
+  *.tar.xz|*.txz)
+    tar xvJf $1 ;;
+  *.tar.bz2|*.tbz|*.tbz2)
+    tar xvjf $1 ;;
+  *.tar.gz|*.tgz)
+    tar xvzf $1 ;;
+  *.bz2)
+    bunzip2 $1 ;;
+  *.rar)
+    unrar x $1 ;;
+  *.gz)
+    gunzip $1 ;;
+  *.tar)
+    tar xvf $1 ;;
+  *.zip)
+    unzip $1 ;;
+  *.Z)
+    uncompress $1 ;;
+  *.7z)
+    7z x $1 ;;
+  *)
+    echo "don't know how to extract '$1'..."
+    exit 1
+  esac
+}
+
+for i in $@; do
+  if [ -f $i ]; then
+    extract $1
+  else
+    echo "$1 not a file"
+    exit 1
+  fi
+done

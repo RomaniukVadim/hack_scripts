@@ -1,0 +1,33 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo -e " \n \t ERROR: No arguments provided"
+    echo -e " \t USAGE: img2sf <path/to/image> <path/to/output>\n"
+    exit 1
+fi
+
+imgw=$(convert -print "%w\n" "$1" /dev/null)
+
+# generate the image
+TMPFILE="tmp"
+img2xterm "$1" > $TMPFILE
+
+# form the output file
+echo 'startline="0"' > $2
+echo 'fulloutput=(' >> $2
+IFS=''
+cat $TMPFILE |
+while read line
+do
+    nspaces=$(grep -o " " <<< "$line" | wc -l)
+    nup=$(grep -o "▀" <<< "$line" | wc -l)
+    ndown=$(grep -o "▄" <<< "$line" | wc -l)
+    spaces=$(expr "$imgw" - "$nspaces" - "$nup" - "$ndown")
+    printf "\"%s%${spaces}s %%s\"\n" "$line" "" >> $2
+done
+echo ")" >> $2
+
+sed -i "0,/%s/{s/%s/ %s/}" "$2"
+
+# clean up
+rm $TMPFILE
