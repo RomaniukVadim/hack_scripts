@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<bitfields product="dbtech_dbseo">
+	<bitfielddefs>
+		<group name="ugp">
+			<group name="dbtech_dbseopermissions">
+				<bitfield name="canadmindbseo"			group="dbtech_dbseo_admin_permissions"	phrase="dbtech_dbseo_is_manager"					install="6"				>1</bitfield>
+			</group>
+		</group>
+		<group name="nocache">
+			<group name="dbtech_dbseo_sitemap_se_submit">
+				<bitfield name="dbtech_dbseo_search_engine_google"     >1</bitfield>
+				<!--<bitfield name="dbtech_dbseo_search_engine_live_search">2</bitfield>-->
+				<bitfield name="dbtech_dbseo_search_engine_yahoo"      >4</bitfield>
+				<bitfield name="dbtech_dbseo_search_engine_ask"        >8</bitfield>
+				<bitfield name="dbtech_dbseo_search_engine_moreover"   >16</bitfield>
+				<bitfield name="dbtech_dbseo_search_engine_bing"       >32</bitfield>
+			</group>
+		</group>
+
+	</bitfielddefs>
+</bitfields>

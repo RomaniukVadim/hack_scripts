@@ -1,0 +1,65 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # DBSEO: Search Engine Optimisation Tool 		         	      # ||
+|| # ---------------------------------------------------------------- # ||
+|| # Copyright ©2013 DragonByte Technologies 			      		  # ||
+|| # https://www.dragonbyte-tech.com - https://www.dragonbyte-tech.net  # ||
+|| # All Rights Reserved.                                             # ||
+|| # This file may not be redistributed in whole or significant part. # ||
+|| # ---------------------------------------------------------------- # ||
+|| # http://www.vbulletin.org/forum/showthread.php?t=           	  # ||
+|| #################################################################### ||
+\*======================================================================*/
+
+/*======================================================================*\
+|| Table of contents                                                    ||
+||  1. License                                                          ||
+||  2. Requirements                                                     ||
+||  3. Importing from vBSEO 			 	                      		||
+\*======================================================================*/
+
+
+/*======================================================================*\
+|| 1. License                                                           ||
+\*======================================================================*/
+
+DBSEO is released under the All Rights Reserved licence.
+You may not redistribute the package in whole or significant part.
+All copyright notices must remain unchanged and visible.
+You may provide phrase .xml files for other languages on any site,
+but you may not provide the full product .xml file - only the phrases.
+
+
+/*======================================================================*\
+|| 2. Requirements                                                      ||
+\*======================================================================*/
+
+DBSEO requires at least vBulletin 4.0.2 (vB4) or vBulletin 3.8.x (vB3)
+It will not function correctly in vBulletin 4.0.1 because of a bug in that version.
+
+
+/*======================================================================*\
+|| 3. First Time Installation / Upgrade                                 ||
+\*======================================================================*/
+
+1. Upload the contents of the upload folder to your forum root
+
+2. Open the .htaccess file in a FXP editor, comment out the vBSEO entries and add the DBSEO entries as per the readme.txt file, but not saving the file just yet
+
+3. Disable vBSEO from the vBulletin Products & Plugins
+
+4. Disable vBSEO Sitemap Generator from vBulletin Products & Plugins
+
+5. Import the DBSEO product
+
+6. Enter the DBSEO Control Panel via the ACP side menu link, click vBSEO Import and wait for it to complete
+
+7. Save the .htaccess file edit from the FXP editor
+
+8. Confirm that Forum Home, Forum Display and Show Thread pages load as intended
+
+9. Chmod the ./store_sitemap folder to 077
+
+10. Enter the DBSEO Control Panel via the ACP side menu link, click Sitemap Settings and enable sitemap generation
+
+11. Click the Build Sitemap link and wait for it to complete

@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	# If you are having problems or are using VirtualDocumentRoot, uncomment this line and set it to your vBulletin directory.
+	# RewriteBase /
+
+	# If you are having problems with the rewrite from content/ to content.php, uncomment this line to turn MultiViews off.
+	# Options -MultiViews
+
+	RewriteCond %{REQUEST_URI} !(admincp/|dbseocp/|modcp/|cron|mobiquo|forumrunner|api\.php|reviewpost/|classifieds/|photopost/)
+	RewriteRule ^((archive/)?(.*\.php(/.*)?))$ dbseo.php [L,QSA]
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/(admincp|dbseocp|modcp|clientscript|cpstyles|images|reviewpost|classifieds|photopost)/
+	RewriteRule ^(.+)$ dbseo.php [L,QSA]
+</IfModule>

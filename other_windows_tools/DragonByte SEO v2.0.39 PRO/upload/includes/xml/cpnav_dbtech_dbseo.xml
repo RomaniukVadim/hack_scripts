@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<navgroups product="dbtech_dbseo">
+
+	<navgroup phrase="dbtech_dbseo" displayorder="9">
+
+		<navoption displayorder="20">
+			<phrase>dbtech_dbseo_settings</phrase>
+			<link><![CDATA[options.php?do=options&dogroup=dbtech_dbseo_options]]></link>
+		</navoption>
+
+	</navgroup>
+
+</navgroups>

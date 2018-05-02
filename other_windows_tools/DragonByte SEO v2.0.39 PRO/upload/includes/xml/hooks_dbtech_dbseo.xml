@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<hooks>
+
+	<hooktype type="dbtech_dbseo_main">
+		<hook>dbtech_dbseo_process_content_meta</hook>
+		
+		<hook>dbtech_dbseo_sitemap_add_content_types</hook>
+		<hook>dbtech_dbseo_sitemap_generate_start</hook>
+		<hook>dbtech_dbseo_sitemap_next_content_type</hook>
+		<hook>dbtech_dbseo_sitemap_view_start</hook>
+
+		<hook>dbtech_dbseo_cpnav_settings</hook>
+		<hook>dbtech_dbseo_cpnav_urlrewrite</hook>
+		<hook>dbtech_dbseo_cpnav_sitemap</hook>
+		<hook>dbtech_dbseo_cpnav_settinggroup</hook>
+		<hook>dbtech_dbseo_cpnav_logs</hook>
+		<hook>dbtech_dbseo_cpnav_maintenance</hook>
+
+		<hook>dbtech_dbseo_keyworddata_start</hook>
+		<hook>dbtech_dbseo_keyworddata_predelete</hook>
+		<hook>dbtech_dbseo_keyworddata_presave</hook>
+		<hook>dbtech_dbseo_keyworddata_postsave</hook>
+		<hook>dbtech_dbseo_keyworddata_delete</hook>
+	</hooktype>
+	
+</hooks>
