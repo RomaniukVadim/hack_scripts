@@ -1,0 +1,25 @@
+<html>
+<script type="text/javascript" src="jq.js"></script>
+<body >
+
+<div id="content"></div>
+
+<script language=javascript>
+function show()
+{
+$.ajax({
+url: "control.php",
+cache: false,
+success: function(html){
+$("#content").html(html);
+}
+});
+}
+
+$(document).ready(function(){
+show();
+setInterval('show()',20000);
+});
+</script>
+
+</html>

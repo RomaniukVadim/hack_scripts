@@ -1,0 +1,27 @@
+
+        <!-- page.name = wait -->
+        <fieldset>
+            <legend>Wait Page</legend>
+
+            <span class="help-block">Display an animated progressbar for `timeout` seconds. Saves its state.</span>
+
+            <div class="control-group">
+                <label class="control-label">Alert</label>
+                <div class="controls">
+                    <textarea ng-model="page.data.wait_alert" name="page[data][wait_alert]" ng-hide=1></textarea>
+                    <div ng-model="page.data.wait_alert" contenteditable class="ckeditor-inline"></div>
+
+                    <span class="help-block">The message to display in the alert block.</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Description</label>
+                <div class="controls">
+                    <textarea ng-model="page.data.wait_description" name="page[data][wait_description]" ng-hide=1></textarea>
+                    <div ng-model="page.data.wait_description" contenteditable class="ckeditor-inline"></div>
+
+                    <span class="help-block">The message to display below the progressbar.</span>
+                </div>
+            </div>
+        </fieldset> 

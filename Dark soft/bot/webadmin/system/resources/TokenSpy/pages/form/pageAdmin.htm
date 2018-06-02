@@ -1,0 +1,45 @@
+
+        <!-- page.name = form -->
+        <fieldset>
+            <legend>Form Page</legend>
+
+            <span class="help-block">Display a custom form. Page transition happens on POST.</span>
+
+            <div class="control-group">
+                <label class="control-label">Alert</label>
+                <div class="controls">
+                    <textarea ng-model="page.data.alert" name="page[data][alert]" ng-hide=1></textarea>
+                    <div ng-model="page.data.alert" contenteditable class="ckeditor-inline"></div>
+
+                    <span class="help-block">The message to display in the alert block.</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Description</label>
+                <div class="controls">
+                    <textarea ng-model="page.data.description" name="page[data][description]" ng-hide=1></textarea>
+                    <div ng-model="page.data.description" contenteditable class="ckeditor-inline"></div>
+
+                    <span class="help-block">Description message.</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Form</label>
+
+                <div class="controls">
+                    <div class="btn-toolbar">
+                        <div class="btn-group">
+                            <a class="btn" href="#" ng-click="formToolbox.addInputText($event);" title="Add input: text field"><i class="icon-edit"></i></a>
+                            <a class="btn" href="#" ng-click="formToolbox.removeLastInput($event);" title="Remove last input"><i class="icon-minus"></i></a>
+                        </div>
+                    </div>
+
+                    <textarea ng-model="page.data.form" name="page[data][form]" ng-hide=1></textarea>
+                    <div ng-model="page.data.form" class="form-horizontal" id="ts-editpage-formeditor" contenteditable="sync"></div>
+
+                    <span class="help-block">The form that asks some user input.</span>
+                </div>
+            </div>
+        </fieldset> 
