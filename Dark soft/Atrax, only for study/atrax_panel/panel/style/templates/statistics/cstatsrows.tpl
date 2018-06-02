@@ -1,0 +1,1 @@
+<tr class="{class}"><td><label><img src="images/flags/{Country}.gif" /></label> {CountryLong}</td><td style="text-align: center;">{Number}</td></tr>

@@ -1,0 +1,1 @@
+<tr class="{class}"><td><label><img src="images/flags/{Country}.gif" /></label> {CountryLong}</td><td>{City}</td><td>{Date}</td></tr>

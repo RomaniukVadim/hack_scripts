@@ -1,0 +1,1 @@
+<tr class="{class}"><td><label>{Name}</label></td><td><a href="index.php?action=settings&install={Name}"><img src="images/other/add.png" /> Install</a></td></tr>

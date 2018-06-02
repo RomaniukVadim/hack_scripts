@@ -1,0 +1,181 @@
+body {
+    font-family: Helvetica, Tahoma, Arial, sans-serif;
+    font-size: 13px;
+    background-image: url('../../images/other/bg.jpg');
+}
+
+#container {
+    min-width: 900px;
+    margin: auto;
+    padding: 10px;
+   /* border-radius: 4px; */
+   /* border: 1px solid #CCC;min-height: 100%; */
+   /* background-color: #FFF; */
+}
+
+#logo {
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+#navigation {
+    background-color: #42464F;
+    padding: 10px;
+   /* border-radius: 3px; */
+}
+
+#navigation a {
+	text-decoration: none;
+  color: #FAFAFA;
+   /* font-weight: bold; */
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.btngreen {
+    text-decoration: none;
+    padding: 7px;
+    background-color: #277D1B;
+    color: #FFF;
+    border:  none;
+   /* border-radius: 2px; */
+    cursor: pointer;
+}
+
+.btngreen:hover {
+    background-color: #9acd32;
+}
+
+.btnred {
+    text-decoration: none;
+    padding: 7px;
+    background-color: #8b0000;
+    color: #FFF;
+    border:  none;
+   /* border-radius: 2px; */
+    cursor: pointer;
+}
+
+.btnred:hover {
+    background-color: #FF0000;
+}
+
+.btnyellow {
+    text-decoration: none;
+    padding: 7px;
+    background-color: #ef9700;
+    color: #FFF;
+    border:  none;
+   /* border-radius: 2px; */
+    cursor: pointer;
+}
+
+.btnyellow:hover {
+    background-color: #ffb83e;
+}
+
+.btnnormal {
+    text-decoration: none;
+    padding: 7px;
+    background-color: #42464F;
+    color: #FFF;
+    border:  none;
+   /* border-radius: 2px; */
+    cursor: pointer;
+}
+
+.btnnormal:hover {
+    background-color: #666;
+}
+
+.activeNavElement {
+    float: right;
+    color: #FFFFFF;
+}
+
+input[type=text], input[type=password], select {
+  width: 250px;
+  padding: 3px;
+  border: 1px solid #42464F;
+ /* border-radius: 2px; */
+}
+
+label {
+  float: left;
+  width: 2em;
+  margin-right: 1em;
+}
+
+img {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.clear {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Statistic */
+#left, #right, #mitte {
+  width: 22%;
+  line-height: 18px;
+}
+
+#left {
+  float: left;
+}
+
+#right {
+  float: right;
+}
+
+#mitte {
+  width: 50%;
+  float: left;
+  margin-left: 3%;
+}
+
+/* Table */
+#tablecss {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, #tablecss th {
+  padding: 3px 7px 2px 7px;
+}
+
+#tablecss th {
+  font-size: 1.1em;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background-color: #42464F;
+  color: #FFF;
+}
+
+#tablecss tr td {
+  background-color: #EEE;
+}
+
+#tablecss tr.alt td {
+  background-color: #D3D3D3;
+}
+
+#tablecss tr.free td {
+  background-color: #DCFFAD;
+}
+
+#tablecss tr.notfree td {
+  background-color: #FFEEEE;
+}
+
+#tablecss tr.offline td {
+  background-color: #FFC4C4;
+}

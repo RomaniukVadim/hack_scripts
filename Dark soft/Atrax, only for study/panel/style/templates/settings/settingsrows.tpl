@@ -1,0 +1,1 @@
+<tr class="{class}"><td>{Name}</td><td>{Parameters}</td><td><a href="index.php?action=settings&deinstall={ID}"><img src="images/other/delete.png" /> Deinstall</a></td></tr>

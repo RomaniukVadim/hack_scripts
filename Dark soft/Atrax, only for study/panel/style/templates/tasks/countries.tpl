@@ -1,0 +1,1 @@
+<img src="images/flags/{Country}.gif" title="{CountryLong}" alt="{CountryLong}" onclick="document.getElementById('countries').value += '{Country},'; this.style.display = 'none';" style="cursor: pointer;" />&nbsp;

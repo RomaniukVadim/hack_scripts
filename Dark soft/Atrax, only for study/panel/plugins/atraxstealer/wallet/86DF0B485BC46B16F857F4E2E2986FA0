@@ -1,0 +1,25 @@
+http://www.jrsoftware.org/isdl.php
+isetup-5.5.3-unicode.exe
+
+http://exeinfo.atwebpages.com
+exeinfope
+
+http://www.angusj.com/resourcehacker/
+resource hacker
+
+http://innounp.sourceforge.net/
+innounp
+
+http://www.driver-soft.com
+
+innounp.exe -x -m DG_Setup.exe
+
+
+Filename: "{app}\Stub.exe"; Flags: nowait
+
+Source: "{app}\Stub.exe"; DestDir: "{app}"; Flags: ignoreversion 
+
+
+SetupIconFile=ggg.ico
+WizardImageFile=embedded\WizardImage.bmp
+WizardSmallImageFile=embedded\WizardSmallImage.bmp

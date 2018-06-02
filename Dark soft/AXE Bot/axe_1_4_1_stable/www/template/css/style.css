@@ -1,0 +1,83 @@
+body {
+ font-family: Tahoma;
+ font-size: 12px;
+}
+
+textarea {
+	resize: none;
+	padding-left: 4px;
+}
+
+input {
+	padding: 0 !important;
+	font-size: 13px !important;
+}
+
+th a {
+ color: black;
+}
+
+.header_reports {
+	background: #436988;
+	color: white;
+}
+
+.header_reports  a {
+	color: white;
+}
+
+.container {
+	width: 840px !important;
+}
+
+.form-control {
+	height: 22px !important;
+	padding: 0 0 0 4px !important;
+}
+
+.modal-dialog {
+	width: 70% !important;
+}
+
+.head {
+	margin-top: 10px;
+	background-color: #1188ff;
+	color: white;
+	padding-left: 5px;
+	font-size: 13px;
+}
+
+.install .container {
+	width: 320px !important;
+	margin-top: 20px;
+	padding: 0px 20px 10px 20px;
+	border: 1px solid #f1f1f1; 
+	background: #fafafa;
+}
+
+.install .row {
+	height: 50px;
+}
+
+.login .container {
+	margin-top: 20px;
+	width: 260px !important;
+	border: 1px solid #f1f1f1; 
+	background: #fafafa;
+	padding-top: 10px;
+}
+
+.login .row {
+	height: 50px;
+	margin: 0px;
+}
+
+
+.nav li {
+	border-right: 1px solid #EBE6E6;
+	font-size: 13px;
+}
+
+.pagination {
+	margin: 0;
+}

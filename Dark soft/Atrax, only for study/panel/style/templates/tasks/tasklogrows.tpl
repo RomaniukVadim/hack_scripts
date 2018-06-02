@@ -1,0 +1,1 @@
+<tr class="{class}"><td>{GUID}</td><td><img src="images/other/{Status}.png" /></td></tr>

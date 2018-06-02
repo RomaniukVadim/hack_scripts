@@ -1,0 +1,1 @@
+<tr class="{class}"><td>{OS}</td><td style="text-align: center;">{Number}</td></tr>

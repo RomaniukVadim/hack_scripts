@@ -1,0 +1,1 @@
+<tr class="{class}"><td><label>{Plugin}</label></td><td style="{Style}width: 30px;">{Amount}</td></tr>
