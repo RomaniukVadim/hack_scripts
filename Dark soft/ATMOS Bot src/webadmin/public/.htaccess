@@ -1,0 +1,4 @@
+Options -Indexes
+allow from all
+
+php_flag engine off

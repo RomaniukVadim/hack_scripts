@@ -1,0 +1,23 @@
+{
+    "name": "Citra-node",
+    "version": "0.0.1",
+    
+    "private": true,
+    "engine": "node >= 0.8.20",
+
+    "dependencies": {
+        "ini": ">= 1.1.0",
+        "underscore": ">= 1.4.4",
+        "socket.io": ">= 0.9.14",
+        "express": ">= 3.2.0"
+    },
+    "devDependencies": {
+    },
+    "optionalDependencies": {
+    },
+
+    "main": "./app.js",
+    "scripts": {
+        "start": "node app.js"
+    }
+}

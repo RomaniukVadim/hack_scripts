@@ -1,0 +1,23 @@
+        <!-- page.name = static -->
+        <fieldset>
+            <legend>Static Page</legend>
+
+            <span class="help-block">Just display some static content.</span>
+
+            <div class="control-group">
+                <label class="control-label">
+                    <label>Text <input type="radio" ng-model="page.data.text_html_mode" value="0" /></label>
+                    <label>Html <input type="radio" ng-model="page.data.text_html_mode" value="1" /></label>
+
+                </label>
+                <div class="controls">
+                    <textarea ng-model="page.data.text" ng-show="page.data.text_html_mode"  name="page[data][text]" style="width: 90%" rows="10"></textarea>
+                    <ng-switch on="page.data.text_html_mode"> <!-- in the absense of ngIf, we use ngSwitch :( -->
+                        <div      ng-model="page.data.text" ng-switch-when="0"  contenteditable class="ckeditor-inline"></div>
+                    </ng-switch>>
+
+                    <span class="help-block"  ng-hide="page.data.text_html_mode">The text to display.</span>
+                    <span class="help-block"  ng-show="page.data.text_html_mode">HTML code for the page.</span>
+                </div>
+            </div>
+        </fieldset> 

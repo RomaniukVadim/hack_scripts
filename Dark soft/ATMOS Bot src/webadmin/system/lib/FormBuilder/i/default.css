@@ -1,0 +1,49 @@
+/* Tooltip */
+.formbuilder-tooltip {
+    display: block;
+    position: absolute;
+    z-index: 9999999;
+
+    max-width: 300px;
+
+    background: #333;
+    background: rgba(0,0,0,.8);
+
+    border-radius: 5px;
+    color: #fff;
+
+    padding: 5px 15px;
+    margin-top: 21px;
+    }
+
+.formbuilder-tooltip:before{
+    position: relative;
+
+    display: block;
+    width: 1px;
+    top: -21px;
+    /*left: 50%;*/
+    content: "";
+
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 0px 8px 16px 8px;
+    }
+
+/* Tooltip for: hint */
+.formbuilder-tooltip.hint {
+    background: #EEE;
+    color: #000;
+}
+.formbuilder-tooltip.hint:before {
+    border-color: #EEE transparent;
+    }
+
+/* Tooltip for: description */
+.formbuilder-tooltip.description {
+    background: #333;
+    color: #FFF;
+}
+.formbuilder-tooltip.description:before {
+    border-color: #333 transparent;
+    }
