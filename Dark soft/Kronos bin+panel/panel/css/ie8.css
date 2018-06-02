@@ -1,0 +1,39 @@
+#login .login-wrapper .control-group input {padding: 0 0 0 46px;}
+#login #bar[data-active="log"] a#log, #login #bar[data-active="reg"] a#reg, #login #bar[data-active="forgot"] a#forgot {
+	background: white;
+	filter: none;
+}
+#header #top-search input#tsearch {	height: 24px;	min-height: 24px !important;}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	min-height: 30px !important;
+}
+#header .dropdown-menu li a:hover {	filter: none;	display: inline-block;	width: 100%;}
+#header .dropdown-menu.messages li .btn.close {background: none; filter: none;}
+#sidebar {position: relative;}
+#sidebar:after {top: 0;	bottom: auto;height: 9999px;z-index: 1;}
+.main {margin-bottom: -55px;}
+#mainnav .nav-list>li.current>a .icon i {color: #fff;}
+.ui-spinner input {border: none;margin-bottom: 0;}
+.datepicker table tbody tr td, 
+.datepicker table thead tr:first-child,
+.datepicker table tr td span.active,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td.selected,
+.datepicker table tr td.selected:hover,
+.datepicker table tr td.selected.disabled,
+.datepicker table tr td.selected.disabled:hover,
+.datepicker table tr td.range.today,
+.datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today.disabled:hover
+{filter:none;box-shadow: none;}
+.nav-tabs > li.last-child > a{border-right: 1px solid #c9c9c9;}
+.tabs-below > .nav-tabs > li.last-child > a, .tabs-below > .nav-tabs > li.last-child > a:hover, .tabs-below > .nav-tabs > li.last-child > a:focus {
+	border-right-color: #c9c9c9;
+}
+.fc-day, .btn-link, .btn-link:active, .btn-link[disabled], .ui-slider .ui-slider-handle , .ui-slider .ui-slider-range, .ui-progressbar .ui-progressbar-value, .ui-dialog .ui-dialog-titlebar-close  {filter: none;}
+.contact-list li .image, .recent-users li .image {width: 40px;height: 40px;}
+.profile-avatar {width: 80px;height: 80px; }
+.profile-avatar img {float: left; padding: 5px;}

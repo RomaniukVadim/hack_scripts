@@ -1,0 +1,20 @@
+.ui-progressbar {
+	height: 14px;
+	text-align: left;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.ui-progressbar .ui-progressbar-value {
+	height: 14px;
+	background: url(../../images/patterns/furley_bg1.png) repeat;
+	margin-left: -1px;
+	margin-top: -1px;
+}
+.ui-progressbar .ui-progressbar-overlay {
+	height: 100%;
+	filter: alpha(opacity=25);
+	opacity: 0.25;
+}
+.ui-progressbar-indeterminate .ui-progressbar-value {
+	background-image: none;
+}

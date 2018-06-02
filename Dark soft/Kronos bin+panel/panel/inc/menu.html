@@ -1,0 +1,93 @@
+<aside id="sidebar">
+				<div class="side-options">
+					<ul>
+						<li><a href="#" id="collapse-nav" class="act act-primary tip" title="Collapse navigation"><i class="icon16 i-arrow-left-7"></i></a></li>
+					</ul>
+				</div>
+
+				<div class="sidebar-wrapper">
+					<nav id="mainnav">
+						<ul class="nav nav-list">
+							<li>
+								<a href="stats.php">
+									<span class="icon"><i class="icon20 i-stats-up"></i></span>
+									<span class="txt">Stats</span>
+								</a>
+							</li>
+							<li>
+								<a href="bots.php">
+									<span class="icon"><i class="icon20 i-screen"></i></span>
+									<span class="txt">Bots</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon"><i class="icon20 i-menu-6"></i></span>
+									<span class="txt">Logging</span>
+								</a>
+								
+								<ul class="sub">
+									<li>
+										<a href="logs.php">
+											<span class="icon"><i></i></span>
+											<span class="txt">Web Logs</span>
+										</a>
+									</li>
+									<?php 
+									if(KLOG_ENABLED == TRUE)
+									{
+										echo("
+										<li>
+											<a href=\"keys.php\">
+												<span class=\"icon\"><i></i></span>
+												<span class=\"txt\">Key Logs</span>
+											</a>
+										</li>"
+										);
+									}
+									?>
+									<li>
+										<a href="blacklist.php">
+											<span class="icon"><i></i></span>
+											<span class="txt">Web Blacklist</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon"><i class="icon20 i-menu-6"></i></span>
+									<span class="txt">Log Parser</span>
+								</a>
+								
+								<ul class="sub">
+									<li>
+										<a href="parserules.php">
+											<span class="icon"><i></i></span>
+											<span class="txt">Parser Rules</span>
+										</a>
+									</li>
+									<li>
+										<a href="parsedlogs.php">
+											<span class="icon"><i></i></span>
+											<span class="txt">Parsed Logs</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="controls.php">
+									<span class="icon"><i class="icon20 i-menu-6"></i></span>
+									<span class="txt">Controls</span>
+								</a>
+							</li>
+							<li>
+								<a href="logout.php">
+									<span class="icon"></span>
+									<span class="txt">Logout</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</aside>
