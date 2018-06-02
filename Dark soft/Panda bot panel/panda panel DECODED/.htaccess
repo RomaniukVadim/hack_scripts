@@ -1,0 +1,12 @@
+Options All -Indexes
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME} !gate/api.php$
+RewriteRule (_reports|files|gate)/.* - [F]
+
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . gate/api.php [L]

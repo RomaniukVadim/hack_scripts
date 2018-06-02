@@ -1,0 +1,58 @@
+          
+        <div class="header-row {header_sub_style}"></div>
+
+        <div class="new-logo-box">
+          <span class="new-logo">Panda {NEWVERSION}</span>           
+        </div>
+
+        <div class="last-login">Last login: {LASTLOGIN}</div>
+
+
+        <div class="sidebar sidebar-new {menu_sub_style}">
+          
+          <ul>
+            <li><a class="{active_stats_main}" href="?m=stats_main">Statistics</a></li>
+            <li><a class="{active_reports_db}" href="?m=reports_db">Reports</a></li>
+            <li><a class="{active_botnet_bots}" href="?m=botnet_bots">Bots</a></li>
+            <li><a class="{active_botnet_scripts}" href="?m=botnet_scripts">Scripts</a></li>
+            <li><a class="{active_port_socks}" href="?botsaction=port_socks&bots[]=&empty=1">Socks</a></li>
+            <li><a class="{active_port_vnc}" href="?botsaction=port_socks&type=vnc&bots[]=&empty=1">VNC</a></li>
+            <li><a class="{active_reports_jn}" href="?m=reports_jn">Jabber</a></li>            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle {active_parser}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parser <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="?m=parser">Templates</a></li>
+                <li><a href="?m=parser&sub=options">Options</a></li> 
+              </ul>
+            </li>
+            <li><a class="{active_api_info}" href="?m=api_info">Api</a></li>
+            <li><a class="{active_inj}" href="?m=inj">WebInjects</a></li>
+            <li><a class="{active_sys}" href="?m=sys_options">Options</a></li>
+           
+            <li><a class="simplered" href="?m=logout">Logout</a></li>
+          </ul>
+
+          <div class="progress-small-container">
+            Total bots: <span id="SMSTAT_TOTAL" class="simpleblue">{SMSTAT_TOTAL}</span>
+            <div class="progress progress-small">
+              <div class="progress-bar" style="width: {SMSTAT_TOTAL_PR}%">
+                
+              </div>
+            </div>
+            Online bots: <span id="SMSTAT_ONLINE" class="simpleblue">{SMSTAT_ONLINE}</span>
+            <div class="progress progress-small">
+              <div class="progress-bar" style="width: {SMSTAT_ONLINE_PR}%">
+                
+              </div>
+            </div>
+            New bots: <span id="SMSTAT_NEW" class="simpleblue">{SMSTAT_NEW}</span>
+            <div class="progress progress-small">
+              <div class="progress-bar" style="width: {SMSTAT_NEW_PR}%">
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+    
