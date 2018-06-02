@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Security Packages">
+      <UniqueIdentifier>{1e52fbf9-a352-419f-870b-3c4e265781d8}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="Common Modules">
+      <UniqueIdentifier>{87c9f520-31d1-4b44-a523-415e0c703bde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Modules\Communication">
+      <UniqueIdentifier>{8c6588bf-b3cf-4080-b59e-3ce82a6ccd62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Modules\Parseur">
+      <UniqueIdentifier>{9e44771d-18f4-407a-8f89-508cf5c366ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Modules\Librairie Modèle">
+      <UniqueIdentifier>{541a9eff-641d-4a77-9b1f-e72ad6a7c0fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Modules\Mémoire">
+      <UniqueIdentifier>{ba6b07a5-6d5b-4632-ad6e-56690630eaa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Modules\System">
+      <UniqueIdentifier>{7fcd7c52-b4e5-4c6c-9dc7-190fbe667193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Modules\Texte">
+      <UniqueIdentifier>{c175e3ec-41d0-4474-bbc7-eb1962a7fc70}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\modules\mod_pipe.cpp">
+      <Filter>Common Modules\Communication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\mod_parseur.cpp">
+      <Filter>Common Modules\Parseur</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\commun\kmodel.cpp">
+      <Filter>Common Modules\Librairie Modèle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\mod_memory.cpp">
+      <Filter>Common Modules\Mémoire</Filter>
+    </ClCompile>
+    <ClCompile Include="sekurlsa.cpp" />
+    <ClCompile Include="sam.cpp" />
+    <ClCompile Include="secrets.cpp" />
+    <ClCompile Include="..\..\modules\mod_system.cpp">
+      <Filter>Common Modules\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Security Packages\msv1_0.cpp">
+      <Filter>Security Packages</Filter>
+    </ClCompile>
+    <ClCompile Include="Security Packages\wdigest.cpp">
+      <Filter>Security Packages</Filter>
+    </ClCompile>
+    <ClCompile Include="Security Packages\livessp.cpp">
+      <Filter>Security Packages</Filter>
+    </ClCompile>
+    <ClCompile Include="Security Packages\msv1_0_helper.cpp">
+      <Filter>Security Packages</Filter>
+    </ClCompile>
+    <ClCompile Include="Security Packages\tspkg.cpp">
+      <Filter>Security Packages</Filter>
+    </ClCompile>
+    <ClCompile Include="Security Packages\kerberos.cpp">
+      <Filter>Security Packages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\mod_text.cpp">
+      <Filter>Common Modules\Texte</Filter>
+    </ClCompile>
+    <ClCompile Include="credman.cpp" />
+    <ClCompile Include="incognito.cpp" />
+    <ClCompile Include="..\..\modules\mod_process.cpp">
+      <Filter>Common Modules\System</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\modules\mod_pipe.h">
+      <Filter>Common Modules\Communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\mod_parseur.h">
+      <Filter>Common Modules\Parseur</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\commun\kmodel.h">
+      <Filter>Common Modules\Librairie Modèle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\mod_memory.h">
+      <Filter>Common Modules\Mémoire</Filter>
+    </ClInclude>
+    <ClInclude Include="sekurlsa.h" />
+    <ClInclude Include="secrets.h" />
+    <ClInclude Include="sam.h" />
+    <ClInclude Include="..\..\modules\mod_system.h">
+      <Filter>Common Modules\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Security Packages\msv1_0.h">
+      <Filter>Security Packages</Filter>
+    </ClInclude>
+    <ClInclude Include="Security Packages\wdigest.h">
+      <Filter>Security Packages</Filter>
+    </ClInclude>
+    <ClInclude Include="Security Packages\livessp.h">
+      <Filter>Security Packages</Filter>
+    </ClInclude>
+    <ClInclude Include="Security Packages\msv1_0_helper.h">
+      <Filter>Security Packages</Filter>
+    </ClInclude>
+    <ClInclude Include="Security Packages\tspkg.h">
+      <Filter>Security Packages</Filter>
+    </ClInclude>
+    <ClInclude Include="Security Packages\kerberos.h">
+      <Filter>Security Packages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\mod_text.h">
+      <Filter>Common Modules\Texte</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\commun\secpkg.h" />
+    <ClInclude Include="credman.h" />
+    <ClInclude Include="incognito.h" />
+    <ClInclude Include="..\..\modules\mod_process.h">
+      <Filter>Common Modules\System</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="sekurlsa.rc" />
+  </ItemGroup>
+</Project>

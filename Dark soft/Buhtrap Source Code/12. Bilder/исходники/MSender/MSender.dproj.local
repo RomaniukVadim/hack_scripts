@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2014.08.09 13:34:20.000.dproj,C:\Users\Serge\Documents\RAD Studio\Projects\Project1.dproj=S:\Projects\#\jman\MSender\MSender.dproj</Transaction>
+    <Transaction>2014.08.09 14:16:02.052.pas,S:\Projects\#\jman\MSender\Unit1.pas=S:\Projects\#\jman\MSender\PayLoad.pas</Transaction>
+    <Transaction>2014.08.09 16:05:24.274.pas,S:\Projects\#\jman\MSender\Unit1.pas=S:\Projects\#\jman\MSender\PhpCrypt.pas</Transaction>
+  </Transactions>
+</BorlandProject>

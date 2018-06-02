@@ -1,0 +1,4 @@
+LIBRARY	"VncDLL"
+EXPORTS	VncStartServer
+EXPORTS	VncStopServer
+

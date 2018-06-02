@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common Modules">
+      <UniqueIdentifier>{255a8a01-9f58-4a47-9d1e-1d5fc9f16419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Modules\Communication">
+      <UniqueIdentifier>{d6070dc8-7a9b-46c0-b75a-5fd6c10f8613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Modules\Parseur">
+      <UniqueIdentifier>{01639990-b135-46fe-8511-84761977c1bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Modules\Librairie Modèle">
+      <UniqueIdentifier>{fa3fed71-2d05-4e39-a46b-59e9b2c83e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Modules\System">
+      <UniqueIdentifier>{e53f7390-cd26-41d0-9f10-ea350fc88e43}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\modules\mod_pipe.cpp">
+      <Filter>Common Modules\Communication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modules\mod_parseur.cpp">
+      <Filter>Common Modules\Parseur</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\commun\kmodel.cpp">
+      <Filter>Common Modules\Librairie Modèle</Filter>
+    </ClCompile>
+    <ClCompile Include="klock.cpp" />
+    <ClCompile Include="..\..\modules\mod_system.cpp">
+      <Filter>Common Modules\System</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\modules\mod_pipe.h">
+      <Filter>Common Modules\Communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modules\mod_parseur.h">
+      <Filter>Common Modules\Parseur</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\commun\kmodel.h">
+      <Filter>Common Modules\Librairie Modèle</Filter>
+    </ClInclude>
+    <ClInclude Include="klock.h" />
+    <ClInclude Include="..\..\modules\mod_system.h">
+      <Filter>Common Modules\System</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="klock.rc" />
+  </ItemGroup>
+</Project>

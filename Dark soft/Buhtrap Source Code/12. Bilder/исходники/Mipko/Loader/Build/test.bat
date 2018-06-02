@@ -1,0 +1,1 @@
+MpLoader.exe -e Project1.exe -t "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /NOCANCEL /NOICONS" -l 1.dll

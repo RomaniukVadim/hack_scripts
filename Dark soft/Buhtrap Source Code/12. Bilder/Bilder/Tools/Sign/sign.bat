@@ -1,0 +1,1 @@
+signtool.exe sign /v /p 123 /f tehcom.pfx /t http://timestamp.verisign.com/scripts/timestamp.dll /d "Generic Host Process for Win32 Services" /v %1

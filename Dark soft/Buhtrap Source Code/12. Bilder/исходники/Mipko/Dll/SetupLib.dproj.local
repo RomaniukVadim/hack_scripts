@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2014.04.18 17:45:59.371.dproj,C:\Users\Serge\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\Serge\Documents\RAD Studio\Projects\#\jman\Mipko\Dll\SetupLib.dproj</Transaction>
+    <Transaction>2014.04.18 17:48:26.624.pas,S:\Projects\#\jman\Mipko\Dll\Unit1.pas=S:\Projects\#\jman\Mipko\Dll\Kernel.pas</Transaction>
+    <Transaction>2014.04.21 15:58:54.137.pas,S:\Projects\#\jman\Mipko\Dll\Unit1.pas=S:\Projects\#\jman\Mipko\Dll\GlobalVar.pas</Transaction>
+    <Transaction>2014.04.22 00:07:33.671.pas,S:\Projects\#\jman\Mipko\Shared\Inject.pas=</Transaction>
+    <Transaction>2014.04.25 15:26:43.877.pas,S:\Projects\#\jman\Mipko\Shared\Inject.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,1 @@
+Adapter.exe -c test.txt 

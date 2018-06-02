@@ -1,0 +1,44 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{63c6141e-e75a-447d-8ec2-a56c0fd05f19}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Projects Include="Dll\SetupLib.dproj" />
+    <Projects Include="Loader\MpLoader.dproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="MpLoader">
+    <MSBuild Projects="Loader\MpLoader.dproj" Targets="" />
+  </Target>
+  <Target Name="MpLoader:Clean">
+    <MSBuild Projects="Loader\MpLoader.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="MpLoader:Make">
+    <MSBuild Projects="Loader\MpLoader.dproj" Targets="Make" />
+  </Target>
+  <Target Name="SetupLib">
+    <MSBuild Projects="Dll\SetupLib.dproj" Targets="" />
+  </Target>
+  <Target Name="SetupLib:Clean">
+    <MSBuild Projects="Dll\SetupLib.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="SetupLib:Make">
+    <MSBuild Projects="Dll\SetupLib.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="MpLoader;SetupLib" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="MpLoader:Clean;SetupLib:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="MpLoader:Make;SetupLib:Make" />
+  </Target>
+  <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
+</Project>

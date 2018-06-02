@@ -1,0 +1,16 @@
+:l
+ping -n 5 localhost
+del /f /q %1
+if exist %1 goto l
+
+set tmp="%2"
+if "%tmp:"=.%"==".." (
+  @echo.
+) else (
+:m
+  ping -n 2 localhost
+  rmdir /s /q %tmp%
+  if exist %tmp% goto m
+)
+
+del %0

@@ -1,0 +1,3 @@
+
+SET V_L1=L1.EXE
+START /MIN %TEMP%\%V_L1%

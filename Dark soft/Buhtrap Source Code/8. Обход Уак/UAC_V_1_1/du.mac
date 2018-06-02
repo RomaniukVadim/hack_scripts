@@ -1,0 +1,73 @@
+; ллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+
+try macro
+assume fs:nothing
+
+push offset Ex_handler
+push fs:[0]
+mov fs:[0],esp
+
+endm
+
+; ллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+
+except macro Finally_
+Ex_handler::
+
+push ebp
+mov ebp,esp
+
+mov eax,[ebp+16]
+mov ecx,Finally_
+mov [eax+0b8h],ecx
+
+pop ebp
+xor eax,eax
+ret 16
+
+endm
+
+; ллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+
+finally macro
+
+pop fs:[0]
+add esp,4
+
+endm
+
+; -------------------------------------------------------------------------
+comment * make unicode string *
+
+db_ macro name,string
+
+len sizestr <string>
+ 
+name label word
+ 
+sstr substr <string>,2,len-2
+% forc n,<sstr>
+db '&n' xor 0deh
+ 
+endm
+db 0
+endm
+
+; -------------------------------------------------------------------------
+
+comment * make unicode string *
+
+du macro name,string
+
+len sizestr <string>
+ 
+name label word
+ 
+sstr substr <string>,2,len-2
+% forc n,<sstr>
+dw '&n'
+ 
+endm
+dw 0
+endm
+

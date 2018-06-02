@@ -1,0 +1,27 @@
+STRINGTABLE
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+{
+1000, "N"
+1001, "http://localhost/test_post.php"
+
+2000, "Config.xml"
+2001, "id="
+
+3000, "NoIPSettings"
+3001, "noip_id="
+3002, "auto_connect=true"
+3003, "FUSClientPath"
+
+4000, "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion"
+4001, "DigitalProductId"
+4002, "InstallDate"
+4003, "RegId"
+4004, "Software\\Microsoft\\Windows\\CurrentVersion\\Run"
+4005, "SYSTEM\\LiteManager\\v3.4\\Server\\Parameters"
+
+5000, "SetHook"
+5001, "80"
+5002, "application/x-www-form-urlencoded"
+5003, "POST"
+5004, "HTTPMethod"
+} 

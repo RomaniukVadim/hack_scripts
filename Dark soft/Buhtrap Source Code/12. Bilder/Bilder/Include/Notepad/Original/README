@@ -1,0 +1,57 @@
+
+                        The Guide
+                       ===========
+
+             README for The Guide, release 2.0.
+             
+What is it?
+-----------
+
+The Guide is a tree-based information management tool. It lets you to
+organize information as nodes in a tree. The information itself is
+maintained as rich text. It is a two-pane, rich-text outliner.
+
+Home Page
+---------
+
+The Guide lives at http://theguide.sourceforge.net/. Details of the
+latest version (and much more) can be found here.
+
+Change Log
+----------
+
+List of changes in each released version of The Guide is listed in
+the file named "CHANGES". They are also available online (in a
+nicer format) at: http://theguide.sourceforge.net/release.html.
+
+Licensing
+---------
+
+The Guide is developed and distributed under the "Apache License 2.0",
+an OSI-approved open source license. For full license text, please see
+the file named "LICENSE", or http://www.apache.org/licenses/LICENSE-2.0.
+
+Installation
+------------
+
+The Guide comes in a Microsoft Installer (.msi) package. This can
+be easily installed (and uninstalled). For those who are allergic
+to installers, the zipped binaries are also available, which can
+be just unpacked into a directory.
+
+Portable Use
+------------
+
+To use The Guide in a portable manner (to carry around in USB
+drives for e.g.), download the zipped binaries, edit the file
+"guide.ini" in a text editor, replacing the line "portable=0"
+with "portable=1". Guide will use the ini file to store all
+preferences/settings and not touch the registry at all.
+
+Contact
+-------
+
+Your feedback, comments and suggestions are more welcome. Please send
+them to mdevan@users.sourceforge.net, or see 
+http://theguide.sourceforge.net/about.html.
+

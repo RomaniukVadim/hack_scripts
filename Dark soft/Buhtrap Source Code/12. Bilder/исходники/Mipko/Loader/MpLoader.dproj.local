@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2014.04.17 14:13:05.482.dproj,C:\Users\Serge\Documents\RAD Studio\Projects\Project1.dproj=S:\Projects\#\jman\Mipko\Loader\MpLoader.dproj</Transaction>
+    <Transaction>2014.04.17 14:21:21.314.pas,S:\Projects\#\jman\Mipko\Loader\Unit1.pas=S:\Projects\#\jman\Mipko\Loader\Kernel.pas</Transaction>
+    <Transaction>2014.04.17 14:43:25.972.pas,S:\Projects\#\jman\Mipko\Loader\Kernel.pas=</Transaction>
+    <Transaction>2014.04.17 14:44:00.730.pas,S:\Projects\#\jman\Mipko\Shared\Kernel.pas=</Transaction>
+    <Transaction>2014.04.17 18:45:06.463.pas,S:\Projects\#\jman\Mipko\Loader\Unit1.pas=S:\Projects\#\jman\Mipko\Loader\Kernel.pas</Transaction>
+    <Transaction>2014.04.18 01:09:00.370.pas,S:\Projects\#\jman\Mipko\Loader\Unit1.pas=S:\Projects\#\jman\Mipko\Loader\WrapFunc.pas</Transaction>
+  </Transactions>
+</BorlandProject>

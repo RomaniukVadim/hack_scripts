@@ -1,0 +1,7 @@
+{.$R .\Res\ExtStr.RES}
+
+{.$DEFINE DBG_OUTPUT}
+
+{$IFDEF RELEASE}
+  {$UNDEF DBG_OUTPUT}
+{$ENDIF}

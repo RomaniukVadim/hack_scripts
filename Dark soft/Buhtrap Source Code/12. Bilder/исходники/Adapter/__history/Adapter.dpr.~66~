@@ -1,0 +1,87 @@
+program Adapter;
+{$I Adapter.inc}
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils,
+  Windows,
+  Crypto in '..\Shared\Crypto.pas',
+  Patterns in '..\Shared\Patterns.pas',
+  MachineID in '..\Shared\MachineID.pas',
+  XmlWrk in 'XmlWrk.pas',
+  PayLoad in 'PayLoad.pas',
+  GlobalVar in 'GlobalVar.pas',
+  HttpWrk in 'HttpWrk.pas',
+  RegWrk in 'RegWrk.pas',
+  PEB in 'PEB.pas';
+
+var
+  ID,
+  FirstParam: string;
+  //i: Integer;
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}  
+procedure Set1ParamStr;
+begin
+  FirstParam := ParamStr(1);
+end;
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+begin
+//  if not IsSystemOk then
+//    begin
+//    {$IFDEF DBG_OUTPUT}
+//      WriteLn('Bad System');
+//    {$ENDIF}
+//      Halt(10);
+//    end
+//  else
+//    MakeInternalKeys;
+
+// { Генерируем ключи шифрования }
+//  if not KeysFromGUID(STRING_CRYPTO_KEY, gK1, gK2, gK3) then
+//    begin
+//    {$IFDEF DBG_OUTPUT}
+//      WriteLn('GenKeys failed!');
+//    {$ENDIF}
+//      Halt(11);
+//    end;
+//
+// { URL }
+//{$IFDEF DBG_OUTPUT}
+//  WriteLn('Gate URL: ' + GateUrl);
+//{$ENDIF}
+//
+// { Генерируем ID }
+//  ID := MakeMachineID_2;
+//{$IFDEF DBG_OUTPUT}
+//  WriteLn('MachineID: ' + ID);
+//{$ENDIF}
+//
+// { Если ID нет, дальше работать нет смысла }
+//  if ID <> '' then
+//    begin
+//      // Заполняем XML/REG конфиг
+//      if not SetXmlConfig(ExtractFilePath(ParamStr(0)) + DecStr(SRV_CFG_FILENAME), ID) then
+//        begin
+//         {$IFDEF DBG_OUTPUT}
+//          WriteLn('XML FAILED!');
+//         {$ENDIF}
+//          Halt(3);
+//         end;
+//
+//      // Отправляем в админку ID
+//      SendID(ID);
+//    {$IFDEF DBG_OUTPUT}
+//      WriteLn('ID sended ok.');
+//    {$ENDIF}
+//    end
+//  else
+//    begin
+//    {$IFDEF DBG_OUTPUT}
+//      WriteLn('ID FAILED!');
+//    {$ENDIF}
+//      Halt(4);
+//    end;
+end.

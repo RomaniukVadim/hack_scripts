@@ -1,0 +1,1 @@
+StrCrypt.exe -d %~dp0

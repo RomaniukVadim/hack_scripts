@@ -1,0 +1,71 @@
+unit RegWrk;
+
+interface
+
+uses
+  Windows;
+
+  function WriteXmlNodeToReg(const ARootKey: DWORD; RegKey, ValName, BinValue: string): Boolean;
+
+  function GetProxyServer: string;
+
+implementation
+
+uses
+  Registry, Crypto;
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+function WriteXmlNodeToReg(const ARootKey: DWORD; RegKey, ValName, BinValue: string): Boolean;
+begin
+  Result := False;
+
+  try
+    with TRegIniFile.Create(KEY_WRITE) do
+      try
+        RootKey := ARootKey;
+        if OpenKey(RegKey, True) then
+          begin
+            WriteBinaryData(ValName, BinValue[1], Length(BinValue));
+            CloseKey;
+            Result := True;
+          end;
+      finally
+        Free;
+      end;
+  except
+   //
+  end;
+end;
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+function GetProxyServer: string;
+const
+  INET_SETTINGS = {#CRYPT 'Software\Microsoft\Windows\CurrentVersion\Internet Settings'}#54#52#27#142#206#166#211#122#215#205#9#14#158#43#187#158#174#52#168#37#185#82#100#130#232#221#180#253#227#251#89#116#136#67#156#183#90#114#69#206#182#223#94#1#215#130#228#208#235#20#19#68#56#10#58#165#167#161#118#30#137{ENDC};
+  PROXY_ENABLE = {#CRYPT 'ProxyEnable'}#54#55#96#87#38#237#38#238#72#155#138#80#36{ENDC};
+  PROXY_SERVER = {#CRYPT 'ProxyServer'}#54#55#96#87#38#237#48#92#175#174#213#31#243{ENDC};
+var
+  Registry: TRegistry;
+begin
+  Result := '';
+  try
+    Registry := TRegIniFile.Create(KEY_READ);
+    with Registry do
+      try
+        RootKey := HKEY_CURRENT_USER;
+        if OpenKey(DecStr(INET_SETTINGS), True) then
+          begin
+            if ValueExists(DecStr(PROXY_ENABLE)) then
+              if ReadInteger(DecStr(PROXY_ENABLE)) = 0 then
+                 Result := ReadString(DecStr(PROXY_SERVER));
+            CloseKey;
+          end;
+      finally
+        Free;
+      end;
+  except
+   //
+  end;
+end;
+
+
+end.

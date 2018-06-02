@@ -1,0 +1,223 @@
+
+Change Log for The Guide:
+-------------------------
+
+For more information please see: http://theguide.sourceforge.net/.
+
+
+v2.0, 13-Dec-2008:
+  Bug Fixes:
+    * Fix crash when deleting last node of tree.
+    * Fix crash when changing node colors via main menu.
+    * Auto save interval was taken to be 1/10th of actual value.
+    * Sporadically new pages might start off with bulletting
+      or numbering set.
+    * Changes to heading styles are not remembered in some cases.
+
+
+v2.0beta1, 9-Aug-2008:
+  Bug Fixes:
+    * Font selection dialog popped up without currently
+      selected font name.
+  Changes:
+    * Code cleanup.
+    * Internal changes for improved localization.
+    * Error message for missing hyperlink targets.
+
+
+v2.0dev4, 20-Jan-2008: ** WORK IN PROGRESS VERSION **
+  Features (since 2.0dev3):
+    + Node icon can be changed.
+    + Nodes can have icons, or checkboxes, both or none.
+    + Command-line utility gdeutil.exe exports to XML.
+    + Title bar shows a '*' when unsaved changes are present.
+  Bug Fixes:
+    * Font for headings greater than level 5 fixed.
+    * Handle leak fix in hyperlink select node dialog.
+    * Fixed .gde file corruption (2.x format) bug.
+    * Collapse All copied current node text to top-level node.
+    * Fixed periodic auto save not working bug.
+
+
+v2.0dev3, 6-Nov-2007: ** WORK IN PROGRESS VERSION **
+  Features:
+    + Portable mode, for use on portable devices.
+    + Last selected node is remembered across sessions.
+    + First visible line per node is remembered within/across
+      sessions.
+  Improvements:
+    + Search dialog appearence, behaviour improvements
+    + Hot key for "paste as text" Ctrl+Shift+V (sf req 1763246)
+  Bug Fixes:
+    * Search dialog used to display only first match in text
+    * Minor bug fixes sf ids: 1727915, 1727249, 1727943
+    * Fixes for better support of east asian languages
+  Changes:
+    + File format updated (from 2.0dev2). Both old version
+      and new version formats can be read. New version will
+      be written.
+
+
+v2.0dev2, 19-Sep-2007: ** WORK IN PROGRESS VERSION **
+  Features:
+    + Proper hyperlinks.
+	+ Link targets are shown in status bar.
+	+ Node expand/collapse state is remembered.
+  Changes:
+    + File format updated. Both old version and new version
+      formats can be read. New version will be written.
+
+
+v2.0dev1, 23-Jul-2007: ** WORK IN PROGRESS VERSION **
+  Features:
+    + Upgraded to Rich Edit 5.0.
+    + Ported to unicode. East european, east asian characters
+      supported fully in tree pane also.
+    + Foreground and background color of nodes in tree pane
+      can be changed via RMB menu.
+    + Node colors are used when printing and exporting also.
+  Changes:
+    + File format updated. Both old version and new version
+      formats can be read. New version will be written.
+
+
+v1.6, 27-May-2007:
+  Bug Fixes:
+    * Custom time format was sometimes not displayed properly in
+      the preferences dialog.
+    * Prevent drag-and-drop of non .gde files from crashing the app.
+    * Behave properly after failure to open a .gde file because of
+      being locked by another instance.
+    * Shifting pages up/down sometimes lost recent unsaved edits.
+
+
+v1.6rc1, 6-May-2007:
+  Features:
+    + Print, print preview and export for single node, subtree or 
+      entire document.
+    + Auto save on close (configurable).
+    + Auto save every 'n' minutes (configurable).
+    + Automatically create backups while opening (configurable).
+    + Single-click (configurable) restore from tray.
+    + Minimize options: Minimize on 'X' button, on 'Esc' key.
+    + Drag-drop revamp: no more menus on drop! Drag moves, ctrl+drag 
+      copies.
+    + Insert date/time, with customizable formats.
+    + New Office 2003-style foreground/background color selectors.
+    + Remember custom colors across sessions.
+    + Line, character counts on the status bar.
+    + Child node count on the status bar.
+    + Expand all/Collapse all entries in tree menu.
+    + Prevent simultaneous edit of same .gde file.
+    + Keyboard shortcut: Ctrl+K strikethrough, Ctrl+, preferences.
+  Bug Fixes:
+    * Fixed Ctrl+C/X/V while renaming nodes
+    * Fixed handle leak in print preferences dialog
+    * Minimize then exit prevented window from showing up correctly 
+      next time
+    * Heading numbers > 10 would be reversed ("1.10" => "1.01")
+
+
+v1.5, 26-Jan-2007:
+  Bug fixes:
+    * Fix for SF bug #1634407: print preview when no printers
+      crashes the application.
+    * Disable print/preview/export when no nodes are present.
+
+
+v1.5rc1, 12-Jan-2007:
+  Features:
+    + Print and print preview of entire document.
+    + Export of entire document into RTF format.
+    + Configurable heading styles for various levels of headings.
+    + Decrease and increase indent menus and toolbar icons.
+    + Remember position and size of main window and panes.
+    + Split recent file list into a separate column in file menu.
+    + Added links to about box.
+    + Changes to text font and color preferences now take effect
+      earlier / more intutively.
+    + Added the CHANGES file (this file).
+  Bug fixes:
+    * Literal "\protect" in text got mangled.
+
+
+v1.4, 4-Dec-2006:
+  Features:
+    + Internal and external hyperlinks.
+    + Seach entire tree or part of it.
+    + Shifted to NSIS installer for smaller installation packages.
+    + Better context menus for tree and text panes.
+    + More shortcuts (Ctrl+Ins for adding top-level page, Ctrl+Tab
+      for switching views), plus included hints for existing shortcuts
+      into top-level and context menus.
+    + Uniform margins all round for text pane, for better readability.
+    + Performance Improvements for moving around in the tree as well
+      as save and load, especially when documents contain embedded images.
+  Bug fixes:
+    * Bug in positioning of font name and size combo boxes in
+      Windows XP themes with large title bars.
+    * Toolbar and statusbar states were not remembered across sessions.
+    * 'Tab' from tree pane could switch to a disabled text pane.
+
+
+v1.3.1, 14-Nov-2006:
+  Bug fixes:
+    * Fix for SF bug #1596295: When an existing guide is opened,
+      it's first top-level node deleted and then saved back, 
+      entire contents of the guide get deleted.  
+
+
+v1.3, 2-Aug-2006:
+  Features:
+    + Configurable fonts and colors for text and tree pane.
+    + User preferences for startup (empty or last used).
+    + Strikethrough button.
+
+
+v1.2.1, 4-Jul-2006:
+  Bug fixes:
+    * Fix for SF bug #1490972: In some circumstances, unsaved
+      data in the right pane might get "forgotten" when the 
+      tree was modified.
+    * Fix for memory leak during "File->New".
+
+
+v1.2, 30-Mar-2006:
+  Features:
+    + Change line spacing.
+    + Enhanced context menu in tree view.
+    + Many keyboard shortcuts.
+    + Keyboard shortcuts help dialog in help menu.
+
+
+v1.1, 5-Mar-2006:
+  Features:
+    + Minimize to system tray option.
+    + Rearrange nodes using drag and drop.
+    + 'Del' key shortcut in tree view.
+    + New icon.
+
+
+v1.0, 5-Oct-2005:
+  Bug fixes:
+    * Current node's text was "lost" in some scenarios.
+    * Code cleanup.
+
+
+v0.9beta2, 9-Jul-2005:
+  Features:
+    + Installer added.
+    + Text pane disabled on startup.
+    + Text pane has informative message on startup.
+  Bug fixes:
+    * Editor pane did not get updated properly at times.
+    * Updated description of .gde files that appear in explorer.
+    * Text was sometimes lost when current node was deleted.
+    * Removed defunct online and context-sensitive help.
+    * Proper detection of whether document had been modified.
+    * Proper title in title bar.
+
+
+v0.9beta1, 8-May-2005:
+    + Initial version.
+
