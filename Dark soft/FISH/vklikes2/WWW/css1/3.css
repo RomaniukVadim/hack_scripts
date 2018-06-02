@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu'), url(http://fonts.gstatic.com/s/ubuntu/v7/l61wsm10hTEpJuizfs2S_g.woff2) format('woff2'), url(http://fonts.gstatic.com/s/ubuntu/v7/c2KTkZ_oLp2UOMwi4GGs9A.woff) format('woff');
+}

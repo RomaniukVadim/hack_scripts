@@ -1,0 +1,6 @@
+<cross-domain-policy>
+<allow-access-from domain="*.vkontakte.ru"/>
+<allow-access-from domain="*.vk.com"/>
+<allow-access-from domain="*.userapi.com"/>
+<allow-access-from domain="*.vk.me"/>
+</cross-domain-policy>

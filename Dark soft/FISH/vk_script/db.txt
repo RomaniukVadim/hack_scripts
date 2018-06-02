@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS `akks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(121) NOT NULL,
+  `pass` varchar(121) NOT NULL,
+  `ip` varchar(100) NOT NULL,
+  `time` int(121) NOT NULL,
+  `frend` varchar(11) NOT NULL,
+  `link` varchar(30) NOT NULL,
+  `token` varchar(300) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `golosa` (
+  `name1` int(11) NOT NULL DEFAULT '10',
+  `name2` int(11) NOT NULL DEFAULT '7'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `golosa` (`name1`, `name2`) VALUES
+(18, 14);

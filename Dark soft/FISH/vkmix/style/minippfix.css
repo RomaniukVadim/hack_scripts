@@ -1,0 +1,209 @@
+/* Using Font Awesome - http://fortawesome.github.com/Font-Awesome */
+@font-face {
+  font-family: "FontAwesome";
+  src: url('font/fontawesome-webfont.eot');
+  src: url('font/fontawesome-webfont.eot?#iefix') format('eot'), url('font/fontawesome-webfont.woff') format('woff'), url('font/fontawesome-webfont.ttf') format('truetype'), url('font/fontawesome-webfont.svg#FontAwesome') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Postfix and Prefix styling start here */
+.ppfix {
+  margin: 0;
+  vertical-align: top;
+  display: inline-block;
+  font-family: Calibri;
+  font-size: 13px;
+  color: #343434;
+  min-width: 150px;
+  height: 20px;
+  background: #fbfbfb;
+  border: 1px solid #cccdcf;
+  padding: 8px 10px;
+  box-shadow: inset 0 2px 3px #e8e8e8;
+}
+
+  .ppfix:focus {
+    outline: none;
+  }
+
+  .pre {
+    margin: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+  }
+  
+    .prefix {
+      vertical-align: top;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      padding: 8px 10px;
+      background: #f2f2f2;
+      border: 1px solid #cccdcf;
+      border-right: 0;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+      -moz-border-radius-topleft: 2px;
+      -moz-border-radius-bottomleft: 2px;
+      -webkit-border-top-left-radius: 2px;
+      -webkit-border-bottom-left-radius: 2px;
+    }
+
+  .post {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+  }
+  
+    .postfix {
+      vertical-align: top;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      padding: 8px 10px;
+      background: #f2f2f2;
+      border: 1px solid #cccdcf;
+      border-left: 0;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      -moz-border-radius-topright: 2px;
+      -moz-border-radius-bottomright: 2px;
+      -webkit-border-top-right-radius: 2px;
+      -webkit-border-bottom-right-radius: 2px;
+    }
+  
+  .prefix,
+  .postfix {
+    font-family: FontAwesome;
+    line-height: 1.5em;
+    font-size: 16px;
+    color: #737373;
+  }
+
+  .prefix.orange,
+  .postfix.orange {
+    background: #ffb700;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYjcwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjhjMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #ffb700 0%, #ff8c00 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb700), color-stop(100%,#ff8c00));
+    background: -webkit-linear-gradient(top,  #ffb700 0%,#ff8c00 100%);
+    background: -o-linear-gradient(top,  #ffb700 0%,#ff8c00 100%);
+    background: -ms-linear-gradient(top,  #ffb700 0%,#ff8c00 100%);
+    background: linear-gradient(to bottom,  #ffb700 0%,#ff8c00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb700', endColorstr='#ff8c00',GradientType=0 );
+    border: 1px solid #e59500;
+    color: #fff;
+  }
+
+  .prefix.magenta,
+  .postfix.magenta {
+    background: #ff82ac;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmODJhYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNzI1ODEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #ff82ac 0%, #f72581 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff82ac), color-stop(100%,#f72581));
+    background: -webkit-linear-gradient(top,  #ff82ac 0%,#f72581 100%);
+    background: -o-linear-gradient(top,  #ff82ac 0%,#f72581 100%);
+    background: -ms-linear-gradient(top,  #ff82ac 0%,#f72581 100%);
+    background: linear-gradient(to bottom,  #ff82ac 0%,#f72581 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff82ac', endColorstr='#f72581',GradientType=0 );
+    border: 1px solid #c60a56;
+    color: #fff;
+  }
+
+  .prefix.dark-grey,
+  .postfix.dark-grey {
+    background: #989fa6;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk4OWZhNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4YTkyOWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #989fa6 0%, #8a929a 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#989fa6), color-stop(100%,#8a929a));
+    background: -webkit-linear-gradient(top,  #989fa6 0%,#8a929a 100%);
+    background: -o-linear-gradient(top,  #989fa6 0%,#8a929a 100%);
+    background: -ms-linear-gradient(top,  #989fa6 0%,#8a929a 100%);
+    background: linear-gradient(to bottom,  #989fa6 0%,#8a929a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#989fa6', endColorstr='#8a929a',GradientType=0 );
+    border: 1px solid #757880;
+    color: #fff;
+  }
+
+  .prefix.green,
+  .postfix.green {
+    background: #b8e172;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I4ZTE3MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3NGFkMzciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #b8e172 0%, #74ad37 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b8e172), color-stop(100%,#74ad37));
+    background: -webkit-linear-gradient(top,  #b8e172 0%,#74ad37 100%);
+    background: -o-linear-gradient(top,  #b8e172 0%,#74ad37 100%);
+    background: -ms-linear-gradient(top,  #b8e172 0%,#74ad37 100%);
+    background: linear-gradient(to bottom,  #b8e172 0%,#74ad37 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8e172', endColorstr='#74ad37',GradientType=0 );
+    border: 1px solid #689b32;
+    color: #fff;
+  }
+
+  .prefix.blue,
+  .postfix.blue {
+    background: #79a8d9;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc5YThkOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1MThlY2UiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #79a8d9 0%, #518ece 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#79a8d9), color-stop(100%,#518ece));
+    background: -webkit-linear-gradient(top,  #79a8d9 0%,#518ece 100%);
+    background: -o-linear-gradient(top,  #79a8d9 0%,#518ece 100%);
+    background: -ms-linear-gradient(top,  #79a8d9 0%,#518ece 100%);
+    background: linear-gradient(to bottom,  #79a8d9 0%,#518ece 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79a8d9', endColorstr='#518ece',GradientType=0 );
+    border: 1px solid #3d81c8;
+    color: #fff;
+  }
+
+  .prefix.red,
+  .postfix.red {
+    background: #ff0000;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiNTAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #ff0000 0%, #b50000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff0000), color-stop(100%,#b50000));
+    background: -webkit-linear-gradient(top,  #ff0000 0%,#b50000 100%);
+    background: -o-linear-gradient(top,  #ff0000 0%,#b50000 100%);
+    background: -ms-linear-gradient(top,  #ff0000 0%,#b50000 100%);
+    background: linear-gradient(to bottom,  #ff0000 0%,#b50000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#b50000',GradientType=0 );
+    border: 1px solid #990000;
+    color: #fff;
+  }
+    
+  span.prefix.email:before, span.postfix.email:before { content: "\f003"; }
+  span.prefix.link:before, span.postfix.link:before { content: "\f0c1"; }
+  span.prefix.external-link:before, span.postfix.external-link:before { content: "\f08e"; }
+  span.prefix.attach:before, span.postfix.attach:before { content: "\f0c6"; }
+  span.prefix.tag:before, span.postfix.tag:before { content: "\f02c"; }
+  span.prefix.home:before, span.postfix.home:before { content: "\f015"; }
+  
+  span.prefix.key:before, span.postfix.key:before { content: "\f084"; }
+  span.prefix.credit-card:before, span.postfix.credit-card:before { content: "\f09d"; }
+  span.prefix.cart:before, span.postfix.cart:before { content: "\f07a"; }
+  span.prefix.user:before, span.postfix.user:before { content: "\f007"; }
+  span.prefix.trash:before, span.postfix.trash:before { content: "\f014"; }
+  span.prefix.folder:before, span.postfix.folder:before { content: "\f07c"; }
+  
+  span.prefix.save:before, span.postfix.save:before { content: "\f0c7"; }
+  span.prefix.marker:before, span.postfix.marker:before { content: "\f041"; }
+  span.prefix.setting:before, span.postfix.setting:before { content: "\f085"; }
+  span.prefix.edit:before, span.postfix.edit:before { content: "\f044"; }
+  span.prefix.bookmark:before, span.postfix.bookmark:before { content: "\f097"; }
+  span.prefix.calendar:before, span.postfix.calendar:before { content: "\f073"; }
+  
+  span.prefix.gplus:before, span.postfix.gplus:before { content: "\f0d5"; }
+  span.prefix.twitter:before, span.postfix.twitter:before { content: "\f099"; }
+  span.prefix.github:before, span.postfix.github:before { content: "\f09b"; }
+  span.prefix.pinterest:before, span.postfix.pinterest:before { content: "\f0d2"; }
+  span.prefix.linkedin:before, span.postfix.linkedin:before { content: "\f0e1"; }
+  span.prefix.facebook:before, span.postfix.facebook:before { content: "\f09a"; }
+  
+  

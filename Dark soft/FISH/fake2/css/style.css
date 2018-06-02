@@ -1,0 +1,16 @@
+.header {background:#4b77a8;height:42px;}
+.well:hover {background:#a6b9d0;}
+.well img{width:100%;}
+.well {padding:10px; padding-bottom:0px;}
+.well p{background:#e8edf3; color:#4c6784;padding:3px;margin-top:10px;}
+.round {
+    border-radius: 100px; /* Радиус скругления */
+width:50px;
+   }
+ .submit {background:#4b77a8;
+ border:none;
+ margin-top:10px;
+ width:150px;
+ height:35px; 
+ color:#fff;}
+ .hed {border:1px solid #dfdede;}

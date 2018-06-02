@@ -1,0 +1,10 @@
+Установка.
+
+1. Импортировать Базу данных ! 
+2. Прописать настройки в файле \include\config.php затем в файле /inc/index.php на 28 строке вставьте адрес вашего сайта
+
+echo '<script type="text/javascript">location.replace("Тут адрес вашего сайта");</script>';
+
+Админпанель
+/index.php?page=vquick_admin
+(сначала нужно авторизоватся)

@@ -1,0 +1,354 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+<html>
+<head>
+<script language="javascript" src="../bitrix/templates/fransh/js/jquery-1.6.1.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Разработка франшиз, создание франшиз, продвижение франшиз, продажа франшиз, каталог франшиз, тренинг по франшизе, тренинг франчайзинга, тренинг франшиза, франшизы, франшиза, франчайзинг" />
+<meta name="description" content="Разработка и продажа франшиз" />
+<link href="../bitrix/js/main/core/css/core.css@14231381675336" type="text/css"  rel="stylesheet" />
+<link href="../bitrix/components/bitrix/main.map/templates/.default/style.css@1421448630175" type="text/css"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'18000','SITE_ID':'s1','USER_ID':'','SERVER_TIME':'1452086422','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'3f90e890afda3dcf991ec60526ab7c86'});</script>
+
+
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@142313817597612"></script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@142313816735278"></script>
+<script type="text/javascript" src="../bitrix/js/main/json/json2.min.js@14214486303467"></script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ls.js@142144863010330"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@14231380203170"></script>
+
+<!-- BEGIN JIVOSITE CODE -->
+<script type='text/javascript'>
+(function(){ var widget_id = '34kd30YyzG';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '../../code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- END JIVOSITE CODE -->
+
+
+
+
+<script type="text/javascript">
+bxSession.Expand(1440, '3f90e890afda3dcf991ec60526ab7c86', false, 'f0c60b4f9c674872e691473ca0bbad2c');
+</script>
+
+
+<title>404 Not Found</title>
+<link rel="shortcut icon" href="../bitrix/templates/fransh/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../bitrix/templates/fransh/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../bitrix/templates/fransh/css/style.css" media="screen" />
+<script language="javascript" src="../bitrix/templates/fransh/js/bitrix-option.js"></script>
+<audio id="soundlib1" preload="auto">
+	<source src="/bitrix/templates/fransh/images/audio_00.mp3"></source>
+</audio>
+<audio id="soundlib2" preload="auto">
+	<source src="/bitrix/templates/fransh/images/start.mp3"></source>
+</audio>
+<audio id="popup" preload="auto">
+	<source src="/bitrix/templates/fransh/images/Pop-up.mp3"></source>
+</audio>
+<audio id="information" preload="auto">
+	<source src="/bitrix/templates/fransh/images/Information.mp3"></source>
+</audio>
+<script>
+  loadbar();
+  
+  function send(a) {
+  var mail = $('.mail'+a).val();
+  var tele = $('.tele'+a).val();
+  var name = $('.name'+a).val();
+  var htm = '';
+  if(mail !== '' && tele!=='' &&  name !== '' ) {
+   if(mail !== 'Ваша почта' && tele !=='Ваш телефон' &&  name !== 'Ваше Имя') {
+    $.ajax({
+                type: "POST",
+                url: "../bitrix/templates/fransh/mail.php",
+                data: 'mail='+mail+'&tele='+tele+'&name='+name,
+                // Выводим то что вернул PHP
+                success: function(result) {
+				$('.form-cont').html(result);
+				setTimeout(function(){
+	 htm += '<center>ЗАЯВКА НА КОНТАКТ</center>';
+	 htm += '<input class="name1 inputs" type="text" name="n" value="Ваше Имя" placeholder="Ваше Имя" onclick="JavaScript:$(this).val(null);"  value="" />';
+	 htm += '<input class="tele1 inputs" type="text" name="t" value="Ваш телефон" placeholder="Ваш телефон" onclick="JavaScript:$(this).val(null);"  value="" />';
+	 htm += '<input class="mail1 inputs" type="text" name="e" value="Ваша почта" placeholder="Ваша почта" onclick="JavaScript:$(this).val(null);"  value="" />';
+	 htm += '<button class="buts" onclick="send(1);">ОТПРАВИТЬ</button>';
+	 $('.form-cont').html(htm);
+	 },4000);
+                }
+        });
+		
+		} else {
+		  $('.form-cont').html('<br/><br/><center>НЕ ЗАПОЛНЕНЫ ВСЕ ПОЛЯ</center>');
+	 setTimeout(function(){
+	 htm += '<center>ЗАЯВКА НА КОНТАКТ</center>';
+	 htm += '<input class="name1 inputs" type="text" name="n" value="Ваше Имя" placeholder="Ваше Имя" onclick="JavaScript:$(this).val(null);"  value="" />';
+	 htm += '<input class="tele1 inputs" type="text" name="t" value="Ваш телефон" placeholder="Ваш телефон" onclick="JavaScript:$(this).val(null);"  value="" />';
+	 htm += '<input class="mail1 inputs" type="text" name="e" value="Ваша почта" placeholder="Ваша почта" onclick="JavaScript:$(this).val(null);"  value="" />';
+	 htm += '<button class="buts" onclick="send(1);">ОТПРАВИТЬ</button>';
+	 $('.form-cont').html(htm);
+	 },2000);
+		}
+		//
+   } else {
+     $('.form-cont').html('<br/><br/><center>НЕ ЗАПОЛНЕНЫ ВСЕ ПОЛЯ</center>');
+	 setTimeout(function(){
+	 htm += '<center>ЗАЯВКА НА КОНТАКТ</center>';
+	 htm += '<input class="name1 inputs" type="text" name="n" value="Ваше Имя" placeholder="Ваше Имя" onclick="JavaScript:$(this).val(null);"  value="" />';
+	 htm += '<input class="tele1 inputs" type="text" name="t" value="Ваш телефон" placeholder="Ваш телефон" onclick="JavaScript:$(this).val(null);"  value="" />';
+	 htm += '<input class="mail1 inputs" type="text" name="e" value="Ваша почта" placeholder="Ваша почта" onclick="JavaScript:$(this).val(null);"  value="" />';
+	 htm += '<button class="buts" onclick="send(1);">ОТПРАВИТЬ</button>';
+	 $('.form-cont').html(htm);
+	 },2000);
+   }
+     
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="clos();">
+<div class="audio act">
+ <div class="ringbase ring1"></div>
+ <div class="ringbase ring2"></div>
+ <div class="pulse"></div>
+</div>
+<div class="up-panel">
+  <div class="up-background">
+	<div class="panel-up">
+	 <div class="logo"><a href="../default.htm"><img src="../bitrix/templates/fransh/images/logo-mini-text8.png"  alt="" /></a></div>
+	 <div class="menu">
+	  
+<ul>
+                                            <li class=""><a href="../razrabotka.php">Разработка</a>
+                                                        </li>
+                                            <li class=""><a href="../zapusk.php">Продвижение</a>
+                                                        </li>
+                                            <li class=""><a href="../prodazha.php">Продажа</a>
+                                                        </li>
+                                            <li class=""><a href="../katalog.php">Каталог франшиз</a>
+                                                        </li>
+                                            <li class=""><a href="../novosti.php">Новости</a>
+                                                        </li>
+                                            <li class=" offs"><a href="../training.php">Тренинг</a>
+                                                        </li>
+            </ul>
+	
+	 </div>
+	 <div class="search"><input type="hidden" class="slid" value="1" />
+	 <input type="hidden" class="revv" value="1" /><input type="hidden" class="time" value="1" />
+	 </div>
+	</div>
+  </div>
+</div>
+<div class="search-panel">
+	<div class="core-search">
+	<form action="http://franshizoff.ru///search/index.php">
+	<div class="search-box"><input type="text" name="q"></div>
+	<div id="search-button">
+			<input type="submit" name="s" id="search-submit-button" value="Поиск" onfocus="this.blur();" >
+			<span class="closesearch"></span>
+	</div>
+	
+	</form>
+	</div></div>
+
+<div class="load-core">
+ <div class="paralax-a "></div>
+ <div class="paralax-b "></div>
+ <div class="paralax-c "></div>
+ <div class="paralax-d "></div>
+</div>
+<div class="mask-core-load">
+ <div class="slide">
+   
+   <div class="bufer-slide"><ul>
+ <li>Студия "Франшизофф":Предоставляем услуги предпринимателям:по разработке франшизы </li>
+ <li>Студия "Франшизофф":Предоставляем услуги предпринимателям:по запуску франчайзинга </li>
+ <li>Студия "Франшизофф":Предоставляем услуги предпринимателям:по продаже франшизы </li>
+ <li>Студия "Франшизофф":Предоставляем услуги инвесторам:по подбору франшизы </li>
+ <li>Студия "Франшизофф":Бесплатное размещение информации о Вашей:франшизе в разделе "Каталог" сайта </li>
+ </ul></div>
+   <div class="prev-slide"><button class="but-prev"></button></div>
+   <div class="view-slide">
+    <div class="v-title ams2"><p>Студия «Franshizoff»</p></div>
+	<div class="v-text">
+	 <div class="v-t ams3"><span>Предоставляем услуги предпринимателям</span></div>
+	 <div class="v-t ams3"><span>Российской Федерации по разработке, запуску и</span></div>
+	 <div class="v-t ams3"><span>продаже франчайзинга</span></div>
+	</div>
+   </div>
+   <div class="next-slide"><button class="but-next"></button></div>
+ </div>
+ <div class="review">
+  <div class="review-title">Популярные услуги студии</div>
+  <div class="review-box">
+    
+	<div class="revtext"></div>
+	</div>
+  <div class="revbufer">
+<title>ОТЗЫВЫ</title>
+<ul>
+ <li><p>Франчайзинговая модель, презентация и договор франчайзинга за 13 дней</p></li>
+ <li><p>Сайт (Landing page) - под ключ на 1С Битрикс (с управлением) для продаж франчайзинга за 7 дней</p></li>
+ <li><p>Дизайн–проект помещения (офис или магазин) для франчайзи за 13 дней</p></li>
+ <li><p>Настройка контекстной рекламы (ЯДирект + Google Adwords) для продаж франчайзинга за 5 дней</p></li>
+ <li><p>Размещение информации о франшизе в каталогах франшиз за 3 дня</p></li>
+ <li><p>Разработка системы продаж франшизы и бизнес-план для франчайзи за 7 дней</p></li>
+ <li><p>Календарно-финансовый план продаж франшизы и инвестиций за 7 дней</p></li>
+</ul></div>
+  
+ </div>
+</div>
+<div class="preview-core">
+ <div class="preview">
+  <div class="big-logo"></div>
+  <div class="status-load">ИДЕТ ЗАГРУЗКА</div>
+  <div class="barload">
+   
+  </div>
+ </div>
+</div>
+<div class="page-content-core">
+ <div class="page-content"><table class="map-columns">
+<tr>
+	<td>
+		<ul class="map-level-0">
+
+		
+			
+
+			
+			
+					<li><a href="../razrabotka.php">Разработка</a></li>
+
+			
+
+			
+		
+			
+
+			
+			
+					<li><a href="../zapusk.php">Продвижение</a></li>
+
+			
+
+			
+		
+			
+
+			
+			
+					<li><a href="../prodazha.php">Продажа</a></li>
+
+			
+
+			
+		
+			
+
+							</ul></td><td><ul class="map-level-0">
+			
+			
+					<li><a href="../katalog.php">Каталог франшиз</a></li>
+
+			
+
+			
+		
+			
+
+			
+			
+					<li><a href="../novosti.php">Новости</a></li>
+
+			
+
+			
+		
+			
+
+			
+			
+					<li><a href="../training.php">Тренинг</a></li>
+
+			
+
+			
+		
+		
+		</ul>
+	</td>
+</tr>
+</table></div>
+ </div>
+<div class="contakt-core">
+ <div class="cont-but">
+  <button class="contakt-but">КОНТАКТЫ</button>
+ </div>
+ <div class="cont-panel">
+  <div class="cont-panel-pager">
+   <div class="cont-form">
+    <div class="form-cont">
+	 <center>ЗАЯВКА НА КОНТАКТ</center>
+	 <input class="name1 inputs" type="text" name="n" value="Ваше Имя" placeholder="Ваше Имя" onclick="JavaScript:$(this).val('');"  value="" />
+     <input class="tele1 inputs" type="text" name="t" value="Ваш телефон" placeholder="Ваш телефон" onclick="JavaScript:$(this).val('');"  value="" />
+     <input class="mail1 inputs" type="text" name="e" value="Ваша почта" placeholder="Ваша почта" onclick="JavaScript:$(this).val('');"  value="" />
+	 <button class="buts" onclick="send(1);">ОТПРАВИТЬ</button>
+	</div>
+   </div>
+   <div class="cont-map"><script type="text/javascript" charset="utf-8" src="../../api-maps.yandex.ru/services/constructor/1.0/js/@sid=rvMf-TwOAcL-1utQYfXFeiSW8sFLNLrM&width=280&height=138"></script></div>
+   <div class="cont-info"><span class="tel-big">+7(499)350-07-09</span>
+<p>
+	 Студия "Франшизофф"<br>
+	 Часы работы: 9:00-18:00<br>
+	 Telegram: @franshizoff<br>
+	 E-mail: <a href="mailto:info@franshizoff.ru">info@franshizoff.ru</a><br>
+</p>
+<p>
+	 VK:&nbsp;<a href="../../https@vk.com/studiofranshizoff" target="_blank">vk.com/studiofranshizoff</a>
+</p></div>
+  </div>
+ </div>
+</div>
+<div class="dw-panel">
+    <div class="dw-background">
+	 <div class="dw-footer">
+	  <div class="panel-footer">
+	   <div class="footer-copy">Студия "Franshizoff"<br/>2016 Все права защищены</div>
+	   <div class="footer-descript">Каждому Бизнесу - успешную франшизу</div>
+	   <div class="footer-develop"><a href="../../franshizoff.ru/default.htm" target="_blank"><img src="../bitrix/templates/fransh/images/box-brand.png"  alt="" /></a></div>
+	  </div>
+	 </div>
+	</div>
+   </div>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter28122831 = new Ya.Metrika({id:28122831,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="../../mc.yandex.ru/watch/28122831" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

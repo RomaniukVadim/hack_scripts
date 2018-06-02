@@ -1,0 +1,62 @@
+# так безопаснее
+php_value register_globals 0 
+# убираем экранирование кавычек 
+php_value magic_quotes_gpc 0 
+# дописываем сессию к URL 
+php_value session.use_trans_sid 1 
+php_value session.cookie_lifetime 0
+# кодировка по-умолчанию
+AddDefaultCharset UTF-8
+
+DirectoryIndex index.php
+Options -Indexes
+
+<Files count.php>
+order allow,deny
+deny from all
+</Files>
+
+
+# задаем соответствие mime типов расширению
+AddType text/vnd.wap.wml;charset=utf-8 .wml
+AddType application/vnd.sonyericsson.mms-template tpl
+AddType application/vnd.wap.wmlc .wmlc
+AddType text/vnd.wap.wmlscript .wmls
+AddType application/vnd.wap.wmlscriptc .wmlsc
+AddType image/vnd.wap.wbmp .wbmp
+AddType application/vnd.eri.thm .thm 
+AddType application/vnd.mophun.application .mpn  
+AddType application/vnd.mophun.certificate .mpc
+AddType text/vnd.sun.j2me.app-descriptor .jad
+Addtype text/x-vmel .mel
+Addtype audio/imelody .imy
+AddType application/vnd.smaf .mmf
+Addtype text/x-vmel .emy
+AddType audio/amr .amr
+AddType audio/x-wav .wav
+AddType application/x-tar .hid
+Addtype image/jpeg .jpg 
+Addtype image/jpeg .jpeg 
+Addtype image/gif .gif 
+Addtype image/png .png 
+Addtype image/bmp .bmp 
+Addtype text/x-imelody .imy 
+Addtype text/x-emelody .emy 
+Addtype text/x-vcard .vcf 
+Addtype text/x-vcalendar .vcs 
+Addtype text/calendar .ics 
+Addtype application/smil .smil 
+Addtype application/smil .smi 
+Addtype application/java-archive .jar 
+Addtype application/vnd.symbian.install .sis 
+Addtype audio/wav .wav 
+Addtype audio/midi .midi 
+Addtype audio/midi .mid 
+Addtype audio/rmf .rmf 
+Addtype application/vnd.wap.mms-message .mms 
+AddType video/flv .flv
+AddType video/mp4 .mp4
+Addtype video/3gpp .3gp
+Addtype application/zip .zip
+Addtype audio/mpeg .mp3
+

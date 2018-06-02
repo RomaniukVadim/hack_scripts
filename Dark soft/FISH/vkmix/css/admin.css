@@ -1,0 +1,547 @@
+#admin_users {
+ line-height: 18px;
+ padding-top: 15px;
+}
+
+.admin_users_user_mini:last-child {
+ border-bottom: none !important;
+ padding-bottom: 0 !important;
+}
+
+.admin_users_user_mini {
+ overflow: hidden;
+ padding-left: 15px;
+ padding-right: 15px;
+ padding-bottom: 5px;
+ margin-bottom: 10px;
+ border-bottom: 1px solid #e4e8ed;
+}
+
+.admin_users_user_mini_avatar {
+ float: left;
+ width: 60px;
+}
+
+.admin_users_user_mini_info {
+ float: left;
+}
+
+.admin_users_user_mini_avatar img {
+ max-width: 50px;
+}
+
+.admin_users_user_mini_other_info {
+ margin-top: 5px;
+}
+
+.overflow_field_user_mini_label {
+ color: gray;
+}
+
+.overflow_field_user_mini_text {
+ 
+}
+
+.admin_users_user_mini_control {
+ float: right;
+ width: 170px;
+}
+
+.admin_users_user_mini_control .admin_users_user_mini_control_menu a {
+ display: block;
+ padding: 4px;
+ padding-left: 8px !important;
+ padding-right: 8px !important;
+ text-decoration: none;
+ text-align: left;
+}
+
+.admin_users_user_mini_control hr {
+ border: 0;
+ border-top: 1px solid #dfe4ea !important;
+ margin-top: 5px;
+ margin-bottom: 5px;
+}
+
+.admin_users_user_mini_control .admin_users_user_mini_control_menu a:hover {
+ background: #e9ecf1;
+}
+
+#settings_balance_admin_users {
+ line-height: 18px;
+}
+
+.settings_balance_admin_users_history {
+ margin-bottom: 10px;
+}
+
+.settings_balance_admin_users_history:last-child {
+ margin-bottom: 0 !important;
+}
+
+.settings_balance_admin_users_history_title {
+ display: inline-block;
+ color: #2B587A;
+}
+
+.settings_balance_admin_users_history_label {
+ color: gray;
+ padding-left: 10px;
+}
+
+.settings_balance_admin_users_history_points_plus {
+ color: green;
+}
+
+.settings_balance_admin_users_history_points_minus {
+ color: #a7020a;
+}
+
+#settings_balance_admin_users_add {
+ background: #f7f7f7;
+ border-bottom: 1px solid #e7e5e5;
+ padding: 20px;
+}
+
+#settings_balance_admin_users {
+ overflow: auto;
+ max-height: 200px;
+ padding: 20px;
+}
+
+#settings_balance_admin_users_add_button {
+ width: 80px;
+ text-align: center;
+}
+
+#settings_balance_admin_users_add_f {
+ overflow: hidden;
+}
+
+#settings_balance_admin_users_add_field {
+ float: left;
+}
+
+#settings_balance_admin_users_add_button_l {
+ float: left;
+}
+
+#settings_balance_admin_users_add_button .blue_button {
+ line-height: 1;
+ padding: 3px;
+ padding-top: 4px !important;
+ padding-left: 18px !important;
+ padding-right: 18px !important;
+ height: 14px;
+}
+
+#settings_balance_admin_users_add_field_input {
+ width: 50px;
+ text-align: center;
+ margin-right: 5px;
+}
+
+#settings_balance_admin_users_add_error {
+ display: inline-block;
+ margin-left: 10px;
+ color: #a7020a;
+}
+
+#settings_balance_admin_users_add_success {
+ display: inline-block;
+ margin-left: 10px;
+ color: green;
+}
+
+#settings_balance_admin_users_pages .page, #admin_history_login_pages .page, #admin_edit_info_box_pages .page, .admin_pages_list_pages .page {
+ padding-left: 5px;
+ padding-right: 5px;
+ padding-bottom: 2px;
+ text-decoration: none !important;
+}
+
+#settings_balance_admin_users_pages .page:hover, #admin_history_login_pages .page:hover,  #admin_edit_info_box_pages .page:hover, .admin_pages_list_pages .page:hover {
+ border-bottom: 4px solid #dae1e8;
+}
+
+#settings_balance_admin_users_pages .page.active, #admin_history_login_pages .page.active, #admin_edit_info_box_pages .page.active, .admin_pages_list_pages .page.active {
+ font-weight: bold;
+ border-bottom: 4px solid #597da3;
+}
+
+
+#settings_balance_admin_users_pages {
+ text-align: left;
+ padding-bottom: 15px;
+}
+
+#admin_history_login {
+ padding: 15px;
+}
+
+#admin_history_login_table {
+ line-height: 18px;
+}
+
+#admin_history_login_table_column {
+ overflow: hidden;
+
+}
+
+.admin_history_login_column {
+ float: left;
+ color: #2B587A;
+ font-size: 12px;
+ font-weight: bold;
+}
+
+#admin_history_login_column1 {
+ width: 200px;
+}
+
+#admin_history_login_column2 {
+ width: 150px;
+}
+
+#admin_history_login_column3 {
+ width: 100px;
+}
+
+#admin_history_login_table_content {
+ overflow: hidden;
+}
+
+#admin_history_login_info {
+ background: #f1f1f1;
+ padding: 15px;
+ line-height: 18px;
+}
+
+.admin_history_login_column_content_overflow {
+ overflow: hidden;
+ margin-top: 10px;
+}
+
+.admin_history_login_column_content1 {
+ float: left;
+ width: 200px;
+}
+
+.admin_history_login_column_content2 {
+ float: left;
+ width: 150px;
+ color: gray;
+}
+
+.admin_history_login_column_content3 {
+ float: left;
+ width: 100px;
+}
+
+#admin_history_login_pages, #admin_edit_info_box_pages {
+ margin-top: 15px;
+ margin-left: 15px;
+}
+
+#admin_edit_info_box {
+ padding: 15px;
+ padding-top: 20px !important;
+ padding-bottom: 20px !important;
+ line-height: 18px;
+}
+
+#admin_edit_info_box .label {
+ width: 125px !important;
+ margin-top: 3px;
+ text-align: right;
+ margin-right: 15px;
+}
+
+#admin_edit_info_box .label_f {
+ margin-top: 3px;
+}
+
+#user_edit_info_name, #user_edit_info_last_name, #user_edit_info_login, #user_edit_info_avatar, #user_edit_info_email, #user_edit_info_vk {
+ width: 230px;
+}
+
+#admin_user_edit_info_error {
+ display: none;
+ margin-bottom: 15px;
+}
+
+#admin_user_edit_info_history_a {
+ margin-top: 10px;
+}
+
+#admin_edit_info_history_box {
+ line-height: 18px;
+ max-height: 350px;
+ overflow: auto;
+ overflow-x: hidden;
+}
+
+.admin_edit_info_history_overflow {
+ padding: 15px;
+ border-bottom: 1px solid #dfe4ea;
+}
+
+#admin_edit_info_history_box .overflow_field:last-child {
+ margin-bottom: 0 !important;
+ padding-bottom: 0 !important;
+}
+
+.admin_edit_info_history_overflow_ftype {
+ padding-bottom: 5px;
+ color: #2B587A;
+}
+
+.admin_edit_info_history_overflow_new_string {
+ color: green;
+}
+
+.admin_edit_info_history_overflow .label {
+ padding-left: 15px;
+}
+
+.admin_edit_info_history_overflow .label {
+ width: 135px !important;
+}
+
+#admin_edit_info_box_info {
+ background: #f8f8f8;
+ border-bottom: 1px solid #f1f1f1;
+ padding: 15px;
+ line-height: 18px;
+}
+
+.admin_edit_info_history_overflow_fsystem {
+ font-size: 10px;
+ color: #444444;
+}
+
+.admin_edit_info_history_overflow_fsystem span {
+ color: gray;
+}
+
+#admin_edit_info_box_none {
+ padding: 20px; 
+ color: gray; 
+ text-align: center; 
+ font-size: 12px;
+}
+
+#admin_site_page_add_content {
+ line-height: 18px;
+}
+
+#admin_site_page_add_content_title {
+ color: #2B587A;
+ font-size: 12px;
+ font-weight: bold;
+ padding: 15px;
+ padding-bottom: 5px !important;
+}
+
+#admin_site_page_add_short_url_content {
+ background: #f1f1f1;
+ padding: 15px;
+ padding-bottom: 0px !important;
+}
+
+#admin_site_page_add_name {
+ width: 569px;
+}
+
+#admin_site_page_add_short_url {
+ width: 400px;
+ background: #f1f1f1 !important;
+ border: 0 !important;
+ padding-left: 0 !important;
+ color: #444444;
+}
+
+#admin_site_page_add_text .wysibb-body {
+ padding: 15px;
+ padding-left: 20px !important;
+ padding-top: 5px !important;
+ padding-bottom: 5px !important;
+ width: 569px;
+ min-height: 250px !important;
+ border: 0 !important;
+ outline: none !important;
+}
+
+#admin_site_page_add_save_hr {
+ border-bottom: 1px solid #f8f8f8;
+}
+
+#admin_site_page_add_save {
+ background: #f1f1f1;
+ padding: 15px;
+ border-top: 1px solid #e4e3e3;
+}
+
+#admin_site_page_add_save_button {
+ width: 135px;
+ text-align: center;
+}
+
+#admin_site_page_edit_save_button {
+ width: 152px;
+ text-align: center;
+}
+
+#admin_site_page_add_short_url_f {
+ margin-bottom: 10px;
+}
+
+#admin_pages_list {
+ line-height: 18px;
+}
+
+.admin_page_overflow {
+ overflow: hidden;
+ padding: 10px;
+ padding-left: 20px !important;
+ padding-right: 20px !important;
+ font-size: 12px;
+ border-bottom: 1px solid #eceff3;
+}
+
+
+.admin_page_overflow_id {
+ float: left;
+ width: 35px;
+ font-weight: bold;
+}
+
+.admin_page_overflow_name {
+ float: left;
+ font-weight: bold;
+ width: 300px;
+}
+
+.admin_page_overflow_date {
+ float: left;
+ color: gray;
+}
+
+.admin_page_overflow_control {
+ float: right;
+}
+
+.admin_page_overflow_control .icons_tab_del1 {
+ display: inline-block;
+ cursor: pointer;
+ opacity: 0.3;
+}
+
+.admin_page_overflow_control .icon_edit_s {
+ cursor: pointer;
+ opacity: 0.4;
+ margin-right: 7px;
+}
+
+.admin_page_overflow_control .icon_edit_s:hover {
+ opacity: 1;
+}
+
+.admin_page_overflow_control .icons_tab_del1:hover {
+ opacity: 1;
+}
+
+#admin_site_page_add_content_title_overflow {
+ overflow: hidden;
+}
+
+#admin_site_page_add_content_title_overflow_left {
+ float: left;
+}
+
+#admin_site_page_add_content_title_overflow_right {
+ float: right;
+ padding: 15px;
+ padding-bottom: 5px !important;
+}
+
+#admin_list_users_page {
+ display: inline-block;
+ margin-right: 15px;
+}
+
+.block_add_check_overflow {
+ overflow: hidden;
+ margin-bottom: 5px;
+}
+
+.block_add_check_left {
+ float: left;
+ width: 20px;
+ margin-top: 3px;
+}
+
+.block_add_check_right {
+ float: left;
+}
+
+#blog_add_new_b {
+ display: block !important; 
+ text-align: center; 
+ margin-bottom: 20px
+}
+
+.user_list_ok_status {
+ display: inline-block;
+ color: green;
+ font-weight: bold;
+}
+
+.user_list_ban_status {
+ display: inline-block;
+ color: #a1000b;
+ font-weight: bold;
+}
+
+#admin_user_banned_textarea {
+ padding: 15px;
+}
+
+#admin_user_banned_textarea_field {
+ width: 456px;
+ height: 80px;
+}
+
+#user_error_msg_blocked {
+ display: none;
+ margin-bottom: 10px;
+}
+
+.pay_stats_overflow {
+ overflow: hidden;
+ padding: 15px;
+ padding-left: 20px !important;
+ border-bottom: 1px solid #e4e8ed;
+}
+
+.pay_stats_overflow:last-child {
+ border-bottom: none !important;
+}
+
+.pay_stat_date {
+ color: gray;
+} 
+
+.pay_stat_telephone {
+ font-size: 12px;
+}
+
+.pay_stat_wm {
+ color: #5b7ba1;
+ font-size: 12px;
+}
+
+.pay_stat_qiwi {
+ color: #b27814;
+ font-size: 12px;
+}

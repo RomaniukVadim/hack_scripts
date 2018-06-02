@@ -1,0 +1,99 @@
+body {
+	background: url(/img/bg.jpg) no-repeat;
+	background-position: center;
+	width: 100%;
+}
+#top_nav {
+  width: 100%;
+  height: 42px;
+  background-color: #507299;
+}
+#bar {
+	width: 100%;
+	height: 42px;
+	background-color: #507299;
+	position: absolute;
+}
+#page_header {
+    position: relative;
+    height: 42px;
+    margin: 0 auto;
+    font-size: 12.5px;
+    padding: 0;
+}
+.head_nav_btns {
+    padding-left: 0px;
+}
+.top_home_link {
+    width: 130px;
+    height: 42px;
+    display: block;
+
+}
+#wrapper {
+	width: 900px;
+	margin: 0 auto;
+}
+#dContent {
+	width: 900px;
+	padding: 15px;
+	margin: 30px auto;
+	text-align: center;
+}
+.t1 {
+	color: #FFFFFF;
+	text-shadow: 0 0 10px black;
+}
+#dContent > h1 {
+	font-size: 50px;
+}
+#dContent > h2 {
+	font-size: 30px;
+}
+#dContent > h3 {
+	font-size: 18px;
+}
+#dContent > button {
+	margin-top: 70px;
+	width: 250px;
+	height: 70px;
+	background-color: #5fb053;
+	border: 0px;
+	color: #FFFFFF;
+	font-size: 18px;
+	border-radius: 100px;
+	box-shadow: 1px -1px #45773E,
+				2px -2px #45773E,
+				3px -3px #45773E,
+				4px -4px #45773E,
+				5px -5px #45773E,
+				-1px 1px #45773E,
+				-2px 2px #45773E,
+				-3px 3px #45773E,
+				-4px 4px #45773E,
+				-5px 5px #45773E;
+}
+#dContent > button:hover {
+	background-color: #68B35D;
+	cursor: pointer;
+}
+#over {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0, .9);
+	z-index: 1000;
+}
+#over > * {
+	z-index: 9999;
+}
+#over > #ov_inner {
+	margin: 17% auto;
+	width: 300px;
+	height: 400px;
+}
+.show {
+	display: block;
+}

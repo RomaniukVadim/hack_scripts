@@ -1,0 +1,812 @@
+@charset "utf-8";
+/*------------------------------------------------------------------
+[Responsive Stylesheet]
+
+Project:    Rhythm
+Version:    1.8.2
+Last change:    27.05.2015
+Primary use:    MultiPurpose Template  
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Small desktop
+2. Tablet landskape
+3. Tablet Portrait
+4. Phone
+5. Small Phone
+6. Max Height 768
+-------------------------------------------------------------------*/
+
+
+/* ==============================
+   Small desktop
+   ============================== */
+
+@media only screen and (max-width: 1366px) {
+	
+    	
+    .inner-nav ul li {
+        margin-left: 15px;
+    }
+	
+}  
+
+@media only screen and (max-width: 1200px) {
+	
+    .inner-nav ul li {
+        margin-left: 8px;
+    }	
+	
+    .hs-wrap {
+        max-width: 540px;
+    }
+    .hs-line-1 {
+        letter-spacing: 40px;
+    }
+	.hs-line-2{
+		font-size: 68px;
+	}
+    .hs-line-12{
+        font-size: 70px;
+        letter-spacing: 0.3em;
+    }
+    .hs-line-13 {
+        font-size: 78px;
+        letter-spacing: 0.195em;
+    }
+    
+    .alt-service-grid {
+        margin-top: -40px;
+    } 
+    .alt-service-item {
+        margin-top: 40px;
+        padding-left: 48px;
+    }
+    .alt-services-title{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .alt-services-image{
+        margin-top: 10px;
+    }
+    
+    .work-grid-5 .work-item{
+        width: 25%;
+    }
+    
+    .mod-breadcrumbs-mini{
+        text-align: right;
+    }
+    
+}
+@media only screen and (max-width: 1199px) {
+    
+    .tpl-alt-tabs{
+        font-size: 13px;
+        letter-spacing: 0.2em;
+    }
+    .tpl-alt-tabs > li{
+        width: 170px;
+    }
+    
+}
+
+/* ==============================
+   Tablet landskape
+   ============================== */
+
+@media only screen and (max-width: 1024px) {
+	
+	.hs-wrap {
+        max-width: 480px;
+		padding-top: 37px;
+		padding-bottom: 43px;
+    }
+    
+    .hs-line-1 {
+        letter-spacing: 30px;
+    }
+	.hs-line-2{
+		font-size: 60px;
+	}
+
+    .hs-line-9 {
+        font-size: 71px;
+    } 
+    .hs-line-10 {
+        padding: 10px 14px;
+        letter-spacing: 1px;
+    }
+    .hs-line-10 > span {
+        margin: 0 1px;
+    }
+    
+    .benefit-item {
+        width: 300px;
+        padding: 15px 32px;
+    }
+    .split-section-headings {
+        width: 30%;
+    }	
+    .split-section-content {
+        width: 70%;
+    }
+    
+	.split-section-headings .section-title{
+		font-size: 26px;
+		letter-spacing: 2px;
+	}
+
+    .page-section{
+        padding: 50px 0;
+        
+    }
+    .page-section, .home-section, .small-section{
+        background-attachment: scroll;
+    }
+	
+    .owl-pagination {
+        bottom: 25px;
+    }
+    .section-bot-image {
+        margin: 120px 0 -120px;
+    }
+	
+    
+    .lp-item {
+        width: 50%;
+    }
+    .lp-item:nth-child(4n + 5){ 
+        clear: none; 
+    }
+    .lp-item:nth-child(2n + 3) {        
+        clear:left;
+    }
+    .lp-title, .lp-author{
+        font-size: 13px;
+    }
+
+}
+  
+@media only screen and (max-width: 992px) {
+    
+    .hs-line-1 {
+        letter-spacing: 23px;
+    }
+    .hs-line-13 {
+        letter-spacing: 0.17em;
+    }
+    
+    .mod-breadcrumbs:not(.align-center):not(.mod-breadcrumbs-mini){
+        text-align: left !important;
+    }
+    
+    .tpl-alt-tabs > li{
+        width: 200px;
+    }
+  	
+	.split-section-headings,
+	.split-section-headings.left,
+	.split-section-headings.right,
+	.split-section-content,
+	.split-section-content.left,
+	.split-section-content.right{
+		float: none !important;
+		width: auto;
+	}
+	
+	.split-section-headings .section-title{
+		font-size: 35px;
+		letter-spacing: 5px;
+	}
+	
+    .banner-text {
+        text-align: center;
+    } 
+    
+    .banner-image {
+        margin: 40px 0;
+    }
+
+	.team-item-name{
+		font-size: 13px;
+	}
+	
+    .features-icon {
+        font-size: 64px;
+    } 
+	.features-title {
+        font-size: 20px;
+    }
+	.features-descr{
+		font-size: 14px;
+	}
+	
+	.work-item,
+	.work-grid-3 .work-item,
+    .container .work-grid-3 .work-item,
+    .work-grid-5 .work-item{
+        width: 50%;
+    }
+     
+    
+    .blog-item-date {
+        border:none;
+    }
+	
+	
+}
+  
+  
+/* ==============================
+   Tablet Portrait
+   ============================== */
+  
+@media only screen and (max-width: 768px) {
+
+	.hs-wrap {
+        max-width: 400px;
+    }
+	.hs-line-2{
+		font-size: 50px;
+	}
+    
+    .hs-line-7 {
+        font-size: 50px;
+    }
+	
+	.page-section {
+        padding: 50px 0;
+    }	
+    .small-section {
+        padding: 50px 0;
+    }
+    .small-title{
+        font-size: 18px;
+    }
+	
+	.owl-pagination {
+        bottom: 17px;
+    }
+	
+	.section-bot-image {
+        margin: 70px 0 -70px;
+    }
+    
+	
+    .tpl-minimal-tabs > li {
+        padding: 0 5px;
+    }
+	
+		
+	.benefit-item{
+		width: 264px;
+	}
+	
+	.count-descr{
+		margin-bottom: 30px;
+	}	
+    
+	.alt-service-grid{
+	margin-top: -30px;
+    }
+    .alt-service-item {
+        margin-top: 30px;
+    }
+
+	.works-filter a{
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 4px;
+	}
+	
+    .blog-item {
+        margin-bottom: 50px;
+    }
+	.blog-item-date{
+		top: 0;
+		left: -100px;
+	}
+	.blog-item-title{
+		font-size: 20px;
+	}
+    .blog-item-title .small{
+        font-size: 15px;
+    }
+	.blog-item-body{
+		font-size: 14px;
+	}
+    .blog-media{
+        margin-bottom: 15px;
+    }
+    .blog-item-body .small{
+		font-size: 13px;
+	}
+
+    
+    #map-canvas{
+        height: 300px;
+    }
+    
+    .fm-logo-wrap{
+        top: 17px;
+        left: 17px;
+    }
+    .fm-button{
+        top: 17px;
+        right: 17px;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+	
+	.hs-wrap {
+        max-width: 320px;
+		padding-top: 27px;
+		padding-bottom: 33px;
+    }
+    .hs-line-1 {
+        font-size: 24px;
+    }
+	.hs-line-2{
+		font-size: 36px;
+	}	
+	.hs-line-3 {
+        font-size: 13px;
+    }
+	.hs-image{
+		display: none;
+	}
+    
+    .hs-wrap-1{
+        max-width: 240px;
+    }	
+    .hs-line-5{
+        font-size: 44px;
+        letter-spacing: 0.28em;
+    }
+    .hs-line-6{
+        font-size: 16px;
+    }
+    .hs-line-7{
+        font-size: 32px;
+    }
+	
+    .hs-line-9{
+        font-size: 48px;
+    } 
+    .hs-line-10 {
+        padding: 5px 8px;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+    .hs-line-10 > span {
+        margin: 0;
+    }
+    
+    .hs-line-11{
+        font-size: 24px;
+    }
+    
+    .hs-line-12{
+        font-size: 44px;
+    }
+    .hs-line-13{
+        font-size: 60px;
+        letter-spacing: 0.1em;
+    }
+    .hs-line-15{
+        font-size: 32px;
+    }
+    
+    .team-item{
+        max-width: 370px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .alt-features-grid {
+        margin-top: -30px;
+    } 
+    .alt-features-item {
+        margin-top: 30px;
+    }
+
+	.benefit-item{
+		width: 230px;
+		padding: 0;
+	}
+	
+	.benefit-item:hover:after{
+		display: none;
+	}
+	
+	.wide-heading {
+        font-size: 32px;
+		letter-spacing: 2px;
+    }
+	
+	.works-filter a{
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 4px;
+		width: 46%;
+		font-size: 11px;
+	}	
+	
+	.blog-item-date{
+		width: auto;
+		position: relative;
+		top: auto;
+		left: auto;
+		padding: 0;
+		text-align: left;
+	}
+	.date-num{
+		display: inline !important;
+		margin: 0 5px 10px 0;
+	}
+    .sidebar {
+        margin-top: 50px;
+    } 
+    
+    blockquote p {
+        font-size: 20px;
+    }
+    
+    blockquote footer {
+        margin-top: 0;
+        font-size: 12px;
+    }   
+
+    .banner-content {
+        text-align: center;
+    } 
+    .banner-image {
+        text-align: center;
+    }
+    
+    
+    .cf-left-col,
+    .cf-right-col{
+        width: auto;
+        margin-right: 0;
+        float: none;
+    }
+	
+    .section-more,
+    .section-more.left,
+    .section-more.right{
+        float: none !important;
+        display: block;
+    }
+    
+    .big-icon{
+        width: 60px;
+        height: 60px;
+        line-height: 56px;
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+    
+    .blog-slide-info{
+        padding: 10px;
+    }
+    .blog-slide-title{
+        font-size: 12px;
+    }
+    .blog-slide-data{
+        display: none;
+    }
+    
+    .top-bar{
+        min-height: 0;
+    }
+    .top-links{
+        float: none !important;
+        padding: 5px 0;
+        text-align: center;
+    }
+    .top-links li,
+    .top-links li:last-child{
+        float: none;
+        border:none;
+        display: inline-block;
+    }
+    .top-links li a{
+        display: inline-block;
+        min-width: 0;
+        height: auto;
+        line-height: 1;
+        padding: 0 5px;
+    }
+    .top-links li a:hover,
+    .top-bar.dark .top-links li a:hover{
+        background: none;
+    }
+    
+    .side-panel{
+        padding-bottom: 20px;
+    }
+    .sp-logo-wrap{
+        max-width: 100px;
+        margin: 0 auto;
+    }
+    .sp-logo-wrap .logo{
+        padding: 20px 0 0 0;
+    }
+    .sp-menu-links a{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .sp-social-links{
+        width: auto;
+        position: static;
+        padding-bottom: 10px;
+    }
+}
+
+
+/* ==============================
+   Phone
+   ============================== */
+  
+@media only screen and (max-width: 480px) {
+    
+    .btn-mod.btn-large {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+    .form input[type="text"].input-lg,
+    .form input[type="email"].input-lg,
+    .form input[type="number"].input-lg,
+    .form input[type="url"].input-lg,
+    .form input[type="search"].input-lg,
+    .form input[type="tel"].input-lg,
+    .form input[type="password"].input-lg,
+    .form input[type="date"].input-lg,
+    .form input[type="color"].input-lg,
+    .form select.input-lg{
+        height: 38px;
+    }
+	.hs-line-1 {
+        font-size: 20px;
+        letter-spacing: 18px;
+    }
+	.hs-line-2{
+		font-size: 28px;
+	}
+    .hs-line-6 {
+        font-size: 15px;
+    }
+    .hs-line-7 {
+        font-size: 28px;
+    }
+    .hs-line-8 {
+        font-size: 12px;
+    } 
+    .hs-line-9 {
+        font-size: 42px;
+    } 
+    .hs-line-11 {
+        font-size: 20px;
+        letter-spacing: 0.2em;
+    } 
+    .hs-line-12 {
+        font-size: 32px;
+    }
+    .hs-line-13 {
+        font-size: 30px;
+        letter-spacing: 0.1em;
+    }
+    .hs-line-14{
+        font-size: 24px;
+        letter-spacing: 0.3em;
+    }
+    .hs-line-15{
+        font-size: 24px;
+    }
+   
+   .scroll-down {
+        bottom: 10px;
+		height: 34px;
+		line-height: 34px;
+    }
+    .scroll-down-icon {
+        width: 22px;
+        margin-left: -11px;
+    }	
+	.scroll-down span{
+		display: none;
+	}
+	
+	.nav-bar-compact{
+		top: 0;
+		left: 0;
+	}
+	
+	
+	.page-section {
+        padding: 50px 0;
+    }
+    .small-section {
+        padding: 30px 0;
+    }
+	
+	.owl-pagination {
+        bottom: 10px;
+    }	
+    
+    .owl-prev, .owl-next {
+    	display: none;
+    }
+    .owl-page {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+	
+	.section-bot-image {
+        margin: 50px 0 -50px;
+    }
+	
+    .section-title,
+	.split-section-headings .section-title,
+	.wide-heading {
+        font-size: 24px;
+		letter-spacing: 2px;
+    }	
+    .section-heading,
+	.sub-heading{
+        font-size: 15px;
+    } 
+	.section-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+	
+	.tpl-minimal-tabs > li {
+        padding: 0;
+    }
+    .tpl-minimal-tabs > li > a {
+        padding: 6px 10px 5px;
+    }
+    .tpl-alt-tabs{
+        font-size: 12px;
+        letter-spacing: 0.1em;
+    }
+    .tpl-alt-tabs > li{
+        width: 120px;
+    }
+    .alt-tabs-icon{
+        font-size: 32px;
+    }
+	
+    .work-container {
+        padding: 30px 0;
+    }
+	.margin-bot{
+        margin-bottom: 30px;
+    }
+	
+	.section-text, 
+	.text{
+		line-height: 1.7;
+	}
+		
+	.count-number{
+		font-size: 32px;
+	}
+	.count-title{
+		font-size: 12px;
+	}
+
+	
+    .works-filter a{
+		width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+	}	
+	
+	.work-item,
+    .work-grid-2 .work-item,
+	.work-grid-3 .work-item,
+    .container .work-grid-3 .work-item,
+    .work-grid-5 .work-item {
+        width: 100%;
+    }	
+    
+	.work-full-text{
+		margin-top: 30px;
+	}
+	.work-full-title{
+		font-size: 20px;
+	}
+	
+	.blog-container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .blog-item-title{
+        font-size: 16px;
+    }
+
+	.blog-item-q p{
+		font-size: 16px;
+	}
+	.comment-avatar{
+		width: 30px;
+		margin-top: 7px;
+	}
+    
+    .comment-item{
+        font-size: 13px;
+    }
+	
+	.separ-space{
+		display: block;
+		height: 10px;
+	}
+    
+    
+    .bot-menu-item{
+        font-size: 16px;
+    }
+    
+    #map-canvas {
+        height: 300px;
+    }
+    
+   .fixed-height-small{
+        min-height: 300px;
+    }
+    .fixed-height-medium{
+        min-height: 350px;
+    }
+    .fixed-height-large{
+        min-height: 400px;
+    }
+    
+    .tpl-tabs > li{
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    .tpl-tabs > li.active a{
+        background: #f5f5f5 !important;
+    }
+    
+    .fm-menu-links a{
+        font-size: 14px;
+    }
+}
+
+
+/* ==============================
+   Small Phone
+   ============================== */
+  
+@media only screen and (max-width: 319px) {
+	
+  	.nav-social-links{
+  		display: none;
+  	}
+}
+
+
+/* ==============================
+   Max Height 768
+   ============================== */
+
+@media only screen and (max-height: 767px) {
+
+    .sp-social-links {
+        padding-bottom: 10px;
+        position: static;
+        width: auto;
+    }
+}

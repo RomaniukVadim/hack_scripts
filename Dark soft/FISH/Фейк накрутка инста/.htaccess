@@ -1,0 +1,18 @@
+AddDefaultCharset UTF-8
+
+<Files config.cfg>
+	order allow,deny
+	deny from all
+</files>
+<Files password.cfg>
+	order allow,deny
+	deny from all
+</files>
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*) index.php [QSA]

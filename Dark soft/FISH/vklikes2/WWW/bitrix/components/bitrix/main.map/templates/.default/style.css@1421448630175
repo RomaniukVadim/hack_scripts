@@ -1,0 +1,11 @@
+ul.map-level-0 a {
+	font-weight: bold;
+}
+
+ul.map-level-1 a, ul.map-level-2 a, ul.map-level-3 a {
+	font-weight: normal;
+}
+
+.map-columns td {
+	vertical-align: top;
+}

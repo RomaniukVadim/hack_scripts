@@ -1,0 +1,260 @@
+@import url(http://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic);
+
+* {
+	margin: 0;
+	padding: 0;
+	transition: all 200ms linear;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+
+body {
+	font: 12px Arial, sans-serif;
+	background: #F5F5F5;
+	color: #000;
+}
+
+a {
+	text-decoration: none;
+	color: #1EACE1;
+}
+
+h1 {
+	font-family: 'Play', Arial, sans-serif;
+	font-size: 20px;
+	color: #1EACE1;
+	width: 100%;
+	border-bottom: 1px solid #1EACE1;
+}
+
+.wrapper {
+	width: 100%;
+	min-width: 1000px;
+}
+
+.center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+ 
+.reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+}
+ 
+.clr {
+	clear: both;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	background: #000;
+	font-family: 'Play', Arial, sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+.header a {
+	color: #fff;
+}
+
+.header-fix {
+	width: 1000px;
+	height: 40px;
+	margin: 0 auto;	
+}
+
+.logo {
+	font-size: 42px;
+	line-height: 36px;
+	float: left;
+}
+
+.logo a {
+	color: #1EACE1;
+}
+
+.menu {
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px
+}
+
+.menu a {
+	font-size: 16px;
+	line-height: 40px;
+	margin-left: 10px;
+	margin-right: 10px
+}
+
+.panel {
+	font-size: 16px;
+	line-height: 40px;
+	float: right;
+}
+
+.notice {
+	border-right: 1px solid #1EACE1;
+	border-left: 1px solid #1EACE1;
+	border-bottom: 1px solid #1EACE1;
+	padding: 10px;
+	width: 980px;
+	margin: 0 auto;
+	box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	font: 20px 'Play', Arial, sans-serif;
+	text-transform: uppercase;
+	background: #F2C316;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+	border-right: 1px solid #1EACE1;
+	border-left: 1px solid #1EACE1;
+	border-bottom: 1px solid #1EACE1;
+	padding: 10px;
+	width: 980px;
+	margin: 0 auto;
+	box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	background: #F5F5F5;
+}
+
+.block_game {
+	box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	width: 316.5px;
+	height: 200px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 10px;
+	float: left;
+	color: #fff;
+}
+
+.block_game a {
+	color: #fff;
+}
+
+.block_img {
+	height: 170px;
+	overflow: hidden;
+}
+
+.block_img img {
+	width: 316.5px;
+}
+
+.block_b {
+	width: 306.5px;
+	height: 20px;
+	padding: 5px;
+	background: #4C6B22;
+	font: 14px 'Play', Arial, sans-serif;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+input, select {
+	padding: 5px;
+	border: 1px solid #1EACE1;
+}
+
+input {
+	width: 200px;
+}
+
+.captcha_block img{
+	border: 1px solid #1EACE1;
+	float: left;
+}
+
+.captcha_block input{
+	width: 120px;
+	height: 40px;
+	float: left;
+	font-size: 34px;
+}
+
+.button_r {
+	width: 980px;
+	font: 20px 'Play', Arial, sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	background: rgb(76, 107, 34);
+	border-radius: 5px;
+	box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	line-height: 50px;
+	border: 0;
+	cursor: pointer;
+}
+
+.button_r:hover, .block_b:hover {
+	background: rgba(76, 107, 34, 0.9);
+}
+
+.button_r:active, .block_b:active {
+	background: #415B1D;
+}
+
+progress {
+	border: 0;
+	width: 980px;
+	height: 50px;
+	background: #9C9C9C;
+	box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+progress::-webkit-progress-bar {
+	border: 0;
+	width: 980px;
+	height: 50px;
+	background: #9C9C9C;
+	box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+progress::-webkit-progress-value {
+    background: #000;
+}
+
+progress::-moz-progress-bar {
+    background: #000;
+}
+
+.progress_text {
+	width: 980px;
+	height: 50px;
+	font: 20px 'Play', Arial, sans-serif;
+	line-height: 50px;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	margin-top: -50px;
+}
+
+.replace_content {
+	font-family: 'Play', Arial, sans-serif;
+	font-size: 32px;
+	color: #1EACE1;
+	text-align: center;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	text-align: center;
+	margin: 10px;
+	color: #9C9C9C;
+}

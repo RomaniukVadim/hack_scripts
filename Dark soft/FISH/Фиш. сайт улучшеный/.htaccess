@@ -1,0 +1,46 @@
+Options All -Indexes
+AddDefaultCharset UTF-8
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L]
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteRule ^([a-zA-Z0-9_-]+)$ /index.php?id=$1 [L,QSA]
+
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4.0[678] no-gzip
+BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+</ifModule>
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+# Bad Request
+ErrorDocument 400 "400 - Bad Request."
+# Authorization Required
+ErrorDocument 401 "401 - Authorization Required."
+# Forbidden
+ErrorDocument 403 "403 - Access Denied."
+# Not found
+ErrorDocument 404 "404 - Not Found."
+# Method Not Allowed
+ErrorDocument 405 "405 - Method Not Allowed."
+# Request Timed Out
+ErrorDocument 408 "408 - Request Timed Out."
+# Request URI Too Long
+ErrorDocument 414 "414 - Request URI Too Long."
+# Internal Server Error
+ErrorDocument 500 "500 - Internal Server Error."
+# Not Implemented
+ErrorDocument 501 "501 - Not Implemented."
+# Bad Gateway 
+ErrorDocument 502 "502 - Bad Gateway."
+# Service Unavailable 
+ErrorDocument 503 "503 - Service Unavailable."
+# Gateway Timeout
+ErrorDocument 504 "504 - Gateway Timeout."

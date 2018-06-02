@@ -1,0 +1,566 @@
+.award-content .col-sidebar .container-fluid .row .col-xs-12 {
+    min-height: 2210px;
+}
+
+.no-pad {
+    padding: 0;
+}
+.side-pad-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.page-wrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.col-main {
+    margin-right: 60px;
+    width: calc(100% - 360px);
+}
+.award-content {
+    background: url('http://oops.ru/images/award-2016/bg-award-page.gif') repeat center;
+}
+.nomination-content {
+    background: url('http://oops.ru/images/award-2016/bg-nomination-01.png') repeat center;
+}
+.award-content > .container {
+    background-color: transparent;
+}
+.col-sidebar > .container-fluid > .row > div {
+    background-color: #fff;
+}
+.content-wrapper > h2 {
+    font-weight: normal;
+    font-size: 36px;
+    margin: 24px 0;
+}
+.section-header {
+    padding: 0 15px;
+    text-align: center;
+    min-height: 130px;
+}
+.section-header h1 {
+    color: #fff;
+    font-size: 46px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 55px 0 10px;
+}
+.section-header h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 40px;
+    font-weight: normal;
+}
+.category-block {
+    padding: 0 20px 20px 40px;
+    margin-bottom: 45px;
+    background-color: #fff;
+}
+.category-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #000;
+    margin: 0 -20px 40px -40px;
+}
+.col-nomination {
+    padding: 0 20px 0 0;
+}
+.nomination-tab, .nomination-tab:focus {
+    display: block;
+    height: 120px;
+    line-height: 100px;
+    color: #fff;
+    background: #f09;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 10px;
+}
+.nomination-tab:hover, .nomination-tab.hover {
+    background: #f09;
+    color: #fff;
+}
+.nomination-tab > span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.nomination-tab-3, .nomination-tab-3:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-3.jpg'); }
+.nomination-tab-3:hover, .nomination-tab-3.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-3.gif'); }
+.nomination-tab-22, .nomination-tab-22:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-3.jpg'); }
+.nomination-tab-22:hover, .nomination-tab-22.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-3.gif'); }
+.nomination-tab-46, .nomination-tab-46:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-3.jpg'); }
+.nomination-tab-46:hover, .nomination-tab-46.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-3.gif'); }
+
+.nomination-tab-4, .nomination-tab-4:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-4.jpg'); }
+.nomination-tab-4:hover, .nomination-tab-4.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-4.gif'); }
+.nomination-tab-27, .nomination-tab-27:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-4.jpg'); }
+.nomination-tab-27:hover, .nomination-tab-27.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-4.gif'); }
+.nomination-tab-51, .nomination-tab-51:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-4.jpg'); }
+.nomination-tab-51:hover, .nomination-tab-51.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-4.gif'); }
+
+.nomination-tab-5, .nomination-tab-5:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-5.jpg'); }
+.nomination-tab-5:hover, .nomination-tab-5.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-5.gif'); }
+.nomination-tab-23, .nomination-tab-23:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-5.jpg'); }
+.nomination-tab-23:hover, .nomination-tab-23.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-5.gif'); }
+.nomination-tab-47, .nomination-tab-47:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-5.jpg'); }
+.nomination-tab-47:hover, .nomination-tab-47.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-5.gif'); }
+
+.nomination-tab-6, .nomination-tab-6:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-6.jpg'); }
+.nomination-tab-6:hover, .nomination-tab-6.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-6.gif'); }
+.nomination-tab-24, .nomination-tab-24:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-6.jpg'); }
+.nomination-tab-24:hover, .nomination-tab-24.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-6.gif'); }
+.nomination-tab-48, .nomination-tab-48:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-6.jpg'); }
+.nomination-tab-48:hover, .nomination-tab-48.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-6.gif'); }
+
+.nomination-tab-7, .nomination-tab-7:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-7.jpg'); }
+.nomination-tab-7:hover, .nomination-tab-7.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-7.gif'); }
+.nomination-tab-25, .nomination-tab-25:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-7.jpg'); }
+.nomination-tab-25:hover, .nomination-tab-25.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-7.gif'); }
+.nomination-tab-49, .nomination-tab-49:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-7.jpg'); }
+.nomination-tab-49:hover, .nomination-tab-49.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-7.gif'); }
+
+.nomination-tab-8, .nomination-tab-8:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-8.jpg'); }
+.nomination-tab-8:hover, .nomination-tab-8.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-8.gif'); }
+.nomination-tab-26, .nomination-tab-26:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-8.jpg'); }
+.nomination-tab-26:hover, .nomination-tab-26.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-8.gif'); }
+.nomination-tab-50, .nomination-tab-50:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-8.jpg'); }
+.nomination-tab-50:hover, .nomination-tab-50.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-8.gif'); }
+
+.nomination-tab-9, .nomination-tab-9:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-9.jpg'); }
+.nomination-tab-9:hover, .nomination-tab-9.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-9.gif'); }
+.nomination-tab-33, .nomination-tab-33:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-9.jpg'); }
+.nomination-tab-33:hover, .nomination-tab-33.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-9.gif'); }
+.nomination-tab-57, .nomination-tab-57:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-9.jpg'); }
+.nomination-tab-57:hover, .nomination-tab-57.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-9.gif'); }
+
+.nomination-tab-10, .nomination-tab-10:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-10.jpg'); }
+.nomination-tab-10:hover, .nomination-tab-10.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-10.gif'); }
+.nomination-tab-31, .nomination-tab-31:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-10.jpg'); }
+.nomination-tab-31:hover, .nomination-tab-31.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-10.gif'); }
+.nomination-tab-52, .nomination-tab-52:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-10.jpg'); }
+.nomination-tab-52:hover, .nomination-tab-52.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-10.gif'); }
+
+.nomination-tab-11, .nomination-tab-11:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-11.jpg'); }
+.nomination-tab-11:hover, .nomination-tab-11.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-11.gif'); }
+.nomination-tab-30, .nomination-tab-30:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-11.jpg'); }
+.nomination-tab-30:hover, .nomination-tab-30.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-11.gif'); }
+.nomination-tab-54, .nomination-tab-54:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-11.jpg'); }
+.nomination-tab-54:hover, .nomination-tab-54.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-11.gif'); }
+
+.nomination-tab-12, .nomination-tab-12:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-12.jpg'); }
+.nomination-tab-12:hover, .nomination-tab-12.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-12.gif'); }
+.nomination-tab-32, .nomination-tab-32:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-12.jpg'); }
+.nomination-tab-32:hover, .nomination-tab-32.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-12.gif'); }
+.nomination-tab-56, .nomination-tab-56:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-12.jpg'); }
+.nomination-tab-56:hover, .nomination-tab-56.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-12.gif'); }
+
+.nomination-tab-14, .nomination-tab-14:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-14-st.gif'); }
+.nomination-tab-14:hover, .nomination-tab-14.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-14.gif'); }
+.nomination-tab-37, .nomination-tab-37:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-14-st.gif'); }
+.nomination-tab-37:hover, .nomination-tab-37.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-14.gif'); }
+.nomination-tab-58, .nomination-tab-58:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-14-st.gif'); }
+.nomination-tab-58:hover, .nomination-tab-58.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-14.gif'); }
+
+.nomination-tab-15, .nomination-tab-15:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-15.jpg'); }
+.nomination-tab-15:hover, .nomination-tab-15.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-15.gif'); }
+.nomination-tab-36, .nomination-tab-36:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-15.jpg'); }
+.nomination-tab-36:hover, .nomination-tab-36.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-15.gif'); }
+.nomination-tab-55, .nomination-tab-55:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-15.jpg'); }
+.nomination-tab-55:hover, .nomination-tab-55.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-15.gif'); }
+
+.nomination-tab-16, .nomination-tab-16:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-16.jpg'); }
+.nomination-tab-16:hover, .nomination-tab-16.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-16.gif'); }
+.nomination-tab-35, .nomination-tab-35:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-16.jpg'); }
+.nomination-tab-35:hover, .nomination-tab-35.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-16.gif'); }
+.nomination-tab-53, .nomination-tab-53:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-16.jpg'); }
+.nomination-tab-53:hover, .nomination-tab-53.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-16.gif'); }
+
+.nomination-tab-18, .nomination-tab-18:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-18.jpg'); }
+.nomination-tab-18:hover, .nomination-tab-18.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-18.gif'); }
+.nomination-tab-41, .nomination-tab-41:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-18.jpg'); }
+.nomination-tab-41:hover, .nomination-tab-41.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-18.gif'); }
+.nomination-tab-61, .nomination-tab-61:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-18.jpg'); }
+.nomination-tab-61:hover, .nomination-tab-61.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-18.gif'); }
+
+.nomination-tab-19, .nomination-tab-19:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-19.jpg'); }
+.nomination-tab-19:hover, .nomination-tab-19.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-19.gif'); }
+.nomination-tab-39, .nomination-tab-39:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-19.jpg'); }
+.nomination-tab-39:hover, .nomination-tab-39.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-19.gif'); }
+.nomination-tab-59, .nomination-tab-59:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-19.jpg'); }
+.nomination-tab-59:hover, .nomination-tab-59.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-19.gif'); }
+
+.nomination-tab-20, .nomination-tab-20:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-20.jpg'); }
+.nomination-tab-20:hover, .nomination-tab-20.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-20.gif'); }
+.nomination-tab-40, .nomination-tab-40:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-20.jpg'); }
+.nomination-tab-40:hover, .nomination-tab-40.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-20.gif'); }
+.nomination-tab-60, .nomination-tab-60:focus { background: url('http://oops.ru/images/award-2016/nomination-tab-20.jpg'); }
+.nomination-tab-60:hover, .nomination-tab-60.hover { background: url('http://oops.ru/images/award-2016/nomination-tab-20.gif'); }
+
+.award-content:after {
+    display: none;
+    content: url('http://oops.ru/images/award-2016/nomination-tab-3.gif') url('http://oops.ru/images/award-2016/nomination-tab-4.gif') url('http://oops.ru/images/award-2016/nomination-tab-5.gif') url('http://oops.ru/images/award-2016/nomination-tab-6.gif') url('http://oops.ru/images/award-2016/nomination-tab-7.gif') url('http://oops.ru/images/award-2016/nomination-tab-8.gif') url('http://oops.ru/images/award-2016/nomination-tab-9.gif') url('http://oops.ru/images/award-2016/nomination-tab-10.gif') url('http://oops.ru/images/award-2016/nomination-tab-11.gif') url('http://oops.ru/images/award-2016/nomination-tab-12.gif') url('http://oops.ru/images/award-2016/nomination-tab-14.gif') url('http://oops.ru/images/award-2016/nomination-tab-15.gif') url('http://oops.ru/images/award-2016/nomination-tab-16.gif') url('http://oops.ru/images/award-2016/nomination-tab-18.gif') url('http://oops.ru/images/award-2016/nomination-tab-19.gif') url('http://oops.ru/images/award-2016/nomination-tab-20.gif');
+}
+
+.nomination-page-close-btn,
+.nomination-page-close-btn:hover,
+.nomination-page-close-btn:focus,
+.nomination-page-close-btn:active {
+    position: absolute;
+    right: 20px;
+    top: -28px;
+    color: #646464;
+    font-size: 68px;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none;
+}
+.nomination-page-title > img {
+    float: left;
+    display: inline-block;
+    height: 74px;
+    margin-right: 20px;
+}
+.nomination-page-title > div {
+    float: left;
+}
+.nomination-category-name {
+    color: #FACE39;
+    font-size: 34px;
+    font-weight: normal;
+    margin: 0;
+}
+.nomination-name {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 500;
+    margin: 0;
+}
+.nominees-gallery {
+    margin-top: 48px;
+}
+.nominees-gallery-item {
+    margin-top: 70px;
+}
+.suggest-nominee-item {
+    width: 180px;
+    background: rgba(221, 221, 221, .9);
+}
+.suggest-nominee-item > img {
+    margin: auto;
+}
+.label-name, .label-action {
+    display: none;
+}
+.label-name {
+    position: absolute;
+    z-index: 1;
+    top: 16px;
+    left: 20px;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}
+.label-action, .label-action:hover, .label-action:focus, .label-action:active {
+    text-align: center;
+    color: #fff;
+    background: #777;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.nominee-photo {
+    height: 180px;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+}
+.nominees-gallery-item.slick-current .bg-shadow {
+    height: 15%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+}
+.nominees-gallery-item.slick-current {
+    margin-top: 0;
+    position: relative;
+}
+.nominees-gallery-item.slick-current .label-name,
+.nominees-gallery-item.slick-current .label-action {
+    display: block;
+}
+.nominees-gallery-item.slick-current:focus,
+.nominees-gallery-item.slick-current:active {
+    outline: none;
+}
+.nominees-gallery-item.slick-current > img {
+    cursor: pointer;
+}
+.slick-next, .slick-prev {
+    z-index: 1;
+    width: 42px;
+    height: 64px;
+    top: 150px;
+}
+.slick-next {
+    right: 20px;
+}
+.slick-next::before {
+    content: '\e080';
+}
+.slick-prev {
+    left: 20px;
+}
+.slick-prev::before {
+    content: '\e079';
+}
+.slick-prev::before, .slick-next::before {
+    font-family: 'Glyphicons Halflings';
+    font-size: 36px;
+}
+.slick-current .nominee-photo {
+    height: 300px;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0);
+}
+.slick-current.suggest-nominee-item {
+    width: 300px;
+}
+.slick-current.suggest-nominee-item .nominee-photo {
+    height: 240px;
+    margin: 30px auto;
+}
+.slick-dots { margin-top: 15px; }
+.slick-dots li { margin: 0; }
+.slick-dots li button::before {
+    opacity: 1;
+    color: #fff;
+    font-size: 10px;
+}
+.slick-dots li.slick-active button::before {
+    opacity: 1;
+    color: #f09;
+    font-size: 14px;
+}
+.voting-block {
+    position: absolute;
+    background: rgba(0, 0, 0, .95);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    border: 2px solid #f09;
+    padding: 90px 20px 20px;
+}
+.voting-block-closer {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+.voting-block > form {
+    margin-bottom: 40px;
+    position: relative;
+}
+.has-error {
+    color: #fe6161;
+    border-color: #fe6161;
+    box-shadow: inset 0 0 6px 0 #fe6161;
+}
+.form-disabled::after {
+    content: ' ';
+    background: rgba(0, 0, 0, .9) url('http://oops.ru/images/ajax-loader.gif') no-repeat center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.voting-block .ya-share2__list,
+.voting-block .ya-share2__badge,
+.voting-block .ya-share2__link,
+.voting-block .ya-share2__list_direction_horizontal > .ya-share2__item {
+    width: 100%;
+}
+.voting-block .ya-share2__list_direction_horizontal > .ya-share2__item {
+    margin-bottom: 10px;
+}
+.voting-block .ya-share2__badge {
+    border-radius: 0;
+}
+.voting-block .ya-share2__badge::after  {
+    content: 'Голосовать';
+    line-height: 42px;
+    font-size: 16px;
+    border-left: 1px solid #fff;
+    padding-left: 15px;
+    margin-left: 5px;
+}
+.voting-block .ya-share2__container_size_m .ya-share2__icon {
+    height: 42px;
+    width: 42px;
+    background-size: 42px 42px;
+}
+.award-partners-content, .award-faq-content {
+    background-color: #fff;
+    padding: 40px;
+}
+.award-partners-content h2:first-child,
+.award-faq-content h2:first-child {
+    margin: 0 auto 24px;
+}
+.award-pages-tab {
+    margin-top: 14px;
+}
+.award-pages-tab a {
+    border: 2px solid #fff;
+    font-size: 28px;
+    color: #fff;
+    padding: 3px 30px
+}
+.award-pages-tab a.active, .award-pages-tab a:hover {
+    background-color: #fc0;
+    color: black;
+    text-decoration: none;
+    border-color: #fc0
+}
+.award-partner-logo {
+    max-width: 220px;
+    float: left;
+}
+.award-partner-details {
+    float: right;
+    width: calc(100% - 240px);
+}
+.award-partner-details ul {
+    padding-left: 20px;
+    list-style: inside;
+}
+.nominee-related-articles {
+    background: #000;
+    border-top: 2px solid #f09;
+    box-sizing: padding-box;
+    padding: 20px 5px 0;
+}
+.nominee-related-articles h3 {
+    color: #fff;
+    margin: 0 0 10px;
+}
+.nominee-related-articles .article-title {
+    padding-bottom: 20px;
+}
+.nominee-related-articles .article-title a {
+    color: #fff;
+}
+.nominee-related-articles .article-title a:hover {
+    color: #f09;
+}
+.award-faq p {
+    font-size: 1em;
+    color: #333;
+    margin: 0 0 7px 0;
+    line-height: 1.7;
+}
+.award-faq .dialog-question {
+    font-weight: bold;
+}
+.award-faq .dialog-answer {
+    margin-bottom: 20px;
+}
+.award-faq .dialog-question::before,
+.award-faq .dialog-answer::before {
+    content: '\002013';
+    margin-right: 5px;
+
+}
+@media screen and (max-width: 1199px) {
+    .col-main {
+        margin-right: 20px;
+        width: calc(100% - 320px);
+    }
+}
+@media screen and (max-width: 991px) {
+    .col-main {
+        margin: 0;
+        width: 100%;
+    }
+    .col-sidebar > .container-fluid > .row > div {
+        background-color: transparent;
+    }
+    .home-sidebar-container {
+        background-color: #fff;
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .section-header { height: auto; }
+    .section-header h1 {
+        margin-top: 0;
+        padding-top: 55px;
+    }
+    .section-header h2 {
+        padding-bottom: 48px;
+    }
+    .nomination-wrapper {
+        padding-bottom: 30px;
+    }
+    .nominee-related-articles .article-title {
+        padding-bottom: 10px;
+    }
+}
+@media screen and (max-width: 639px) {
+    .award-pages-tab a {
+        font-size: 18px;
+        padding: 5px 24px;
+    }
+    .award-partner-logo {
+        max-width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+    .award-partner-details {
+        float: none;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 480px) {
+    .award-pages-tab a:nth-child(-n+2) {
+        border-right: none;
+    }
+    .award-pages-tab a.active:nth-child(n+2),
+    .award-pages-tab a:hover:nth-child(n+2) {
+        border-left-color: #fff;
+    }
+}
+@media screen and (max-width: 479px) {
+    .section-header { width: auto; }
+    .nomination-page-title > img {
+        height: 60px;
+    }
+    .nomination-category-name, .nomination-name {
+        font-size: 24px;
+    }
+    .award-pages-tab a:nth-child(-n+2) {
+        border-bottom: none;
+    }
+    .award-pages-tab a.active:nth-child(n+2),
+    .award-pages-tab a:hover:nth-child(n+2) {
+        border-top-color: #fff;
+    }
+    .award-pages-tab a {
+        display: block;
+    }
+}

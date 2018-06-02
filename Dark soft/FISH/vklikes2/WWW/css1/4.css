@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(http://fonts.gstatic.com/s/opensanscondensed/v10/gk5FxslNkTTHtojXrkp-xCIr6c12TYpRRnuCzHEWEz0.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensanscondensed/v10/gk5FxslNkTTHtojXrkp-xC3jdGpUUWWw3ZkjEiH7VGY.woff) format('woff');
+}

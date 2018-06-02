@@ -1,0 +1,212 @@
+@import url(http://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+
+body {
+	font: 12px Arial, sans-serif;
+	background: #2c3338;
+	color: #333436;
+}
+
+a {
+	color: #333436;
+	text-decoration: none;
+}
+
+.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+	background: #fff;
+	overflow: hidden;
+	box-shadow: 0 0 3px rgba(255,255,255,0.5);
+}
+
+.center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto
+}
+ 
+.right { float: right }
+ 
+.left { float: left }
+ 
+.reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+}
+
+.clr {
+	clear: both
+}
+
+hr {
+	background: #3b4148;
+	height: 1px;
+}
+
+h1 {
+	font: 16px 'Play', Arial, sans-serif;
+}
+
+h2 {
+	font: 14px 'Play', Arial, sans-serif;
+}
+
+h3 {
+	font: 12px 'Play', Arial, sans-serif;
+}
+
+input[name="save"] {
+	font: 18px 'Play', Arial, sans-serif;
+	text-transform: uppercase;
+	background: #4EA828;
+	width: 1000px;
+	padding: 16px;
+	color: #fff;
+	border: 0;
+	cursor: pointer;
+}
+
+.button_menu {
+	font: 18px 'Play', Arial, sans-serif;
+	text-transform: uppercase;
+	background: #00ADEF;
+	padding: 8px;
+	color: #fff;
+	border: 0;
+	width: auto;
+	margin: 4px;
+}
+
+input[type="text"], input[type="password"] {
+	font-size: 14px;
+	background: #fff;
+	width: 462px;
+	padding: 4px;
+	border: 1px solid #E0E2E3;
+}
+
+select, textarea {
+	font-size: 14px;
+	background: #fff;
+	padding: 4px;
+	border: 1px solid #E0E2E3;	
+ }
+
+.notice {
+	font: 20px 'Play', Arial, sans-serif;
+	text-transform: uppercase;
+	background: #F2C316;
+	padding: 10px;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	background: #00ADEF;
+	color: #fff;
+	padding: 2px;
+}
+
+.header-title {
+	font: 40px 'Play', Arial, sans-serif;
+	text-transform: uppercase;
+	background: #00ADEF;
+	padding: 8px;
+	color: #fff;
+	border: 0;
+	width: auto;
+	margin: 4px;
+	border-bottom: 1px solid #fff;
+}
+
+.header-title  a {
+	color: #fff;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+}
+
+table {
+	width: 1000px;
+	border-collapse: collapse;
+}
+
+table .title_t {
+	background: #F5F5F5;
+}
+
+table tr {
+	border: 1px solid #C8CACC;
+}
+
+table td {
+	width: 480px;
+	padding: 10px;
+}
+
+.content .block {
+	width: 460px;
+	padding: 10px;
+	float: left;
+}
+
+progress {
+	border: 0;
+	width: 980px;
+	height: 30px;
+	background: #9C9C9C;
+	box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+progress::-webkit-progress-bar {
+	border: 0;
+	width: 980px;
+	height: 50px;
+	background: #9C9C9C;
+	box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+progress::-webkit-progress-value {
+    background: #000;
+}
+
+progress::-moz-progress-bar {
+    background: #000;
+}
+
+.progress_text {
+	width: 980px;
+	height: 30px;
+	font: 20px Arial, sans-serif;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	margin-top: -30px;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	width: 980px;
+	margin: 0 auto;
+	padding: 10px;
+	box-shadow: inset 0 10px 5px rgba(0, 0, 0, 0.1);
+	color: #fff;
+}
+
+.footer a {
+	color: #fff;
+}

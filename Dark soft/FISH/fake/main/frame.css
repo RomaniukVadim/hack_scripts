@@ -1,0 +1,28 @@
+/**
+ * Created by GamePost on 09.08.2016.
+ * API Vkonte.Club
+ * VK Accounts Manager
+ */
+
+.msg {
+    display: none;
+    margin: 20px 0 20px;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+.msg-success {
+    background: rgb(118, 243, 151);
+    border-color: rgb(65, 187, 63);
+}
+
+.msg-error {
+    background: #fdf0f0;
+    border-color: #f8d5d6;
+}
+
+.msg-information {
+    background: rgb(235, 236, 125);
+    border-color: rgb(181, 175, 108);
+}
+

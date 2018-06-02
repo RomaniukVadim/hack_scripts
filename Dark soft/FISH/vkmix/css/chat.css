@@ -1,0 +1,711 @@
+#chat_add_content {
+ background: #f7f7f7;
+ padding: 10px;
+ padding-bottom: 25px !important;
+}
+
+#chat_add_content_inner {
+ padding-top: 20px;
+ width: 450px;
+ line-height: 18px;
+ margin: 0 auto;
+}
+
+#chat_add_content_fields {
+ 
+}
+
+#chat_add_field_theme {
+ width: 100%;
+ height: 21px;
+ padding-left: 8px !important;
+}
+
+#chat_add_content_field_theme {
+ margin-top: 10px;
+ width: 437px;
+}
+
+#chat_add_content_field_text {
+ width: 437px;
+}
+
+ #chat_question_add_comment_field_text {
+ padding: 4px;
+ padding-left: 6px !important;
+ padding-bottom: 5px !important;
+ outline: none;
+ min-height:50px;
+}
+
+#chat_question_add_comment_field_text span i {
+  display: none;
+}
+
+#chat_add_content_buttons {
+ overflow: hidden;
+ margin-top: 15px;
+}
+
+#chat_add_content_buttons .blue_button, #chat_question_add_comment_txt_buttons_left .blue_button {
+ line-height: 1;
+ padding: 4px;
+ padding-top: 5px !important;
+ padding-left: 10px !important;
+ padding-right: 10px !important;
+ height: 14px;
+ width: 80px;
+ text-align: center;
+}
+
+#chat_add_content_buttons_left {
+ float: left;
+}
+
+#chat_add_content_buttons_right {
+ float: right;
+}
+
+#chat_add_content_buttons_right a {
+ position: relative;
+ display: inline-block;
+}
+
+.border_bottom_field_chat_add {
+ width: 451px; 
+ border-top: 1px solid #ffffff;
+}
+
+#chat_my_count_que {
+ color: #2B587A;
+ font-weight: bold;
+ margin-top: 5px;
+ padding: 10px;
+ padding-bottom: 7px !important;
+ border-bottom: 1px solid #e0e4eb;
+}
+
+#chat_my_content {
+ line-height: 18px;
+}
+
+#chat_my_content .question_main {
+ overflow: hidden;
+ padding: 10px;
+ padding-left: 25px !important;
+ border-bottom: 1px solid #e9edf3;
+}
+
+#chat_my_content .question_main:last-child {
+ border-bottom: none !important;
+}
+
+#chat_my_content .question_left {
+ float: left;
+ padding-top: 5px;
+ width: 360px;
+}
+
+#chat_my_content .question_title a {
+ font-size: 12px;
+ font-weight: bold;
+}
+
+#chat_my_content .question_status {
+ font-size: 11px;
+}
+
+#chat_my_content .question_right {
+ float: right;
+ width: 210px;
+}
+
+.question_mini_profile {
+ overflow: hidden;
+ padding: 5px;
+ padding-bottom: 0 !important;
+ padding-right: 0 !important;
+ cursor: pointer;
+}
+
+.question_mini_profile a {
+ text-decoration: none !important;
+}
+
+.question_mini_profile:hover {
+ background: #e9ecf1;
+}
+
+.question_mini_profile .question_mini_avatar {
+ float: left;
+ width: 40px;
+}
+
+.question_mini_avatar img {
+ max-width: 32px;
+}
+
+.question_mini_info {
+ float: left;
+}
+
+.question_mini_username {
+ display: block;
+}
+
+.question_mini_time {
+ display: block;
+ margin-top: -3px;
+ color: #5d84a2;
+}
+
+#error_msg_chat_error {
+ display: inline-block;
+ color: #a7020a;
+ margin-left: 10px;
+}
+
+#chat_none_questions {
+ padding: 20px;
+ text-align: center;
+ color: gray;
+ font-size: 12px;
+}
+
+#chat_title_head {
+ background: #f7f7f7;
+ border-bottom: 1px solid #e7e5e5;
+ padding: 10px;
+ padding-left: 15px !important;
+ overflow: hidden;
+ line-height: 18px;
+}
+
+#chat_title_head_left {
+ float: left;
+}
+
+#chat_title_head_left_title {
+ color: #2B587A;
+ font-weight: bold;
+ font-size: 12px;
+ width: 490px;
+}
+
+#chat_title_head_right_status {
+ float: right;
+}
+
+.chat_comment_list {
+  padding: 10px;
+}
+
+.chat_comment_question {
+ overflow: hidden;
+ border-bottom: 1px solid #e2e6ee;
+ padding: 15px;
+}
+
+.chat_comment_question .chat_comment_question_avatar {
+ float: left;
+ width: 32px;
+ padding-right: 9px;
+}
+
+.chat_comment_question_avatar img {
+ max-width: 32px;
+ 
+}
+
+.chat_comment_question_info {
+ float: left;
+ word-wrap: break-word;
+ width: 500px;
+ line-height: 13px;
+}
+
+.chat_comment_question_info_name a {
+ font-weight: bold;
+}
+
+.chat_comment_question_info_text {
+ margin-top: 5px;
+}
+
+.chat_comment_question_info_date {
+ float: right;
+ color: gray;
+ margin-top: -14px;
+}
+.chat_comment_question_info_del {
+ float: right;
+color: #526D8B;
+margin-top: -27px;
+font-weight: bold;
+font-size: 15px;
+ cursor: pointer;
+}
+.chat_del_result{
+color: red;
+}
+#chat_question_add_comment {
+ background: #f7f7f7;
+ padding: 15px;
+ overflow: hidden;
+}
+
+#chat_question_add_comment_avatar {
+ float: left;
+ width: 65px;
+}
+
+#chat_question_add_comment_avatar img {
+ max-width: 50px;
+}
+
+#chat_question_add_comment_txt {
+ float: left;
+ width: 500px;
+}
+
+#chat_question_add_comment_field_text_wrapper {
+ width: 100%;
+ display: block;
+ background: #ffffff;
+ border: 1px solid #C0CAD5;
+ font-size: 11px;
+ font-family: tahoma;
+ min-height: 50px;
+}
+
+#chat_question_add_comment_txt_buttons {
+ overflow: hidden;
+ margin-top: 10px;
+}
+
+#chat_question_add_comment_txt_buttons_left {
+ float: left;
+}
+
+#chat_question_add_comment_txt_buttons_right {
+ float: right;
+}
+
+#chat_msg {
+ margin-top: 10px;
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+.chat_browser_agent {
+ font-weight: normal !important;
+ font-size: 11px !important;
+}
+
+.agent_name {
+ color: #2B587A;
+ font-weight: bold;
+}
+
+.rate_result_comment_chat {
+ color: gray;
+}
+
+.rate_result_comment_chat_1 {
+ color: green;
+}
+
+.rate_result_comment_chat_2 {
+ color: #a7020a;
+}
+
+.divider_chat {
+ margin-left: 5px;
+ margin-right: 5px;
+}
+
+#chat_all_questions_content {
+ padding: 10px;
+ margin-top: -10px;
+}
+
+#chat_all_questions_table, #chat_agents_rate_table {
+ border: 1px solid #d3dbe1;
+}
+
+#chat_all_questions_table_header, #chat_agents_rate_table_header {
+ background: #e3e9ee;
+ border-bottom: 1px solid #d3dbe1;
+ padding: 8px;
+ padding-left: 10px !important;
+ padding-right: 10px !important;
+ line-height: 1;
+ height: 12px;
+ font-weight: bold;
+ color: #51677a;
+ overflow: hidden;
+}
+
+#chat_all_questions_table_id {
+ float: left;
+ width: 50px;
+}
+
+#chat_all_questions_table_question {
+ float: left;
+ width: 380px;
+}
+
+#chat_all_questions_table_status {
+ float: right;
+ width: 120px;
+}
+
+#chat_all_questions_table_content {
+
+}
+
+.chat_all_questions_table_content, .chat_agents_rate_table_content {
+ overflow: hidden;
+ padding: 10px;
+}
+
+.chat_all_questions_table_content.active {
+ background: #edf1f4;
+}
+
+.chat_all_questions_table_id {
+ float: left;
+ width: 50px;
+ font-weight: bold;
+ color: #2B587A;
+}
+
+.chat_all_questions_table_question {
+ float: left;
+ width: 380px;
+}
+
+.chat_all_questions_table_status {
+ float: right;
+ width: 120px;
+ color: gray;
+}
+
+#chat_all_questions_bar {
+ overflow: hidden;
+ margin-left: 10px;
+ margin-right: 10px;
+ margin-top: 15px;
+}
+
+#chat_all_questions_bar_left {
+ float: left;
+ color: #2B587A;
+ font-size: 12px;
+ font-weight: bold;
+ padding-bottom: 10px;
+}
+
+#chat_all_questions_bar_right {
+ float: right;
+ padding-bottom: 10px;
+}
+
+#chat_agents_rate {
+ padding: 10px;
+}
+
+#chat_agents_rate_table_header_agent_name {
+ float: left;
+ width: 180px;
+ text-align: center;
+}
+
+.chat_agents_rate_table_header_agent_name {
+ float: left;
+ color: #2B587A;
+ width: 180px;
+}
+
+#chat_agents_rate_table_header_rate_plus {
+ float: left;
+ width: 140px;
+}
+
+.chat_agents_rate_table_header_rate_plus {
+ float: left;
+ width: 140px;
+ color: green;
+}
+
+#chat_agents_rate_table_header_rate_minus {
+ float: left;
+ width: 140px;
+}
+
+.chat_agents_rate_table_header_rate_minus {
+ float: left;
+ width: 140px;
+ color: #a7020a;
+}
+
+#chat_agents_rate_table_header_rate {
+ float: right;
+ width: 100px;
+}
+
+.chat_agents_rate_table_header_rate {
+ float: right;
+ width: 100px;
+}
+
+#chat_add_img_file {
+ filter: alpha(opacity=0);
+ opacity: 0;
+ width: 220px;
+ font-size: 100px;
+ position: absolute;
+ margin-top: -19px;
+ margin-left: -10px;
+ z-index: 2;
+ cursor: pointer !important;
+}
+
+#chat_upload_iframe {
+ display: none;
+}
+
+#chat_grad_progress {
+
+}
+
+.progress_grad_chat_overflow_comment {
+ margin-top: 10px !important;
+}
+
+.progress_grad_chat_overflow {
+ margin-top: 20px;
+}
+
+.progress_grad_chat_overflow_left {
+ margin-left: 5px;
+ color: gray;
+ display: inline-block; 
+ vertical-align: 2px;
+}
+
+#chat_grad_progress {
+ display: none;
+}
+
+#chat_images_attach {
+ margin-top: 15px;
+ display: none;
+}
+
+.chat_images_attach_comment {
+ margin-top: 10px !important;
+}
+
+#chat_images_attach .chat_images_attach_img_wrap {
+ vertical-align: top;
+ margin-right: 10px;
+}
+
+#chat_images_attach img {
+ border: 0;
+}
+
+.chat_images_attach_img_wrap {
+ display: inline-block; 
+ max-width: 75px; 
+ position: relative
+}
+
+.chat_images_attach_img_inner {
+ position: absolute; 
+ z-index: 2; 
+ top: 0; 
+ right: 0;
+}
+
+.chat_images_attach_img_inner_bdel {
+ background: #000000;
+ opacity: 0.6;
+ width: 15px;
+ height: 15px;
+ line-height: 13px;
+ text-align: center;
+ -webkit-border-radius: 2px;
+ -moz-border-radius: 2px;
+ border-radius: 2px;
+ cursor: pointer;
+}
+
+.chat_images_attach_img_inner_bdel_closed {
+ display: inline-block;
+ background-image: url('../images/wnd_bottom/closed_wnd.png');
+ width: 7px;
+ height: 7px;
+ opacity: 0.6;
+}
+
+.chat_images_attach_img_inner_bdel:hover .chat_images_attach_img_inner_bdel_closed {
+ opacity: 1;
+}
+
+.question_attaches_img_result {
+ margin-top: 10px;
+}
+
+.question_attaches_img_result img {
+ vertical-align: top;
+ margin-right: 10px;
+ border: 0;
+}
+
+.chat_add_content_buttons_right_comment .smile {
+  padding: 3px;
+}
+.chat_add_content_buttons_right_comment .smile:hover {
+  padding: 3px;
+  background: #D5DDE5;
+}
+
+.chat_add_content_buttons_right_comment .chat_smile_button {
+  background: url('../images/smile.png') no-repeat;
+  background-position: 10px center;
+  padding-left: 35px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  height: 13px;
+  border-radius: 5px;
+}
+.chat_add_content_buttons_right_comment .chat_smile_button:hover {
+  background: #EEF1F4 url('../images/smile.png') no-repeat;
+  background-position: 10px center;
+  text-decoration: none;
+}
+
+.chat_comment_list {
+  min-height: 400px;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+
+/* Emoji */
+
+.emoji-menu {
+  position: absolute;
+  z-index: 999;
+  width: 225px;
+  margin-left: -107px;
+  margin-top: -252px;
+  overflow: hidden;
+
+  border: 1px #dfdfdf solid;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow:    0px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow:         0px 1px 1px rgba(0, 0, 0, 0.1);
+
+  display: none;
+}
+.emoji-items-wrap1 {
+  background: #FFF;
+  padding: 5px 2px 5px 5px;
+}
+.emoji-items-wrap1 .emoji-menu-tabs {
+    width: 100%;
+    margin-bottom: 8px;
+    margin-top: 3px;
+}
+.emoji-items-wrap1 .emoji-menu-tabs td {
+    text-align: center;
+    color: white;
+    line-height: 0;
+}
+.emoji-menu-tabs .emoji-menu-tab {
+  display: inline-block;
+  width: 24px;
+  height: 29px;
+  background: url('../images/IconsetSmiles.png') no-repeat;
+  background-size: 42px 350px;
+}
+.is_1x .emoji-menu-tabs .emoji-menu-tab {
+  background-image: url('../images/IconsetSmiles_1x.png');
+}
+
+.emoji-menu-tabs .icon-recent {background-position: -9px -306px; }
+.emoji-menu-tabs .icon-recent-selected {background-position: -9px -277px; }
+
+.emoji-menu-tabs .icon-smile {background-position: -9px -34px; }
+.emoji-menu-tabs .icon-smile-selected {background-position: -9px -5px; }
+
+.emoji-menu-tabs .icon-flower {background-position: -9px -145px; }
+.emoji-menu-tabs .icon-flower-selected {background-position: -9px -118px; }
+
+.emoji-menu-tabs .icon-bell {background-position: -9px -89px; }
+.emoji-menu-tabs .icon-bell-selected {background-position: -9px -61px; }
+
+.emoji-menu-tabs .icon-car {background-position: -9px -196px; }
+.emoji-menu-tabs .icon-car-selected {background-position: -9px -170px; }
+
+.emoji-menu-tabs .icon-grid {background-position: -9px -248px; }
+.emoji-menu-tabs .icon-grid-selected {background-position: -9px -222px; }
+
+.emoji-menu-tabs .icon-smile,
+.emoji-menu-tabs .icon-flower,
+.emoji-menu-tabs .icon-bell,
+.emoji-menu-tabs .icon-car,
+.emoji-menu-tabs .icon-grid {
+  opacity: 0.7;
+}
+.emoji-menu-tabs .icon-smile:hover,
+.emoji-menu-tabs .icon-flower:hover,
+.emoji-menu-tabs .icon-bell:hover,
+.emoji-menu-tabs .icon-car:hover,
+.emoji-menu-tabs .icon-grid:hover {
+  opacity: 1;
+}
+
+
+.emoji-menu .emoji-items-wrap {
+  position: relative;
+  height: 174px;
+  overflow-y: auto;
+}
+.emoji-menu .emoji-items {
+  padding-right: 8px;
+  outline: 0 !important;
+}
+.emoji-menu img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  border: 0 none;
+}
+.emoji-menu .emoji-items a {
+  margin: -1px 0 0 -1px;
+  padding: 5px;
+  display: block;
+  float: left;
+  border-radius: 2px;
+}
+.emoji-menu .emoji-items a:hover {
+  background-color: #edf2f5;
+}
+.emoji-menu:after {
+  content: ' ';
+  display: block;
+  clear: left;
+}
+.emoji-menu a .label {
+  display: none;
+}

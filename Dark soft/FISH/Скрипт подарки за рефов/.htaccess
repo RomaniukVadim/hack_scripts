@@ -1,0 +1,28 @@
+DirectoryIndex index.php
+
+RewriteEngine On
+
+# Убираем www
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Убираем index.php
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ / [R=301,L]
+
+# Редиректы
+RewriteRule ^exit.html index.php?do=exit [L]
+RewriteRule ^register.html$ index.php?do=register [L]
+RewriteRule ^profile.html$ index.php?do=profile [L]
+RewriteRule ^login.html$ index.php?do=login [L]
+RewriteRule ^faq.html$ index.php?do=faq [L]
+RewriteRule ^advertisers.html$ index.php?do=advertisers [L]
+RewriteRule ^contacts.html$ index.php?do=contacts [L]
+RewriteRule ^captcha.jpg$ captcha/captcha.php [L]
+RewriteRule ^404.html index.php?do=404 [L]
+RewriteRule ^list.html index.php?do=list [L]
+RewriteRule ^ref/([^/]*)(/?)+$ index.php?id=$1 [L]
+RewriteRule ^([^/]*)/([0-9]+)(/?)+$ index.php?id=$2&game=$1 [L]
+
+
+ErrorDocument 404 /404.html

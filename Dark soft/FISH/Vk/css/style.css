@@ -1,0 +1,111 @@
+@import url(reset.css);
+
+body{
+	background-color: #000;
+}
+
+.wrap{
+	background-color: #fff;
+	padding: 40px 30px;
+	border-radius: 3px;
+	border: 1px solid #d3d9de;
+	margin-top: 93px;
+}
+
+.text-h3{
+	padding: 0 0 30px 0;
+	width: 486px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.text-h3 h3{
+	display: inline-block;
+	color: #686868;
+	font-size: 25px;
+}
+
+#item_1, #item_2, #item_3, #item_4, #item_5{
+	width: 8px;
+	height: 8px;
+	background-color: #686868;
+	border-radius: 50%;
+	display: inline-block;
+	margin-left: 10px;
+	position :relative;
+}
+
+.wrap-form{
+	width: 283px;
+	height: auto;
+	margin: 0 auto;
+}
+
+#form_1 input[type="text"], #form_1 input[type="password"], #form_2 input[type="text"]{
+	border: none;
+	outline: 0;
+	width: 250px;
+	padding: 8px 0 8px 15px;
+	border-radius: 3px;
+	border: 1px solid #d3d9de;
+	margin-bottom: 14px;
+}
+
+#form_1 input[type="submit"], #form_1 input[type="button"]{border: none; color: #fff; padding: 7px 26px 8px; font-size: 14px; outline: 0; border-radius: 3px;}
+
+.welk{
+	background: none;
+	background-color: #5e81a8;
+	margin-right: 10px;
+	cursor: pointer;
+}.welk:hover{
+	background-color: #6888ad;
+}
+
+.registr{
+	background: none;
+	background-color: #5fb053;
+	cursor: pointer;
+}.registr:hover{
+	background-color: #68b35d;
+}
+
+.numbar h4{
+	color: #686868;
+	font-size: 14px;
+	padding: 36px 0 19px 0;
+}
+
+#form_2 input[type="submit"]{margin-bottom: 20px; border: none; color: #fff; padding: 7px 50px 8px; font-size: 14px; outline: 0; border-radius: 3px;}
+
+.wrap-form a{
+	font-size: 11px;
+	color: #2a5885;
+	padding-top: 20px;
+}.wrap-form a:hover{
+	text-decoration: underline;
+}
+
+#item_1{
+	animation: bols 2s infinite;
+}#item_2{
+	animation: bols 3s infinite;
+}#item_3{
+	animation: bols 2s infinite;
+}#item_4{
+	animation: bols 2s infinite;
+}#item_5{
+	animation: bols 2s infinite;
+}
+
+@keyframes bols{
+	0%	{opacity: 1;}
+	50%	{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@-webkit-@keyframes bols{
+	0%	{opacity: 1;}
+	50%	{opacity: 0;}
+	100%{opacity: 1;}
+}
