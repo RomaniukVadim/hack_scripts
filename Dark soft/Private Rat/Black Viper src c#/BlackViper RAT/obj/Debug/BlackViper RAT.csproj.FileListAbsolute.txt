@@ -1,0 +1,4 @@
+A:\Desktop\DarkAgent-master\BlackViper RAT\obj\Debug\Interop.NATUPNPLib.dll
+A:\Desktop\DarkAgent-master\BlackViper RAT\obj\Debug\BlackViper RAT.csproj.ResolveComReference.cache
+A:\Desktop\Black Viper\BlackViper RAT\obj\Debug\Interop.NATUPNPLib.dll
+A:\Desktop\Black Viper\BlackViper RAT\obj\Debug\BlackViper RAT.csproj.ResolveComReference.cache

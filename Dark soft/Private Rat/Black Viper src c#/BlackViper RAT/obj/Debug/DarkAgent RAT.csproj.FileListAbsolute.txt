@@ -1,0 +1,2 @@
+A:\Desktop\DarkAgent-master\DarkAgent RAT\obj\Debug\Interop.NATUPNPLib.dll
+A:\Desktop\DarkAgent-master\DarkAgent RAT\obj\Debug\DarkAgent RAT.csproj.ResolveComReference.cache
